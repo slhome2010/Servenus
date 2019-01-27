@@ -23,7 +23,7 @@ vqmod/mods.cache
 *.zip
 *.iep
 *.bat
-.log
+*.log
 wtools-win32-ia32/
 nbproject/
 .vscode/
