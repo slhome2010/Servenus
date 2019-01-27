@@ -1,0 +1,1786 @@
+<?php header('Content-type: text/html; charset=utf-8')?>
+<?php require_once("../language/ru.php");?>
+<!DOCTYPE html>
+<html lang="en">
+<head>		
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>Attribut&amp;co documentation</title>
+    <meta name="description" content="Attribut&amp;co lets you to create rename delete products attributes for your OpenCart administration."/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'/>	
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/> 
+	<link type="text/css" rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"/>	
+	<link type="text/css" rel="stylesheet" href="/css/jquery-ui.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/sldocs.css"/>		
+	<link type="text/css" rel="stylesheet" href="/css/lightgallery.css"/>
+</head>
+<body data-spy="scroll" data-target="#sidebar" data-offset="0">
+	 <header class = "navbar navbar-default navbar-fixed-top" role = "navigation">
+		 <div class = "container">
+			 <div class = "navbar-header">
+				 <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+					 <span class = "sr-only"> Toggle navigation </span>
+					 <span class = "icon-bar"></span>
+					 <span class = "icon-bar"></span>
+				 </button>
+				 <a class="navbar-brand" href="#"><img src ="/img/logo-attributico.png" alt ="Attribut&amp;co official site!" title ="Attribut&amp;co official site!"></a>
+			 </div>
+			 <div class = "navbar-collapse collapse" >
+				 <ul class = "nav navbar-nav navbar-right" >
+					 <li class="menuItem active"><a href = "attributico.html"><span class="glyphicon glyphicon-home"></span>&nbsp;<?php echo $entry_home;?></a></li>	
+					 <li class = "dropdown" >
+						 <a href = "#products" class = "dropdown-toggle" data-toggle = "dropdown"><?php echo $entry_documentation;?><b class = "caret"> </b></a >
+						 <ul class = "dropdown-menu" >															
+							<li><a href = "doc_attributico_<?php echo $language;?>.html" > Attribut&amp;co (<?php echo $language;?>)</a></li>							
+							<li><a href = "doc_attributico_v_<?php echo $language;?>.html" > Attribut&amp;co Viewer (<?php echo $language;?>) </a></li>
+                            <li class = "divider"></li> 
+							<li><a href = "attributico_download.html" > <?php echo $entry_archive;?> </a></li>	
+                            <li> <a href = "index.html" >Servenus</a></li>
+						</ul>	
+					 </li>
+					 <li class = "dropdown" >
+                        <a href = "#language" class = "dropdown-toggle" data-toggle = "dropdown"><?php echo $entry_language;?><b class = "caret"> </b></a >
+                        <ul class = "dropdown-menu" >
+							<li><a href="/ru/doc_attributico_ru.html"><img src="/img/ru.png">  Русский</a></li >	
+							<li><a href="/en/doc_attributico_en.html"><img src="/img/en.png">  English</a></li >                                   
+                        </ul>
+                     </li>
+				 </ul>
+			 </div>
+		 </div>
+	 </header>
+	<!-- Docs page layout -->
+	<div class="jumbotron">
+		<div class ="language">	
+			<img src="/img/<?php echo $language;?>.png" data-toggle="tooltip" title="<?php echo $language_name;?>">
+		</div>
+		<div class="container">
+			<h1><?php echo $header_jumbo;?></h1>
+			<p><?php echo $overview_jumbo;?></p>
+		</div>
+	</div>			
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div id="sidebar" class="sidebar hidden-xs">
+					<ul class="nav nav-list" data-spy="affix" data-offset-top="150">
+						<li>
+							<a href="#overview">Описание возможностей</a>
+							<ul class="nav">
+								<li><a href="#overview-mission">Миссия модуля</a></li>
+								<li><a href="#overview-idea">Основная идея</a></li>
+								<li><a href="#overview-capabilities">Возможности</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#whats-included">Структура архива</a>							
+						</li>
+						<li>
+							<a href="#system">Системные требования.</a>
+						</li>
+						<li>
+							<a href="#сompatibility">Совместимость</a>
+						</li>
+						<li>
+							<a href="#license">Лицензия</a>
+						</li>	
+						<li>
+							<a href="#install">Установка/обновление</a>
+						</li>
+						<li>
+							<a href="#settings">Настройка</a>
+							<ul class="nav">
+								<li><a href="#settings-main">Общие настройки</a></li>
+								<li><a href="#settings-tree">Настройки деревьев</a></li>
+								<li><a href="#settings-category">Атрибуты категории</a></li>
+								<li><a href="#settings-inherit">Наследование</a></li>
+								<li><a href="#settings-product">Добавление в товар</a></li>																
+							</ul>
+						</li>						
+						<li>
+							<a href="#using">Работа с модулем</a>
+							<ul class="nav">
+								<li><a href="#using-theory">Немного теории</a></li>
+								<li><a href="#using-terms">Термины и определения</a></li>
+								<li><a href="#using-loading">Загрузка узлов</a></li>
+								<li><a href="#using-synchro">Синхронизация</a></li>
+								<li><a href="#using-edit">Редактирование</a></li>
+								<li><a href="#using-dnd">Drag-and-Drop</a></li>
+								<li><a href="#using-select">Мультиселект</a></li>
+								<li><a href="#using-merge">Слияние</a></li>
+								<li><a href="#using-search">Фильтр</a></li>
+								<li><a href="#using-example">Примеры</a></li>								
+							</ul>
+						</li>
+						<li>							
+							<a href="#integro">Интеграция с OpenCart</a>
+							<ul class="nav">
+								<li><a href="#integro-product">Страница товара</a></li>
+								<li><a href="#integro-category">Страница категории</a></li>
+								<li><a href="#integro-attribute">Атрибуты категории</a></li>															
+							</ul>
+						</li>			
+						<li>							
+							<a href="#tools">Инструменты</a>
+							<ul class="nav">
+								<li><a href="#tools-empty">Удалить пустые значения</a></li>
+								<li><a href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
+								<li><a href="#tools-defrag">Дефрагментация атрибутов</a></li>
+								<li><a href="#tools-detach">Удалить не связанные с товаром</a></li>
+								<li><a href="#tools-duplicate">Объединить дубли (beta)</a></li>
+								<li><a href="#tools-category">Атрибуты категорий</a></li>
+								<li><a href="#tools-cache">Очистить кэш деревьев</a></li>
+								<li><a href="#tools-standart">Стандартизация атрибутов</a></li>															
+							</ul>
+						</li>						
+						<li>							
+							<a href="#problems">Проблемы и ошибки</a>
+						</li>
+						<li>							
+							<a href="#faq">FAQ</a>
+						</li>			
+						<li>
+							<a href="#history">История изменений</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9" role="main">
+				<!-- Getting started -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="overview">Описание возможностей модуля.</h1>
+					</div>
+					<h3 id="overview-mission">Миссия модуля</h3>
+					<p>Облегчить работу с атрибутами и их значениями. Более наглядно отобразить структуру атрибутов. Применить более современные технологии редактирования.
+					Заменить рутинный ручной труд автоматическими операциями и перейти к пакетной обработке изменений.</p>
+					<h3 id="overview-idea">Основная идея</h3>
+					<p>Составление набора атрибутов, одинаковых для определенной категории товара и привязка этого набора к категории. Приведение структуры атрибутов и их значений
+					к виду: </p>
+<pre><code>
+Категория товаров
+    └── Атрибут 
+          └── Значение(список значений) атрибута
+		  			</code></pre>
+					<p>Представление структуры атрибутов и значений в виде деревьев.</p>
+					<h3 id="overview-capabilities">Возможности</h3>
+					<ul>
+						<li>Создание новых групп и атрибутов в одном и том же дереве;</li>
+						<li>Drag-and-drop и copy-paste технологии:
+							<ul>
+								<li>Копирование атрибутов одной группы в другую;</li>
+								<li>Перенос атрибутов из группы в группу (смена группы);</li>
+								<li>Drag-and-drop сортировка групп и атрибутов внутри группы;</li>
+								<li>Drag-and-drop добавление атрибутов в категорию;</li>
+								<li>Перенос атрибутов из одной категории в другую (смена категории);</li>
+								<li>Слияние атрибутов (объединение) без потери значений и связей;</li>
+							</ul>
+						</li>						
+						<li>Фильтрация и поиск групп, атрибутов и значений атрибутов в дереве;</li>
+						<li>Редактирование групп, атрибутов, шаблонов и значений;</li>
+						<li>Подстановка "Дежурного шаблона" в момент добаления атрибута в товар;</li>
+						<li>Пакетная подстановка "Дежурного шаблона" в товары, в момент добаления атрибута в категорию;</li>
+						<li>Настройка <a href="#settings-product"><mark><small>алгоритма</small></mark></a> добавления значений и шаблонов в товар;</li>
+						<li>Оперативный просмотр товаров отфильтрованных по атрибуту или значению;</li>						
+						<li>Набор инструментов для упорядочивания атрибутов:
+							<ul>
+								<li>Поиск и удаление пустых значений атрибутов;</li>
+								<li>Удаление ссылок на несуществующие атрибуты;</li>
+								<li>Дефрагментация атрибутов. Подготовка группы парсинга;</li>
+								<li>Удаление атрибутов не связанных ни с одним товаром;</li>
+								<li>Объединение дублей атрибутов без потери связей;</li>
+								<li>Автоматическое формирование атрибутов категорий;</li>
+							</ul>
+						</li>
+						<li>Мультиязычность, возможность параллельной работы с несколькими языками;</li>	
+					</ul>
+				</div>
+				<!-- File structure -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="whats-included">Структура архива.</h1>
+					</div>
+					<pre><code>
+Attributico_v3.0.1/
+│── PHP5.4-5.6/
+│       ├── upload_v1.5.x-2.2/
+│       │     ├── admin/
+│       │     │    ├── controller/
+│       │     │    ├── language/
+│       │     │    ├── model/
+│       │     │    └── view/
+│       │     └── system/
+│       │          └── library/
+│       │               └── attributico/
+│       │                     ├── array_column.php
+│       │                     └── attributico.php
+│       └── upload_v2.3.x-3.x/
+│
+│ 
+│── PHP7.0/
+│       ├── upload_v1.5.x-2.2/
+│       └── upload_v2.3.x-3.x/ 
+│
+│── PHP7.1
+│       ├── upload_v1.5.x-2.2/
+│       └── upload_v2.3.x-3.x/
+│ 
+│── PHP7.2/
+│       ├── upload_v1.5.x-2.2/
+│       └── upload_v2.3.x-3.x/ 
+│
+│── ocmod/
+│       ├── attribut&co.2.x.ocmod.xml
+│       ├── autocomplete.ocmod.xml
+│       └── attributico.3.x.ocmod.zip
+│
+│── vqmod/
+│       └── xml/ 
+│            ├── attribut&co1_5_x.xml
+│            └── autocomplete.xml
+│
+├── help/
+│    ├── img/
+│    └── readme.txt
+├── News2.2.0/
+├── News3.0.1/
+└── readme.txt	
+					</code></pre>
+					<div class="callout callout-info">
+						<h4>Различия версий.</h4>
+						<p>Приведенная структура архива соответствует версии модуля > 3.0.1. В более ранних версиях возможно наличие папок <code>5.4/</code>, <code>5.5/</code> и <code>5.6/</code>.
+						   Разница в ioncube-кодировке некоторых файлов модуля для разных версий PHP. Название папки соответствует версии PHP. Файлы, кодированные для PHP 5.4, работают и на более поздних версиях включая PHP 5.6.
+						   Внутри этих папок находятся папки <code>upload/</code> с OpenCart-структурой модуля для разных версий магазинов. Если версия движка вашего магазина, например, 2.1.0.2, 
+						   то вам нужна папка <code>upload_v1.5.x-2.2/</code>, если версия магазина 2.3.0.2, то папка <code>upload_v2.3.x-3.x/</code>.</p>
+					</div>
+					<p class="lead">Назначение папок и файлов.</p>
+					<ul>
+						<li><code>upload_v1.5.x-2.2/</code> и <code>upload_v2.3.x-3.x/</code> папки с файлами собственно модуля для разных версий OpenCart;</li>
+						<li><code>ocmod/</code> папка с модификаторами для магазинов второй и третьей версии
+							<ul>
+								<li><code>attribut&co.2.x.ocmod.xml</code> файл модификатор для магазинов второй версии 2.0.x - 2.3.x;</li>								
+								<li><code>autocomplete.ocmod.xml</code> файл модификатор для улучшения работы функции <code>autocomplete</code> для магазинов второй версии 2.0.x - 2.3.x;</li>
+								<li><code>attributico.3.x.ocmod.zip</code> файл модификатор для магазинов третьей версии 3.x;</li>								
+							</ul>
+						</li>
+						<li><code>vqmod/</code> папка с модификаторами для магазинов версий 1.5.x
+							<ul>							
+								<li><code>vqmod/xml/attribut&amp;co1_5_x.xml</code> файл модификатор для версий 1.5.x;</li>
+								<li><code>vqmod/xml/autocomplete.xml</code> файл модификатор для улучшения работы функции <code>autocomplete</code> для магазинов версий 1.5.x;</li>
+							</ul>
+						</li>
+						<li><code>help/</code> папка с инструкциями и вспомогательными материалами;</li>
+						<li><code>News.../</code> папки с описанием изменений, исправлений и вспомогательными материалами;</li>
+						<li><code>readme.txt</code> краткая инструкция по установке и работе модуля;</li>
+					</ul>
+					<div class="callout callout-info">
+						<h4>Различия версий.</h4>
+						<p>Для версий 2.x. папка <code>vqumod/</code> не нужна.</p>
+						<p>Для версий 1.5.x. копирование папки <code>vqmod/</code> является обязательным. Зато файлы с расширением <code>.ocmod</code> совсем не нужны.</p>						
+					</div>
+				</div>
+				<!-- сompatibility-->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="system">Системные требования.</h1>						
+					</div>
+					<p>Для работы модуля, Ваш хостинг должен поддерживать:</p>
+					<ul>
+						<li>Ioncube Loader версии 5.0 и выше;</li>
+						<li>PHP версии 5.4 и выше;</li>
+					</ul>
+					<p>Для интеграции функционала модуля и движка магазина используется <mark><small>ocmod</small></mark> для версий 2.x и <mark><small>vqmod</small></mark> для 1.5.x соответственно.</p>	
+				</div>					
+				<!-- сompatibility-->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="сompatibility">Совместимость.</h1>
+					</div>
+					<p>Работает на OpenCart: 1.5.x, 2.0.x, 2.1.x, 2.2.x, 2.3.x, 3.0.x</p>
+					<p>Работает на ocStore: 1.5.x, 2.1.x, 2.3.x.</p>
+					<p>Работает на OpenCart.Pro, ocShop и других сборках  на базе OpenCart соответствующих версий.</p>
+					<p class="lead">Поддерживаемые языки:</p>
+					<ul>
+						<li>english</li>
+						<li>русский</li>
+						<li>модуль мультиязычный, языки добавляются с помощью языковых файлов <code>admin/language/..../attributico.php</code></li>
+					</ul>
+				</div>					
+				<!-- License-->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="license">Лицензия.</h1>
+					</div>
+					<p class="lead">Действие лицензии.</p>	
+					<p>Лицензия действует на один домен, и один тестовый домен. Должно быть очевидно, что тестовый домен действительно тестовый.</p>
+					<p>После покупки модуля, необходимо сделать запрос с подтверждением названий доменов и версии PHP в мой личный почтовый ящик на том сайте, где покупали модуль.</p>
+					<p>На локальных машинах лицензия действует на все домены с адресом 127.0.0.1.</p>
+					<p class="lead">Установка лицензии.</p>
+					<p>В комплект поставки модуля, отдельным архивом входит <code>License.zip</code>. В этом архиве и содержатся файлы лицензий. Как и файлы модуля, лицензии распределны по папкам,
+					соответствущим версии PHP. После скачивания и распаковки архива <code>License.zip</code>, необходимо выбрать папку соответствующую вашей версии PHP, содержимое папки скопировать поверх структуры сайта.
+					Лицензию устанавливать ОБЯЗАТЕЛЬНО.
+					После согласования названий доменов и получения подтверждения о готовности лицензии, необходимо этот архив скачать, повторно и переустановить лицензию.</p>
+					<div class="callout callout-info">
+						<h4>В случае изменений</h4>
+						<p>В последней версии и последующих версиях возможно изменение структуры архива. В любом случае, правильное расположение
+						файла лицензии <code>/system/license/sllic.lic</code></p>
+					</div>
+					<div class="callout callout-danger">
+						<h4>Возможные ошибки</h4>
+						<p>Если Вы неправильно разместите файл <code>sllic.lic</code> или вообще забудете установить его, то с вероятностью 100% получите сообщение об ошибке: 
+						<span class="text-danger">Notice: Undefined variable: vendor in .....\www\admin\controller\module\attributico.php on line...</span></p>
+						<p>В том случае, когда Ваш домен не согласован с файлом лицензии, Вы можете использовать модуль в режиме view (просмотра). В этом случае рядом с названием и версией модуля будет
+						высвечиваться надпись (free). Например, <span> Attribut<b style="color: #2199C7;">&</b>co</span> v3.0.1 (free).</p>
+					</div>
+				</div>	
+				<!-- install -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="install">Установка, обновление, удаление модуля.</h1>
+					</div>
+					<p class="lead">Установка.</p>
+					<p>1. Распакуйте архив. Содержимое папки <code>upload.../</code>, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
+					<p>2. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> должен появиться модуль "Attribut&amp;co". Его необходимо установить. <button type="button" class="btn btn-success" data-toggle="tooltip" title="Установить">
+						<i class="fa fa-plus-circle"></i></button></p>
+					<p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установиить разрешения на просмотр и редактирование для <code>module/attributico</code></p>	
+					<p>4. Распакуйте архив <code>License.zip</code>. Содержимое папки, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
+					<p>5. В административной панели в разделе <mark><small>Дополнения ⇒ Установка дополнений</small></mark> загрузите файлы <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code>
+					  для магазинов второй версии (2.x) или <code>attributico.3.x.ocmod.zip</code> для магазинов третьей версии (3.x) из папки <code>ocmod</code>. Для магазинов версии 1.5.x скопируйте 
+					  папку <code>vqumod/</code> поверх структуры сайта. </p>	
+					<p>6. В административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> необходимо обновить модификаторы. <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить">
+						<i class="fa fa-refresh"></i></button>&nbsp;&nbsp;</p>
+					<p>После этого должен появиться пункт меню <mark><small>Каталог ⇒ Атрибуты ⇒ Attribut&amp;co.</small></mark></p>
+					<div class="callout callout-danger">
+						<h4>Внимание</h4>
+						<p>Если до этого Вы уже использовали модуль более ранних версий и устанавливали модификаторы непосредственно в папку <code>system</code>, необходимо их оттуда удалить.</p>
+						<p>Т.е. в папке <code>system</code> вашего сайта файлов <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code> быть не должно.</p>						
+					</div>
+					<div class="callout callout-warning">
+						<h4>Обязательно</h4>
+						<p>Очистите кэш магазина и браузера.</p>						
+					</div>
+					<div class="callout callout-info">
+						<h4>Некоторые особенности</h4>
+						<p>В некоторых версиях перевода вместо слова <mark>Дополнения</mark> присутствует слово <mark>Расширения.</mark></p>
+						<p>Для магазинов на движке 1.5.x процедура установки та же кроме пункта 3. Обновление модификаторов не требуется. Вместо кнопок надо использовать ссылки с 
+						соответствующими названиями.</p>
+					</div>					
+					<div class="callout callout-warning">
+						<h4>Возможные проблемы</h4>
+						<p>Данный модуль использует плагины <code>jQuery UI - v1.11.4 и jQuery UI context menu plugin - v1.7.0</code> Соответствующие файлы <code>jquery.ui-contextmenu.min.js и jquery.ui.min.js</code> находятся в папке
+						<code>upload/admin/view/javascript/jquery</code> Если аналогичные плагины уже установлены ранее, сравните версии. Если у вас используются старые версии, попробуйте их заменить на указанные выше. 
+						Проверьте работоспособность модулей, которые их используют. Если все нормально, то папку <code>upload/admin/view/javascript/jquery</code> копировать не надо. 
+						В основном это касается OpenCart 1.5.x, где используется <code>jQuery UI - v1.8</code> В процессе установки модуля эта версия будет заменена однозначно, иначе Attribut&amp;co работать не будет.</p>
+					</div>
+					<p class="lead">Обновление.</p>
+					<p>1. Обновление модуля не требует его удаления. После скачивания новой версии надо распаковать архив и содержимое папки <code>upload.../</code>, соответствующей вашей версии магазина из архива скопировать поверх структуры папок сайта.</p>
+					<p>2. Для магазинов версии 2.x и 3.x надо обязательно переустановить модификаторы <code>...ocmod.xml</code> или <code>...ocmod.zip</code> описанным выше способов, затем в административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> 
+					необходимо их обновить. <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить"><i class="fa fa-refresh"></i></button></p>
+					<p>3. Очистите кэш магазина и браузера.</p>
+					<p class="lead">Удаление.</p>
+					<p>1. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> напротив модуля "Attribut&amp;co" - кнопка "Удалить". <button type="button" class="btn btn-danger" data-toggle="tooltip" title="Установить">
+						<i class="fa fa-minus-circle"></i></button></p>
+					<p>2. Для магазинов версии 2.x из папки <code>/system</code> удалить файлы <code>attribut&amp;co.2.x.ocmod.xml, attribut&amp;co.2.3.ocmod.xml, attribut&amp;co.22.ocmod.xml, autocomplete.ocmod.xml</code>. 
+					Для магазинов версии 1.5.x из папки <code>/vqmod/xml</code> удалить файлы <code>attribut&amp;co1_5_x.xml, autocomplete.xml</code></p>
+					<p class="lead">База данных.</p>
+					<p>В процессе установки модуля в базе данных будет создана таблица <mark><small>"category_attribute"</small></mark> с полями <code>`category_id` INTEGER(11) NOT NULL</code> и <code>`attribute_id` INTEGER(11) NOT NULL.</code></p>
+					<p>Начиная с версии 2.0.1 в стандартной таблице OpenCart <mark><small>"attribute_description"</small></mark> создается дополнительное поле <code>`duty` TEXT NOT NULL</code> для хранения <span class="node">Дежурных шаблонов</span>.</p>
+					<p>В процессе удаления модуля все вышеперечисленные таблицы и поля удаляются.</p>
+				</div>
+				<!-- settings -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="settings">Настройка модуля.</h1>
+					</div>
+					<p>На вкладке "Настройки" (до версии 2.0.3 вкладка "Общие") есть возможность установить и сохранить некоторые опции, которые влияют на работу модуля.</p>						
+					<h3 class="lead" id="settings-main">Общие настройки.</h3>
+					<a class="lightgallery" href="/img/help/attributico/settings.jpg" title="Settings"><img src="/img/help/attributico/settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>				
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Пункт</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th class="im">Разделитель атрибутов</th>
+							  <td>Применяется если товар может иметь несколько разных значений одного и того же атрибута. Более подробно прочтите <a href="#using-theory">Немного теории</a>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Учитывать порядок сортировки</th>
+							  <td>При формировании деревьев будет учтен порядок сортировки, который установил пользователь. Если этот чекбокс не отмечен, будет сделана сортировка по алфавиту.</td>
+							</tr>
+							<tr>
+							  <th class="im">Смарт скроллинг</th>
+							  <td>Включает автопрокрутку узлов дерева внутри фиксированной видимой области. Удобно для больших магазинов при использовании Drag-and-Drop.</td>
+							</tr>
+							<tr>
+							  <th class="im">Показывать пустые значения</th>
+							  <td>Показывать или скрывать пустые значения атрибута или пустые шаблоны. О пустых значениях более подробно <a href="#tools-empty">Удалить пустые значения</a>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Товар в новом окне</th>
+							  <td>Открывать страницу (карточку) товара в новом окне. На вкладке <mark><small>Товары</small></a> по двойному клику на выбранном товаре есть возможность переадресации на карточку товара.</td>
+							</tr>
+							<tr>
+							  <th class="im">Ленивая загрузка</th>
+							  <td>Управление режимом загрузки деревьев. Если режим включен, то, как и раньше, дочерние узлы подгружаются по запросу. Если отключен, дерево грузится полностью. Более подробно в разделе <a href="#using-loading">Загрузка узлов</a>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Кэш деревьев атрибутов</th>
+							  <td>Управление режимом загрузки деревьев. Если режим включен, то при построении дерева атрибутов на различных вкладках, данные будут получены не из базы данных, а из кэш файла, соответствующего данному дереву.
+							  Дополнительно: <a href="#tools-cache">Очистить кэш деревьев</a>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Все магазины</th>
+							  <td>Управление списком категорий для мультимагазинов. Если режим включен, то в список категорий попадут категории всех магазинов, если отключен, то только категории магазина указанного в системных настройках.</td>
+							</tr>				
+						  </tbody>
+						</table>						
+					</div>
+					<div class="callout callout-info">
+						<h4>Изменить размеры скроллинга</h4>
+						<p>Высоту области прокрутки можно изменить. Для этого в файле <code>/admin/view/stylesheet/attributico.css</code> надо изменить свойство <code>.smart-scroll {height: 250px;}</code>.</p>
+					</div>
+					<div class="callout callout-danger">
+						<h4>Соблюдайте осторожность при открытии карточки товара в новом окне</h4>
+						<p>Когда Вы вносите изменения в карточке товара, эти изменения происходят непосредственно в БД. Attribut&amp;co "подхватит" эти изменения только в момент загрузки модуля. Если Вы переключитесь обратно
+						на страницу модуля без его перезагрузки, то Attribut&amp;co не будет "знать" о ваших изменениях. Продолжив работу с модулем, Вы рискуете нарушить целостность данных. Применяйте этот режим в крайних
+						случаях, например, когда важно видеть всю панораму <span class="node">Атрибутов</span>. В большинстве случаев достаточно ориентироваться на информационный баннер, где отражаются параметры <span class="node">Атрибута</span> 
+						и <span class="node">Группы</span> с которыми осуществлена переадресация на карточку товара.</p>
+					</div>
+					<h3 class="lead" id="settings-tree">Настройки деревьев.</h3>
+					<a class="lightgallery" href="/img/help/attributico/tree_settings.jpg" title="Settings"><img src="/img/help/attributico/tree_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>				
+					<p>Теперь есть возможность для каждого дерева сделать настройку дочерних узлов <span class="node">Атрибута</span>. Отметка чекбокса узла в делает его видимым в соответствующем дереве.
+					Обозначение деревьев можно посмотреть в разделе <a href="#using-terms">Термины и определения</a>.</p>
+					<h3 class="lead" id="settings-category">Добавление/удаление атрибутов категории.</h3>
+					<a class="lightgallery" href="/img/help/attributico/category_attribute_settings.jpg" title="Settings"><img src="/img/help/attributico/category_attribute_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>					
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Пункт</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th class="im">Добавлять атрибут категории в товары</th>
+							  <td>При добавлении нового <span class="node">Атрибута</span> в категорию, он будет автоматически добавлен во все товары этой категории. <span class="node">Значения</span> атрибута
+							  во всех товарах этой категории будут заполнены в соответствии с разделом "Добавление значений атрибута в товар".</td>
+							</tr>							
+							<tr>
+							  <th class="im">Удалять атрибут категории из товаров</th>
+							  <td>При удалении <span class="node">Атрибута</span> из категории, он будет автоматически удален из всех товаров этой категории.</td>
+							</tr>	
+						  </tbody>
+						</table>
+					</div>
+					<h3 class="lead" id="settings-inherit">Наследование.</h3>
+					<a class="lightgallery" href="/img/help/attributico/inherit_settings.jpg" title="Settings"><img src="/img/help/attributico/inherit_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Пункт</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th class="im">Добавлять во все подкатегории</th>
+							  <td>При добавлении нового <span class="node">Атрибута</span> в категорию, он будет рекурсивно добавлен во все дочерние категории (подкатегории).
+							  <span class="node">Значения</span> атрибута во всех товарах этих подкатегорий будут заполнены в соответствии с разделом "Добавление значений атрибута в товар".</td>
+							</tr>							
+							<tr>
+							  <th class="im">Удалять из всех подкатегорий</th>
+							  <td>При удалении <span class="node">Атрибута</span> из категории, он будет рекурсивно удален из всех подкатегорий а <span class="node">Значения</span> из всех товаров этих подкатегорий.</td>
+							</tr>
+							<tr>
+							  <th class="im">Автовыбор подкатегорий с учетом иерархии</th>
+							  <td>Рекурсивный выбор всех дочерних подкатегорий отмеченной категории. Если отмечены все дочерние категории, родительская отмечается автоматически.</td>
+							</tr>		
+						  </tbody>
+						</table>
+					</div>
+					<p>Алгоритм наследования требует некоторых пояснений. Первые два пункта настроек обеспечивают недостаточно гибкий алгоритм. Что делать, если не во все подкатегории требуется добавлять тот или иной атрибут?
+					Начиная с версии 2.1.0 появилась возможность отметить целевые подкатегории с помощью чекбоксов. Пока ничего не отмечено - действуют правила рекурсивного добавления/удаления 
+					(если отмечены первые два пункта). Если отмечена хотя бы одна категория - действие рекурсии отменяется. Т.е. отменяется действие первых двух пунктов. Все действия будут производится только с отмеченными категориями.</p>
+					<p>Впрочем, теперь даже без первых двух пунктов можно рекурсивно отметить все подкатегории кликнув на чекбокс родительской категории. Для этого пункт  
+					<span class="im">Автовыбор подкатегорий с учетом иерархии</span> должен быть отмечен (включен).</p>
+					<div class="callout callout-warning">
+						<h4>Обратите внимание</h4>
+						<p>При включенном режиме иерархии действует и обратное правило - при выборе всех дочерних, родительская выбирается автоматически. Или - при отмене хотя бы одной дочерней, 
+						родительская автоматически отменяется.</p>
+					</div>
+					<p>Учитывая сказанное выше, если не нужна рекурсия, если не нужна иерархия, а нужен произвольный набор категорий, то режим <span class="im">Автовыбор подкатегорий с учетом иерархии</span> 
+					надо отключить. Для оперативного управления этим режимом в дереве <span class="tree">Категории</span> в контекстном меню, <span class="im">Настройки</span> есть пункт <span class="im">Учитывать иерархию</span>.</p>
+					<ul id="gallery_0" class="list-unstyled row">
+					    <li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/hier_category.jpg" title="Hierarchical multi-selection"><img src="/img/help/attributico/hier_category.jpg" alt="Tree1" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/hier_operative.jpg" title="Hierarchical operate"><img src="/img/help/attributico/hier_operative.jpg" alt="Tree2" class="img-thumbnail img-responsive mrb15"></a>
+						</li>						
+					</ul>
+					<div class="callout callout-warning">
+						<h4>Очень важно</h4>
+						<p>Действия всегда выполняются по отношению к целевой категории независимо от того, отмечена она или нет. Целевая - это та категория, куда вы
+						перетаскиваете атрибут с помощью Drag-and-Drop или Copy-Paste, которая в результате откроется в дереве справа со всеми своими <span class="node">Атрибутами категории</span>.</p>
+					</div>	
+					<h3 class="lead" id="settings-product">Добавление значений атрибута в товар.</h3>
+					<a class="lightgallery" href="/img/help/attributico/product_settings.jpg" title="Settings"><img src="/img/help/attributico/product_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Пункт</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>							
+							<tr>
+							  <th class="im">Значения атрибутов</th>
+							  <td>Этот пункт задает <mark><small>алгоритм</small></mark> действий со <span class="node">Значениями</span> атрибута в момент добавления <span class="node">Атрибута</span> в категрию.</td>
+							</tr>
+							<tr>
+							  <th><code>Обновлять</code></th>
+							  <td> При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span>  атрибута будут очищены.</td>
+							</tr>
+							<tr>
+							  <th><code>Оставлять</code></th>
+							  <td>При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения атрибута</span>, если они уже есть в товарах, останутся без изменений.</td>
+							</tr>
+							<tr>
+							  <th><code>Подставлять дежурный шаблон</code></th>
+							  <td> При добавлении  <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span>  атрибута в товарах этой категории, будут заменены дежурным шаблоном, если
+							  сам этот шаблон не пустой.</td>
+							</tr>
+							<tr>
+							  <th><code>Подставлять дежурный только в пустые</code></th>
+							  <td>При добавлении <span class="node">Атрибута</span> в категорию, пустые <span class="node">Значения</span>  атрибута в товарах этой категории, будут заменены дежурным шаблоном, 
+							  если сам этот шаблон не пустой, непустые <span class="node">Значения</span>  атрибута останутся без изменений.</td>
+							</tr>							
+						  </tbody>
+						</table>
+					</div>
+					<div class="callout callout-info">
+						<h4>Ручной ввод.</h4>
+						<p>По точно такому же <mark><small>алгоритму</small></mark>, значения атрибутов будут изменяться при "ручном" редактировании карточки товара. Например, отметка
+						пункта "Показывать в категории" на вкладке "Связи" приведет к добавлению в этот товар всех атрибутов данной категории, а в поле "Текст" (значения) подставится
+						дежурный шаблон.</p>
+					</div>
+					<div class="callout callout-warning">
+						<h4>Внимание!</h4>
+						<p>При отключенном пункте <span class="im">Добавлять атрибут категории в товары</span>, дежурные шаблоны не работают.</p>
+					</div>
+				</div>				
+				<!-- using-->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="using">Работа с модулем.</h1>
+					</div>
+					<h3 id="using-theory">Немного теории.</h3>
+					<p>Что такое атрибуты и чем они отличаются, например, от опций, Вы можете прочитать в интернете. Информации достаточно, например, <a href="http://docs.myopencart.com/index.php?title=%D0%90%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B" target="blanc">здесь</a> 
+					или <a href="http://bono-idea.com/blog/instrukciya-po-rabote-s-opciyami-i-atributami-v-OpenCart-2/" target="blanc">здесь</a>. Если коротко, то это характеристики, которые позволяют
+					систематизировать товары, сравнивать товары, делать поиск или выборки с помощью фильтров.</p>
+					<p>В OpenCart принята следующая структура атрибутов:</p>
+					<pre><code>
+Группа атрибутов
+    └── Атрибут        
+					</code></pre>
+                    <p>Значение атрибута относится к конкретному товару:</p>
+					<pre><code>
+Товар
+  ├── Ссылка на атрибут
+  └── Значение атрибута
+					</code></pre>										
+					<p>Так вот, все, перечисленные выше, задачи выполняются анализируя именно значения атрибутов. Т.е. если Вы добавите атрибут в товар, но не впишите его значение,
+					то анализировать будет нечего.</p>
+					<p>Любой товар может иметь несколько атрибутов. Любой атрибут может иметь несколько значений. Значение атрибута это, на самом деле, текстовое поле, куда через разделитель
+					можно вписать несколько значений.</p>
+					<p>Модуль Attribut&amp;co (визуально) приводит структуру атрибутов и значений к удобному виду и представляет эту структуру в виде дерева.</p>
+					<pre><code>
+Группа атрибутов
+    └── Атрибут 
+          └── Значение(список значений) атрибута
+		  			</code></pre>
+					<p>Понятие <mark><small>Группа атрибутов</small></mark> используется только для систематизации самих атрибутов. Товары же систематизируются по категориям. Поэтому, кажется
+					логичным, сделать привязку определенного списка атрибутов с их значениями к определенной категории. Идея эта не нова и используется многими модулями, но именно эта идея 
+					лежит в основе работы данного модуля.</p>
+					<pre><code>
+Категория товаров
+    └── Атрибут 
+          └── Значение(список значений) атрибута
+		  			</code></pre>
+					<h3 id="using-terms">Термины и определения.</h3>
+                    <div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Термин</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th class="node">Разделитель атрибутов</th>
+							  <td>Точнее было бы название <span class="node">Разделитель значений атрибутов</span>. Повторимся, что у товара может быть несколько атрибутов и несколько значений
+							  атрибутов. Значение записывается в поле типа <code>TEXT</code> в Базе Данных. Чтобы отделить одно значение от другого используется разделитель. Как правило это
+							  <code>"/"</code> или <code>":"</code> или <code>";"</code> Современные фильтры, например filterpro, умеют разбирать такие конструкции.</td>
+							</tr>
+							<tr>
+							  <th class="node">Группа</th>
+							  <td>Группа <span class="node">Атрибутов</span> используется для систематизации самих <span class="node">Атрибутов</span>.</td>
+							</tr>
+							<tr>
+							  <th class="node">Атрибут</th>
+							  <td>Собственно <span class="node">Атрибут</span> или характеристика товара.</td>
+							</tr>
+							<tr>
+							  <th class="node">Атрибут категории</th>
+							  <td><span class="node">Атрибут</span>, поставленный в соответствие какой-либо категории. <span class="node">Атрибут</span> может быть поставлен в сотответствие
+							  нескольким категориям. Категория может иметь сопоставление с несколькими <span class="node">Атрибутами</span>. Т.е. когда мы говорим <span class="node">Атрибуты категории</span>, то 
+							  имеем ввиду список <span class="node">Атрибутов</span>, сопоставленных ("принадлежащих") категории.</td>
+							</tr>
+							<tr>
+							  <th class="node">Шаблон</th>
+							  <td>Список <span class="node">Значений</span> <span class="node">Атрибута</span> через разделитель. Т.е. запись типа <code>Значение1/Значение2/Значение3</code></td>
+							</tr>
+							<tr>
+							<tr>
+							  <th class="node">Значение</th>
+							  <td>Одиночное значение <span class="node">Атрибута</span>, выделенное из <span class="node">Шаблона</span>. Часто <span class="node">Шаблон</span> состоит из единственного <span class="node">Значения</span></td>
+							</tr>							
+							<tr>
+							  <th class="node">Дежурный шаблон</th>
+							  <td>Это <span class="node">Шаблон</span>, который хранится "вместе" с <span class="node">Атрибутом</span>, содержит часто используемый набор <span class="node">Значений</span> 
+							  и может быть автоматически "присвоен" товару в соответствии с <a href="#settings-product"><mark><small>алгоритмом</small></mark></a>, заданным в настройках.</td>
+							</tr>	
+						  </tbody>
+						</table>
+					</div>
+					<p class="lead">Обозначение деревьев.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-1">
+							<col class="col-xs-1">
+							<col class="col-xs-1">
+							<col class="col-xs-4">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>№</th>
+							  <th>Вкладка</th>
+							  <th>Название</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>1</td>
+							  <td>Атрибуты</td>
+							  <th class="tree">Группы атрибутов</th>
+							  <td>Основное дерево, где можно производить все манипуляции с <span class="node">Группами</span>, <span class="node">Атрибутами</span> и <span class="node">Значениями</span> - редактирование, сортировку, поиск, 
+							  удаление, добавление.</td>
+							</tr>
+							<tr>
+							  <td>2</td>
+							  <td>Дежурные шаблоны</td>
+							  <th class="tree">Дежурные шаблоны</th>
+							  <td>Дерево для работы с <span class="node">Дежурными шаблонами</span>. Редактирование, поиск.</td>
+							</tr>	
+							<tr>
+							  <td>3</td>
+							  <td>Атрибуты категорий</td>
+							  <th class="tree">Категории</th>
+							  <td>Структура категорий, показанная в виде дерева. </td>
+							</tr>
+							<tr>
+							<tr>
+							  <td>4</td>
+							  <td>Атрибуты категорий</td>
+							  <th class="tree">Атрибуты</th>
+							  <td>Дерево, аналогичное <span class="tree">Группы атрибутов</span>, служит для перетаскивания из него выбранного атрибута в нужную категорию с помощью технологии Drag-and-Drop либо копирования с помощью 
+							  Copy-Paste. Желательно в структуру включать дочерние <span class="node">Дежурные шаблоны</span>, чтобы напомнить, при добавлении <span class="node">Атрибута</span> в категорию, какие <span class="node">Значения</span>
+							  добавятся в товар.</td>
+							</tr>
+                            <tr>
+							  <td>5</td>
+							  <td>Атрибуты категорий</td>
+							  <th class="tree">Атрибуты категорий</th>
+							  <td>Дерево, которое показывает категорию со всеми приписанными ей <span class="node">Атрибутами</span> и их <span class="node">Шаблонами</span> и <span class="node">Значениями</span>. 
+							  Здесь возможно добавить или удалить атрибуты.</td>
+							</tr>
+							<tr>
+							  <td>6</td>
+							  <td>Товары</td>
+							  <th class="tree">Атрибуты товаров</th>
+							  <td>Дерево, аналогичное <span class="tree">Группы атрибутов</span>, служит для выбора <span class="node">Атрибута</span>, <span class="node">Шаблона</span> или <span class="node">Значения</span> и фильтрации товаров по 
+							  выбранному.</td>
+							</tr>
+							<tr>
+							  <td>7</td>
+							  <td>Товары</td>
+							  <th class="tree">Товары</th>
+							  <td>Дерево, где отображаются товары для выбранного <span class="node">Атрибута</span>, <span class="node">Шаблона</span> или <span class="node">Значения</span>. Справа от наименования товара, в скобках выводится id товара
+							  в БД и модель. Двойной клик по выбранному товару переадресует на карточку товара.</td>
+							</tr>
+							<tr>
+							  <td></td>
+							  <td>Любая</td>
+							  <th class="tree">Узел</th>
+							  <td><span class="tree">Узел</span> это по сути элемент дерева. Любое дерево состоит из <span class="tree">Узлов</span>. <span class="tree">Узлы</span> отображаются в виде папок либо других значков. Могут иметь текстовое название, могут быть 
+							  пустыми.</td>
+							</tr>
+						  </tbody>
+						</table>						
+					</div>
+					<p class="lead">Принцип фильтрации товаров.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>							
+							<col class="col-xs-1">
+							<col class="col-xs-4">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Выбрано</th>
+							  <th>Соответствие товаров</th>							  
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>							  
+							  <th class="node">Атрибут</th>
+							  <td>Все товары, где есть данный <span class="node">Атрибут</span>. Выборка происходит по id, а не по наименованию, поэтому, если в другой <span class="node">Группе</span> будет <span class="node">Атрибут</span>
+							  с таким же наименованием, товары, ему соответствующие, в выборку не попадут.</td>
+							</tr>
+							<tr>							 
+							  <th class="node">Шаблон</th>
+							  <td>Все товары, где есть родительский <span class="node">Атрибут</span> и поле, содержащее характеристики товара точно совпадает с выбранным <span class="node">Шаблоном</span>.</td>
+							</tr>	
+							<tr>							  
+							  <th class="node">Значение</th>
+							  <td>Все товары, где есть родительский <span class="node">Атрибут</span> и поле характеристик товара содержит выбранное <span class="node">Значение</span> . </td>
+							</tr>							
+						  </tbody>
+						</table>						
+					</div>
+					<ul id="gallery_1" class="list-unstyled row">
+					    <li class="col-xs-6 col-md-3">
+							<a class="lg-item" href="/img/help/attributico/tree1.png" title="Attribute group"><img src="/img/help/attributico/tree1.png" alt="Tree1" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-3">
+							<a class="lg-item" href="/img/help/attributico/tree2.png" title="Duty templates"><img src="/img/help/attributico/tree2.png" alt="Tree2" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-3">
+							<a class="lg-item" href="/img/help/attributico/tree3.png" title="Attribute category"><img src="/img/help/attributico/tree3.png" alt="Tree3" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-3">
+							<a class="lg-item" href="/img/help/attributico/tree4.png" title="Products"><img src="/img/help/attributico/tree4.png" alt="Tree3" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+					</ul>
+					<h3 id="using-loading">Загрузка узлов.</h3>
+					<p>Медленная загрузка деревьев может свести на нет все усилия по облегчению работы с атрибутами. Поэтому, для дочерних узлов, таких как <span class="node">Шаблоны</span> и <span class="node">Значения</span>
+					используется, так называемая, ленивая (lazy) загрузка. Эти узлы не загружаются в момент загрузки дерева, а подгружаются по мере обращения к ним, т.е. по запросу. Вот почему при двойном клике на узел <span class="tree">Шаблоны</span>
+					или <span class="tree">Значения</span> прежде, чем откроется этот узел, приходится наблюдать индикатор загрузки <img src="/img/loading_ajax.gif" alt="loading">.</p>
+					<p>Такая загрузка узлов дает существеный выигрыш при загрузке деревьев и их перезагрузки во время синхронизации, но накладывает особенности на работу фильтра. Т.к. при выполнении
+					поиска фильтру приходится делать обход всего дерева и принудительно открывать все узлы, то поиск, во-первых, происходит медленно, во-вторых, некорректно работает счетчик найденных совпадений.
+					Однако если запустить поиск повторно, то все происходит быстро и считается правильно, т.к. все узлы уже открыты.</p>
+					<p>Для открытия узлов используются ajax-запросы, каждый из которых вносит задержку до 1 секунды. Испытания на большом количестве атрибутов показали, что часто происходит зависание.</p>
+					<p>Начиная с версии 2.1.4 появилась возможность управлять режимом загрузки. Либо в настройках, либо через контекстное меню, можно включить или отключить режим ленивой загрузки. Если этот режим отключен,
+					все узлы дерева загружаются полностью. Отпадает необходимость делать обход дерева и догружать узлы, что многократно ускоряет поиск.</p>
+					<p>Таким образом, если предполагается активное использование поиска, то лучше перезагрузить деревья, отключив ленивую загрузку.</p>
+					<p>Поскольку загрузка узлов производится с помощью асинхронных ajax запросов, иногда в консоли можно увидеть сообщения типа <small>FancytreeNode(#attribute_393, 'New attribute') scrollIntoView(): node is invisible.</small> 
+					Это означает, что данные ajax запроса не успели загрузиться до начала их использования. Особенно это проявляется на медленных серверах. Ничего страшного, на результаты работы модуля это не влияет, 
+					но стимулирует на совершенствование алгоритма.</p> 
+					<h3 id="using-synchro">Мультиязычность и синхронизация.</h3>
+					<p>Поскольку модуль является мультиязычным, то для каждого языка будут создаваться свои деревья. Для удобства к обозначениям деревьев будем прибавлять языковую приставку <span class="tree">.ru</span> 
+					или <span class="tree">.en</span> там, где это необходимо для объяснения. Для сохраниния целостности БД применяется синхронизация между деревьями. Например, при добавлении нового <span class="node">Атрибута</span> в 
+					<span class="tree">Группы атрибутов.ru</span>, в дерево <span class="tree">Группы атрибутов.en</span> синхронно добавится новый <span class="node">Атрибут</span> с названием "New attribute".
+					То же самое касается <span class="node">Групп</span> атрибутов. А вот <span class="node">Шаблоны</span>, <span class="node">Значения</span> и <span class="node">Дежурные шаблоны</span> синхронно не добавляются.</p>
+					<p>Синхронизация происходит так же при редактировании <span class="node">Групп</span>, <span class="node">Атрибутов</span>, <span class="node">Шаблонов</span>, <span class="node">Значений</span>. 
+					Во всех деревьях, где присутствует изменяемый <span class="tree">Узел</span>, изменения происходят синхронно и в соответсвии с выбранным языком.</p>
+					<h3 id="using-edit">Редактирование.</h3>
+					<p>Редактирование данных происходит в каждом дереве и для каждого языка отдельно. При необходимости обеспечения целостности данных срабатывает синхронизация.</p>
+					<p>Для активизации какого либо элемента дерева необходимо сделать <kbd>Click</kbd> на этом элементе левой кнопкой мышки.</p>
+					<p>Для развертывания (раскрытия) какого либо элемента дерева необходимо сделать двойной <kbd>Click</kbd> на этом элементе левой кнопкой мышки.</p>
+					<p class="lead">Контекстное меню.</p>					
+					<p>Дейтствия, которые можно осуществлять по отношению к <span class="tree">Узлам</span> конкретного дерева отражены в контекстном меню. Контекстное меню индивидуально для каждого дерева.
+					Вызывается контекстное меню правой кнопкой мышки (Курсор должен находиться на узле дерева). Разрешенные для узла действия будут активными в контекстном меню. Действие можно вызвать и 
+					по сочетанию "горячих" клавиш.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-1">
+							<col class="col-xs-1">
+							<col class="col-xs-1">
+							<col class="col-xs-4">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th></th>
+							  <th>Действие</th>
+							  <th>Горячие клавиши</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td><i class="fa fa-pencil"></i></td>
+							  <td>Редактировать</td>
+							  <th><kbd>Shift + Click</kbd></th>
+							  <td>Включается режим однострочного редактора. Можно редактировать любой <span class="tree">Узел</span>.</td>
+							</tr>
+							<tr>
+							  <td><i class="fa fa-trash"></i></td>
+							  <td>Удалить</td>
+							  <th><kbd>Del</kbd></th>
+							  <td>Удаляется выбранный <span class="tree">Узел</span> или группа <span class="tree">Узлов</span> дерева.</td>
+							</tr>	
+							<tr>
+							  <td><i class="fa fa-copy"></i></td>
+							  <td>Копировать</td>
+							  <th><kbd>Ctrl + c</kbd></th>
+							  <td>Выбранный <span class="tree">Узел</span> копируется в буфер. Его можно вставить в нужное место. </td>
+							</tr>
+							<tr>
+							<tr>
+							  <td><i class="fa fa-paste"></i></td>
+							  <td>Вставить</td>
+							  <th><kbd>Ctrl + v</kbd></th>
+							  <td>Вставка <span class="tree">Узла</span> находящегося в буфере.</td>
+							</tr>
+                            <tr>
+							  <td><i class="fa fa-folder-open"></i></td>
+							  <td>Развернуть</td>
+							  <th><kbd>Ctrl + b</kbd></th>
+							  <td>В зависимости от выбранного режима сворачивания/разворачивания развернет (раскроет) дерево.</td>
+							</tr>
+							<tr>
+							  <td><i class="fa fa-folder"></i></td>
+							  <td>Свернуть</td>
+							  <th><kbd>Ctrl + b</kbd></th>
+							  <td>В зависимости от выбранного режима сворачивания/разворачивания свернет (закроет) дерево.</td>
+							</tr>
+							<tr>
+							  <td><i class="fa fa-gear"></i></td>
+							  <td>Настройки</td>
+							  <th></th>
+							  <td>Будет вызвано диалоговое меню настроек для данного дерева. Можно управлять "Порядком сортировки" и режимом сворачивания/разворачивания дерева.</td>
+							</tr>
+							<tr>
+							  <td><i class="fa fa-plus"></i></td>
+							  <td>Новая группа</td>
+							  <th><kbd>Ctrl + m</kbd></th>
+							  <td>Добавится новая <span class="node">Группа</span> и включится однострочный редактор. Синхронно добавится во все деревья.</td>
+							</tr>
+							<tr>
+							  <td><span class="ui-icon ui-icon-arrowreturn-1-e"></span></td>
+							  <td>Новый атрибут</td>
+							  <th><kbd>Ctrl + q</kbd></th>
+							  <td>В выбранную <span class="node">Группу</span> добавится новый <span class="node">Атрибут</span> и включится однострочный редактор. Синхронно добавится во все деревья.</td>
+							</tr>
+						  </tbody>
+						</table>						
+					</div>
+					<p class="lead">Диалоговое меню.</p>
+					<p>Если в <mark><small>Контекстном меню</small></mark> выбрать пункт "Настройки", то появится диалоговое окно управления деревом.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Пункт</th>
+							  <th>Назначение</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>Автоматически сворачивать</td>
+							  <td>По умолчанию - включено, значит при разворачивании какого либо элемента дерева, ближайшие родственные элементы (элементы того же уровня)
+							  будут сворачиваться. Это сделано, чтоб не загромождать экран информацией. Но иногда требуется видеть сразу несколько развернутых элементов,
+							  тогда следует этот пункт отключить. В зависимости от этого работают пункты <mark><small>Контекстного меню</small></mark> "Развернуть" и "Свернуть"</td>
+							</tr>
+							<tr>
+							  <td>Порядок сортировки</td>
+							  <td>Позволяет временно отключить порядок сортировки в конкретном дереве. При отключенном пункте все сортируется по алфавиту.</td>
+							</tr>
+							<tr>
+							  <td>Учитывать иерархию</td>
+							  <td>Работает только в дереве категорий. Для оперативного управления рекурсивным выбором подкатегорий.</td>
+							</tr>			
+						  </tbody>
+						</table>
+					</div>
+					<h3 id="using-dnd">Drag-and-Drop технологии.</h3>
+					<p>Даже ради этого стоит использовать Attribut&amp;co. Насколько удобней например, перетащить мышкой <span class="node">Атрибут</span> из <span class="node">Группы</span> в <span class="node">Группу</span>
+					, чем открывать формы, в одной форме добалять в другой форме удалять название новой <span class="node">Группы</span>. В общем возможности d&d технологии можно описать так:</p>
+					<ul>
+						<li>Перетаcкивание <span class="tree">Узлов</span> внутри одного дерева</li>
+						<li>Перетаcкивание <span class="tree">Узлов</span> между деревьями</li>						
+					</ul>
+					<p>Применительно к нашим задачам:</p>
+					<ul>
+						<li>Изменение <span class="node">Группы</span> у <span class="node">Атрибута</span></li>
+						<li>Сортировка <span class="node">Групп</span></li>
+						<li>Сортировка <span class="node">Атрибутов</span> внутри <span class="node">Группы</span></li>
+						<li>Добавление <span class="node">Атрибута</span> в категорию</li>
+						<li>Изменение категории у <span class="node">Атрибута</span></li>
+						<li>Слияние <span class="node">Атрибутов</span> (объединение) без потери <span class="node">Значений</span> и связей;</li>
+					</ul>
+					<p>Как это работает можно увидеть в разделе <a href="#using-example">Примеры</a>.</p>
+					<h3 id="using-select">Мультиселект.</h3>
+					<p>Все операции Drag-and-Drop, а так же Copy-Paste можно выполнять не только над одним <span class="tree">Узлом</span>, но и над несколькими
+					<span class="tree">Узлами</span> одновременно. Для того, чтобы выделить несколько <span class="tree">Узлов</span>, кликайте по этим <span class="tree">Узлам</span> 
+					левй кнопкой мышки одновременно с клавишей "Ctrl". Т.е. <kbd>Ctrl + Click </kbd>. Чтобы обезопасить пользователя от ошибок, в модуле предусмотрен <code>selectcontrol</code>. 
+					Поэтому, например, вы не сможете одновременно выбрать и <span class="node">Группы</span>  и <span class="node">Атрибуты</span>.</p>
+					<h3 id="using-merge">Слияние атрибутов.</h3>
+					<p>Всем знакомая картина, когда <span class="node">Атрибуты</span> с разными названиями несут одну и ту же смысловую нагрузку. Например, "Страна производитель", "Производитель" и
+					"Страна производства" это, скорее всего, один и тот же <span class="node">Атрибут</span>, который логично объединить под одним названием, допустим "Страна производитель".
+					Некоторые называют такое сопоставление "неявными дублями". Объединить "неявные дубли" в автоматическом режиме невозможно, поэтому придется делать это вручную. Но облегчит нам работу
+					технология Drag-and-Drop.</p>
+					<p>Если перетащить один узел в другой с помошью Drag-and-Drop и одновременно нажатой клавишей "Ctrl", то произойдет слияние перетаскиваемого <span class="tree">Узла</span> с целевым.
+					Если просто перетаскивать <span class="tree">Узлы</span> без "Ctrl", то будет выполняться задача сортировки или смены <span class="node">Группы</span>. Таким образом <kbd>Ctrl + Drag-and-Drop</kbd> 
+					- слияние <span class="node">Атрибутов</span>.</p>
+					<p>Возникает резонный вопрос - а что происходит при слиянии <span class="node">Атрибутов</span> с их <span class="node">Значениями</span>? Операция слияния проходит без потери связей
+					с товарами или категориями, поэтому <span class="node">Значения</span> тоже никуда не теряются. В случае, когда один и тот же товар связан и с целевым и с объединяемым <span class="node">Атрибутом</span>,
+					<span class="node">Значения</span> объединяемого добавляются к целевому. Например, <span class="node">Значения</span> целевого <span class="node">Атрибута</span> были "Россия/Франция"
+					после слияния станут "Россия/Франция/Германия". Новое значение добавляется через разделитель. Если товары не связаны с целевым <span class="node">Атрибутом</span>, то просто меняется связь с объединяемого на
+					целевой. Для наглядности желательно посмотреть <a href="#using-example">видеопример</a>.</p>
+					<p>Можно провести слияние сразу нескольких <span class="node">Атрибутов</span> с целевым. Для этого используйте <a href="#using-select">мультиселект</a>. Разрешено слияние <span class="node">Атрибутов</span>
+					из разных <span class="node">Групп</span>.</p>
+					<p>Возможно делать слияние <span class="node">Групп</span>. В этом случае все <span class="node">Атрибуты</span> выбранной <span class="node">Группы</span> будут перемещены
+					в целевую, а выбранная <span class="node">Группа</span> (список <span class="node">Групп</span>) будет удалена.</p>
+					<div class="callout callout-danger">
+						<h4>Не забывайте!</h4>
+						<p>В результате выполнения операции слияния, <span class="tree">Узлы</span>, отмеченные как объединяемые, будут удалены без возможности восстановления. Спасет только резервная
+						копия базы данных.</p>
+					</div>
+					<h3 id="using-search">Фильтр.</h3>
+					<p>Какие наши действия при обнаружении ошибок в <span class="node">Атрибутах</span> или, что гораздо хуже в <span class="node">Значениях</span>? Кто виноват и что делать?
+					Отловить товары где есть ошибка, например с помощью filterpro. Зайти в каждый товар и исправить. Ну представьте, что вы пропустили одну букву, 
+					а товаров, подлежащих исправлению, допустим 50. Так вот, Фильтр, позволит найти искомое в дереве. Причем неважно <span class="node">Группа</span> это <span class="node">Атрибут</span> 
+					или <span class="node">Значение</span>. Исправить можно здесь же.</p>
+					<p class="lead">Опции фильтра.</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-6">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>Опция</th>
+							  <th>Описание</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th class="im">Только Атрибуты</th>
+							  <td>Поиск будет осуществляться только в <span class="node">Атрибутах</span>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Только Значения</th>
+							  <td>Поиск будет осуществляться только в <span class="node">Шаблонах</span> и <span class="node">Значениях</span>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Скрыть несовпадения</th>
+							  <td><span class="tree">Узлы</span>, в которых не найдено совпадений, будут скрыты.</td>
+							</tr>							
+							<tr>
+							  <th class="im">автоРазвернуть</th>
+							  <td> Автоматически раскрывает <span class="tree">Узлы</span>, в которых найдены совпадения. Зависит от состояния пункта диалогового меню
+							  <span class="im">Автоматически сворачивать</span>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Счетчики узлов</th>
+							  <td>Показывает в скольки <span class="tree">Узлах</span> есть вхождения поискового запроса.</td>
+							</tr>
+							<tr>
+							  <th class="im">Счетчики раскрытых</th>
+							  <td> Скрывает счетчики с раскрытых <span class="tree">Узлов</span>.</td>
+							</tr>
+							<tr>
+							  <th class="im">Выделить</th>
+							  <td>Найденное будет подсвечено желтым цветом.</td>
+							</tr>
+							<tr>
+							  <th class="im">Примерно</th>
+							  <td>Поиск по нечетким данным. Возможно по совпадению одиночных символов например, 'кп' будет найдено 'Компьютеры'.</td>
+							</tr>
+							<tr>
+							  <th class="im">Регулярное выражение</th>
+							  <td>Строка поиска задана с помощью регулярного выражения.</td>
+							</tr>		
+						  </tbody>
+						</table>
+					</div>
+					<div class="callout callout-info">
+						<h4>Счетчики узлов.</h4>
+						<p>Счетчики работают корректно только при отключении ленивой загрузки.</p>
+					</div>
+					<div class="callout callout-danger">
+						<h4>HTML.</h4>
+						<p>Фильтр не может работать должным образом, если заголовки <span class="tree">Узлов</span> содержат HTML - разметку..</p>
+					</div>
+					<div class="callout callout-warning">
+						<h4>Скорость поиска.</h4>
+						<p>Скорость поиска зависит от количества <span class="tree">Узлов</span> и текста в заголовках <span class="tree">Узлов</span>. На больших магазинах с большим количеством
+						<span class="node">Значений</span> работать может медленно. Скорость значительно увеличивается при отключенном режиме ленивой загрузки.</p>
+					</div>
+					<p>В версии 2.0.3 произошли некоторые полезные доработки фильтра. Для больших магазинов, где есть вероятность зависания фильтра, теперь есть возможность отключить автозаполнение.
+					Т.е. поиск не будет осуществляться по каждой введенной букве. После ввода целого слова или фразы можно будет запустить поиск нажатием на кнопку <button id="btnSearch" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>.</p>
+					<p>Поисковая строка фильтра теперь выглядит так:</p>
+					<div class="well well-lg">
+						<label class="control-label" for="search"> Фильтр:</label>
+						<input type="text" name="search" placeholder="Filter..."/>
+						<button id="btnResetSearch" type="button" class="btn btn-default">&times;</button>
+						<button id="btnSearch" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+						<div class="btn-group dropdown-events">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Выполнить <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a>Найти пустые</a></li>
+                                <li><a>Найти числовые</a></li>
+                                <li><a>Найти HTML теги</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a>Восстановить</a></li>
+                            </ul>                                             
+                        </div>
+                        <span id="tab-attribute_matches" class="badge"></span>
+                        <label class="checkbox-inline" for="autoComplete"><input type="checkbox" id="autoComplete" checked>Автозаполнение</label>
+						<label class="checkbox-inline" for="attributesOnly"><input type="checkbox" id="attributesOnly" checked>Только Атрибуты</label>
+						<label class="checkbox-inline" for="leavesOnly"><input type="checkbox" id="leavesOnly" checked>Только Значения</label>                        
+					</div>
+					<p>Кнопка поиска <button id="btnSearch" type="button" class="btn btn-default"><i class="fa fa-search"></i></button> становится доступной при отключенном автозаполнении.</p>
+					<p>Выпадающее меню с заголовком <span class="im">Выполнить</span> открывает список команд для поиска по наиболее популярным Регулярным Выражениям. Комманда 
+					<span class="im">Восстановить</span> очищает фильтр и восстанавливает состояние чекбоксов.</p>
+					<p>Отдельно стоит объяснить действие настроек <span class="im">Только Атрибуты</span> и <span class="im">Только Значения</span>. Точнее было бы назвать настройку 
+					<span class="im">Только Атрибуты</span> как <span class="im">Поиск только в загруженных узлах</span>. Для понимания определения <mark><small>загруженных узлов</small></mark>,
+					надо прочитать раздел <a href="#using-loading">Загрузка узлов</a>. Это означает, что поиск будет производиться в <span class="node">Атрибутах</span> и <span class="node">Группах</span>,
+					если до этого не были загружены дочерние узлы. Если до этого <span class="node">Шаблоны</span> или <span class="node">Значения</span> были загружены, то поиск будет производиться и в них тоже.</p>
+					<p>Поиск в режиме <span class="im">Только Значения</span> имеет более высокий приоритет, но он и является наиболее медленным, т.к. происходит обход и загрузка всех узлов дерева.</p>
+					<h3 id="using-example">Примеры.</h3>
+					<div id="example_1">
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/jBcowwJZlPY">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Редактирование Групп и Атрибутов</h4>
+								<p>Как добавить новую <span class="node">Группу</span>. Как добавить новый <span class="node">Атрибут</span>. Как изменить название добавленного или любого выбранного
+								<span class="tree">Узла</span>.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/CIi62QSyzgI">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Поиск с помощью фильтра</h4>
+								<p>Поиск <span class="node">Групп</span>, <span class="node">Атрибутов</span>, <span class="node">Значений</span> в дереве с помощью фильтра.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/_K9NL4JgAdw">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Редактирование Шаблонов и Значений</h4>
+								<p>Простое редактирование или исправление ошибок в <span class="node">Шаблоне</span> или в <span class="node">Значениях</span>.</p>
+							</div>
+						</div>
+						<div class="callout callout-info">
+							<h4>В чем разница?</h4>
+							<p>Если Вы вносите изменения в  <span class="node">Значение</span>, то изменения произойдут во всех товарах, где присутствуют это <span class="node">Значение</span>,
+							а значит и во всех <span class="node">Шаблонах</span>. Т.е. если <span class="node">Значение</span> присуствует в нескольких <span class="node">Шаблонах</span>, то изменения
+							коснутся их всех. Если изменения делаются в <span class="node">Шаблоне</span>, то это касаются всех товаров, где присутствует данный <span class="node">Шаблон</span>, другие товары и 
+							<span class="node">Шаблоны</span> затронуты не будут. 
+						</div>	
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/q6OkGi1EM2s">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Копирование атрибута, смена группы</h4>
+								<p>Копирование <span class="node">Атрибута</span> одной <span class="node">Группы</span> в другую, смена <span class="node">Группы</span>.</p>
+							</div>
+						</div>
+						<div class="callout callout-info">
+							<h4>В чем разница?</h4>
+							<p>При копирование <span class="node">Атрибута</span> одной <span class="node">Группы</span> (источник) в другую (цель), и в источнике и в цели <span class="node">Атрибут</span>
+							сохраняется. <span class="node">Значения</span> и <span class="node">Шаблоны</span> в цели будут пустыми.</p>
+							<p>При Drag-and-Drop смене <span class="node">Группы</span>, <span class="node">Атрибут</span> переносится в цель со всеми <span class="node">Значениями</span> и <span class="node">Шаблонами</span>
+							Из источника <span class="node">Атрибут</span> удаляется полностью.</p>
+					    </div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/hZgMqECdXG0">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Drag-and-Drop сортировка</h4>
+								<p>Сортировка <span class="node">Групп</span>. Сортировка <span class="node">Атрибутов</span> внутри <span class="node">Группы</span>.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/a7PyVXJ7QhI">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Работа с атрибутами категорий</h4>
+								<p>Добавить <span class="node">Атрибут</span> в категорию. Сменить категорию. Добавить <span class="node">Атрибуты категории</span> в товар.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/FmB7abWi1O8">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Интеграция со страницей товара</h4>
+								<p>Добавить <span class="node">Атрибуты категории</span> в товар. Заполнить <span class="node">Значения</span>. Создать новые <span class="node">Шаблоны</span>.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/f6RILGD8yOI">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Дежурные шаблоны</h4>
+								<p>Редактировать <span class="node">Дежурные шаблоны</span>. Добавить <span class="node">Атрибуты</span> в категорию вместе <span class="node">Дежурными шаблонами</span>. Добавить 
+								<span class="node">Дежурные шаблоны</span> в товар в соответствии с <a href="#settings-product"><mark><small>алгоритмом</small></mark></a>.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/h7tRTcJLRhQ">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							  </div>
+							  <div class="media-body">
+								<h4 class="media-heading">Слияние атрибутов</h4>
+								<p>Слияние <span class="node">Атрибутов</span>. Объединение "неявных дублей". Без потери <span class="node">Значений</span> и связей с товаром.</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- integro -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="integro">Интеграция с OpenCart.</h1>
+					</div>
+					<h3 id="integro-product">Интеграция со страницей товара.</h3>					
+					<p>Интеграция модуля с движком OpenCart осуществляется с помощью файлов модификаторов <code>ocmod</code> или <code>vqmod</code>. Более подробно об этом
+					в разделе <a href="#whats-included">Структура архива</a>. Если модификация прошла корректно, в карточке товара должны появиться дополнительные кнопки управления	
+					<span class="btn-group"><button type="button" class="btn btn-default" ><i class="fa fa-th-list"></i> Шаблоны</button>
+					<button type="button" class="btn btn-default" ><i class="fa fa-th"></i> Значения</button></span>&nbsp;&nbsp;и поле выбора.</p>
+					<p>В зависимости от того, какая кнопка нажата, в поле выбора будут выводиться либо <span class="node">Шаблоны</span> либо <span class="node">Значения</span>.</p>
+					<div class="callout callout-info">
+						<h4>Новый шаблон.</h4>
+						<p>Новый шаблон всегда можно "накидать" из <span class="node">Значений</span>. Разделитель будет подставляться автоматически. Недостающие <span class="node">Значения</span>
+						надо будет вписать вручную.</p>
+					</div>
+					<p class="lead">Откуда берутся шаблоны.</p>
+					<p>Представим, что мы только начали работать с магазином. Создали несколько товаров, несколько <span class="node">Атрибутов</span>. Зайдя в карточку товара, на вкладку <mark><small>Атрибуты</small></mark>
+					мы увидим пустую страницу. Добавим <span class="node">Атрибут</span> и справа видим пустое текстовое поле. Чтобы появился хотя бы один <span class="node">Шаблон</span> надо что-то вписать в это поле. Точнее туда надо
+					вписать набор <span class="node">Значений</span>. Например <code>Дальность1/Дальность2/Дальность3</code>. После того, как Вы сохраните изменения и снова зайдете в карточку товара, то увидите, что справа появилось поле выбора и выбрать
+					возможно только одну запись. По мере накопления товаров и соответствующих им, заполненных, текстовых полей, список <span class="node">Шаблонов</span> пополняется.</p> 
+					<p>Напомню, что <span class="node">Значения</span> это "разобранные" по разделителю <span class="node">Шаблоны</span>.</p>
+					<p class="lead">Фильтр значений.</p>
+					<p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным. 
+					Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <span class="node">Дежурного шаблона.</span></p>
+					<div>
+					<label class="radio-inline">
+                            <input type="radio" name="filter-values" id="filter-nofilter" value="all" checked> Все
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="filter-values" id="filter-category" value="categories"> Категории
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="filter-values" id="filter-duty" value="duty"> Дежурные
+                        </label>
+                        <label class="radio-inline"></label>
+					</div>
+					<p></p>
+					<p>Фильтр работает в оперативном режиме, перезагрузка списка <span class="node">Значений</span> происходит сразу после переключения режима. На больших магазинах иногда заметны
+					задержки. Т.е. после переключения надо немного подождать.</p>	
+					<h3 id="integro-category">Интеграция со страницей категории.</h3>					
+					<p>На сегодняшний день сохраняется интеграция на уровне карточки категории. Там должна появиться вкладка <mark><small>Атрибуты</small></mark>. Можно добавить атрибут в категорию, можно удалить, нажав на значок -(минус).</p>
+					<div class="callout callout-warning">
+						<h4>Интеграция с категорией закончена.</h4>
+						<p>Надо иметь в виду, что <a href="#settings-product"><mark><small>алгоритм</small></mark></a> действий со <span class="node">Значениями</span> при этом не действует. Интеграция осталась "как есть" от предыдущих
+						версий и в будущих, скорее всего, будет упразднена. Для этого есть две причины. Во первых - дублируется функционал самого модуля, где более наглядно все это реализовано. 
+						Во вторых - это дополнительные модификации движка OpenCart и возрастает вероятность ошибок, конфликтов с другими модификаторами.</p>
+					</div>
+					<h3 id="integro-attribute">Поддержка атрибутов категории.</h3>					
+					<p>Интеграция со страницей товара позволяет так же немного автоматизировать "ручной" способ добавления <span class="node">Атрибутов категории</span> в товар. Поскольку мы привязали <span class="node">Атрибуты</span> к категории,
+					то должна быть возможность, в момент отнесения товара к какой либо категории, одновременно устанавливать связь этого товара с <span class="node">Атрибутами категории</span>. Физически это происходит, 
+					 когда отмечается чекбокс напротив категории или изменяется Главная категория на вкладке <mark><small>Связи</small></mark>. Для магазинов версии 2.2.x это момент выбра
+					 категории из списка. Добавление <span class="node">Атрибутов категории</span> в товар происходит в соответствии с <a href="#settings-product"><mark><small>алгоритмом</small></mark></a>, который обсуждался
+					 в разделе <a href="#settings">Настройки</a>.</p>
+					<p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a href="#using-example">Примеры</a>.</p>
+					<ul id="gallery_2" class="list-unstyled row">
+					    <li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/integro1.png" title="Integration OpenCart 2.x"><img src="/img/help/attributico/integro1.png" alt="Integro1" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/integro15.png" title="Integration OpenCart 1.5.x"><img src="/img/help/attributico/integro15.png" alt="Integro15" class="img-thumbnail img-responsive mrb15"></a>
+						</li>						
+						<li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/integro2.png" title="Integration OpenCart - links"><img src="/img/help/attributico/integro2.png" alt="Integro2" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<div class="clearfix"></div> 	
+						<li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/integro22.png" title="Integration OpenCart 2.2.x"><img src="/img/help/attributico/integro22.png" alt="Integro22" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-4">
+							<a class="lg-item" href="/img/help/attributico/integro_category.png" title="Integration OpenCart - category"><img src="/img/help/attributico/integro_category.png" alt="Integro_category" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+					</ul>					
+				</div>
+				<!-- tools -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="tools">Инструменты.</h1>
+					</div>
+					<div class="callout callout-danger">
+						<h4>Внимание!</h4>
+						<p>Перед применением любого инструмента за исключением очистки кэша, ОБЯЗАТЕЛЬНО сделайте резервную копию базы данных. Если операция прервется не завершившись, высока вероятность нарушения целостности данных.</p>						
+					</div>
+					<h3 id="tools-empty">Удалить пустые значения.</h3>					
+					<p>Пустые <span class="node">Значения</span> появляются в результате ошибок контент-менеджеров. Предлагаю два наиболее распространенных способа создать пустые <span class="node">Значения</span>. Первый: при ручном редактировании карточки
+					товара, нажать на кнопку "Сохранить" при добавленном <span class="node">Атрибуте</span>, но не вписанном <span class="node">Значении</span>. Второй: используя Attribut&amp;co, добавить <span class="node">Атрибут</span> с незаполненным 
+					<span class="node">Дежурным шаблоном</span> в категорию.</p>
+					<ul id="gallery_3" class="list-unstyled row">
+					    <li class="col-xs-6 col-md-6">
+							<a class="lg-item" href="/img/help/attributico/empty4.jpg" title="Empty values"><img src="/img/help/attributico/empty4.jpg" alt="Empty4" class="img-thumbnail img-responsive mrb15"></a>
+						</li>
+						<li class="col-xs-6 col-md-6">
+							<a class="lg-item" href="/img/help/attributico/empty5.jpg" title="Empty duty template"><img src="/img/help/attributico/empty5.jpg" alt="Empty5" class="img-thumbnail img-responsive mrb15"></a>
+						</li>						
+					</ul>
+					<p>В результате, гарантировано получите товар или все товары определенной категории с пустыми <span class="node">Значениями</span> атрибутов. Такие пустышки некрасиво выглядят в фильтре вашего магазина и вводят клиентов в заблуждение.</p>
+					<p>Чтобы не искать по всей БД товары с пустыми <span class="node">Значениями</span>, можно применять данный инструмент, который просто удалит ссылки на эти товары. Для запуска достаточно нажать на кнопку
+					<button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+					<p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+					<div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+					<p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+                    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено пустых значений: 48</div>	
+					<h3 id="tools-scavengery">Удалить ошибочные ссылки.</h3>
+					<p>Некоторые таблицы БД, которые создает модуль, не являются "родными" для OpenCart. Соответственно, стандартные средства движка не позволяют корректно изменять данные в этих таблицах.
+					Рекомендацию - работать только через Attribut&amp;co, некоторые пользователи игнорируют. Особенно ручное удаление приводит к появлению ссылок на несуществующие атрибуты. Визуально 
+					это отображается как <span class="bg-danger">Load error! (SyntaxError: Unexpected token < in JSON at position 0)</span>.</p>
+					<p>Чтобы проверить корректность таблиц БД, можно применять данный инструмент, который просто удалит ссылки на несуществующие атрибуты. Для запуска достаточно нажать на кнопку
+					<button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+					<p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+					<div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+					<p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+                    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено ошибочных ссылок: 0</div>	 	
+					<h3 id="tools-defrag">Дефрагментация атрибутов и групп.</h3>
+					<p>В процессе работы приходится удалять и добавлять <span class="node">Атрибуты</span> и <span class="node">Группы</span>. Особенность работы БД такова, что в таблицу записи добавляются по правилу автоинкремента.
+					В результате можем получить, например, такую таблицу:</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-2">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>attribute_group_id</th>
+							  <th>sort_order</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>7</td>
+							  <td>4</td>
+							</tr>
+							<tr>
+							  <td>8</td>
+							  <td>5</td>
+							</tr>
+							<tr>
+							  <td>12</td>
+							  <td>3</td>
+							</tr>							
+							<tr>
+							  <td>37</td>
+							  <td>2</td>
+							</tr>
+							<tr>
+							  <td>68</td>
+							  <td>1</td>
+							</tr>
+							<tr>
+							  <td>146</td>
+							  <td>9</td>
+							</tr>
+							<tr>
+							  <td>363</td>
+							  <td>7</td>
+							</tr>
+							<tr>
+							  <td>364</td>
+							  <td>6</td>
+							</tr>
+							<tr>
+							  <td>366</td>
+							  <td>8</td>
+							</tr>		
+						  </tbody>
+						</table>
+					</div>
+					<p>Нет ничего страшного в том, что между соседними записями есть большие "разрывы" в нумерации <code>attribute_group_id</code>. Неприятность заключается в том, что отсутствует <code>attribute_group_id = 1</code>
+					Дело в том, что модули автоматической загрузки прай-листов и модули парсинга используют именно <code>attribute_group_id = 1</code> для размещения всех  <span class="node">Атрибутов</span>.</p>
+					<p>Теперь хорошая новость для любителей парсинга и автоматической загрузки прайс-листов. Данный инструмент восстанавливает <code>attribute_group_id = 1</code> без ущерба целостности данных, т.е. приводит таблицу к
+					такому виду:</p>
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+						  <colgroup>
+							<col class="col-xs-2">
+							<col class="col-xs-2">
+						  </colgroup>
+						  <thead>
+							<tr>
+							  <th>attribute_group_id</th>
+							  <th>sort_order</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <td>1</td>
+							  <td>4</td>
+							</tr>
+							<tr>
+							  <td>2</td>
+							  <td>5</td>
+							</tr>
+							<tr>
+							  <td>3</td>
+							  <td>3</td>
+							</tr>							
+							<tr>
+							  <td>4</td>
+							  <td>2</td>
+							</tr>
+							<tr>
+							  <td>5</td>
+							  <td>1</td>
+							</tr>
+							<tr>
+							  <td>6</td>
+							  <td>9</td>
+							</tr>
+							<tr>
+							  <td>7</td>
+							  <td>7</td>
+							</tr>
+							<tr>
+							  <td>8</td>
+							  <td>6</td>
+							</tr>
+							<tr>
+							  <td>9</td>
+							  <td>8</td>
+							</tr>		
+						  </tbody>
+						</table>
+					</div>
+					<p>В дальнейшем <span class="node">Группу</span>, у которой <code>attribute_group_id = 1</code> будем называть <span class="node">Группа парсинга</span>.</p>
+					<p>Процесс дефрагментации может занять длительное время, особенно для магазинов с большим количеством атрибутов или товаров. Ведь изменения надо внести в каждый товар. При недостатке ресурсов на хостинге есть большая вероятность,
+					что операция может быть прервана по тайм-ауту. Для получения <span class="node">Группы парсинга</span> достаточно дефрагментировать только <span class="node">Группы</span>. Начиная с версии 2.1.7 есть возможность раздельной 
+					дефрагментации <span class="node">Групп</span> или <span class="node">Атрибутов</span>.</p>
+					<a class="lightgallery" href="/img/help/attributico/defrag.jpg" title="Defragmentation settings"><img src="/img/help/attributico/defrag.jpg" alt="Defragmentation settings" class="img-thumbnail img-responsive mrb15"></a>
+					<p>После того, как отметили <span class="node">Группы</span> или <span class="node">Атрибуты</span> для запуска задачи необходимо нажать кнопку					
+					<button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+					<p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+					<div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+					<p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+                    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Упорядочено групп: 9 Упорядочено атрибутов: 31 </div>					
+					<p>После того, как инструмент отработал, во всех деревьях должна появиться <span class="node">Группа парсинга</span> которая обозначается иконкой <img src="/img/home.png" alt="...">.
+					(Если не появилась иконка, то надо очистить кэш браузера).</p>
+					<p>Как быть если после дефрагментации появилвсь <span class="node">Группа парсинга</span> и она уже занята и содержит <span class="node">Атрибуты</span>, а для парсинга или загрузки
+					прайс-листа надо ее очистить? Ничего сложного. Надо создать новую одноименную группу, и с помощью Drag-and-drop технологии перетащить туда все атрибуты, а саму <span class="node">Группу парсинга</span>
+					переименовать. Для лучшего понимания - следующие видео:</p>
+					<div id="example_2">
+						<div class="media">
+							<div class="media-left">
+								<a class="lg-item" href="https://youtu.be/8OcO_4L7iBU">
+								  <img class="media-object" src="/img/video-play.png" alt="...">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Подготовка группы парсинга</h4>
+								<p>Дефрагментация <span class="node">Групп</span> и <span class="node">Атрибутов</span>. Подготовка <span class="node">Группы парсинга</span>.</p>
+							</div>
+						</div>
+					</div>
+					<h3 id="tools-detach">Удалить не связанные с товаром.</h3>	
+					<p>В результате парсинга, автоматической загрузки прайс-листов и других операций, часто появляются дубли <span class="node">Атрибутов</span> или <span class="node">Атрибуты</span>,
+					которые не принадлежат ни одному товару.</p>
+					<p>Сами по себе не связанные с товаром атрибуты никакого отрицательного влияния на работу магазина не оказывают. Возможно, незначительно замедляют поиск. Но если вы боретесь за порядок
+					и чистоту в рядах <span class="node">Атрибутов</span>, можете применять этот инструмент.</p>
+					<p>Прежде всего надо выбрать <span class="node">Группы</span>, отметив соответствующий чекбокс в дереве. Можно выбрать сразу все, отметив самый верхний.</p>
+					<a class="lightgallery" href="/img/help/attributico/detach.jpg" title="Detach & deduplicate"><img src="/img/help/attributico/detach.jpg" alt="Detach & deduplicate" class="img-thumbnail img-responsive mrb15"></a>
+					<p>После того, как отметили <span class="node">Группы</span> для запуска задачи необходимо нажать 
+					<button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+					<h3 id="tools-duplicate">Объединить дубли (beta).</h3>
+					<p>Причины появления дублей <span class="node">Атрибутов</span> как было в описании для предыдущего инструмента, появляются в результате парсинга, автоматической загрузки прайс-листов или ошибок контент-менеджеров.
+					Этот инструмент позволяет объединять дубли без потери связей с товаром и категорией. Действие производятся для отмеченных <span class="node">Групп</span>, как и в предыдущем случае.</p>					
+					<div class="callout callout-warning">
+						<h4>Используйте с осторожностью.</h4>
+						<p>Инструмент "Объединить дубли" пока работает в режиме beta-версии.</p>
+					</div>
+					<p>Как и в предыдущих случаях, для запуска достаточно нажать на кнопку
+					<button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+					<p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+					<div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+					<p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+					<div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено атрибутов: 0 </div>
+					<p>или</p>
+                    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Обработано дублей: 0 </div>
+					<h3 id="tools-category">Атрибуты категорий.</h3>
+					<p>Этот инструмент будет полезен тем, кто устанавливает модуль на рабочий магазин, особенно с большим количеством категорий и товаров, а так же для тех, кто занимается парсингом. Формирование <span class="node">Атрибутов категорий</span>
+					вручную, является трудоемким процессом, а при парсинге иногда неизвестно с какими <span class="node">Атрибутами</span> придет товар.</p>
+					<a class="lightgallery" href="/img/help/attributico/createcategory.jpg" title="Create category attributes"><img src="/img/help/attributico/createcategory.jpg" alt="Create category attributes" class="img-thumbnail img-responsive mrb15"></a>
+					<p>Инструмент выберет все <span class="node">Атрибуты</span> указанной вами категориии из всех товаров, принадлежащих этой категории и сгруппирует их в виде <span class="node">Атрибутов категории</span>.</p>
+					<div class="callout callout-warning">
+						<h4>Имейте в виду!</h4>
+						<p>Если товар принадлежит сразу нескольким категориям, то <span class="node">Атрибуты</span> всех этих категорий просуммируются для каждой из них. Приведите в порядок структуру категорий или не забудьте удалить ненужные атрибуты 
+						из категорий после выполнения задачи.</p>
+					</div>
+					<p>Если отмечен пункт <mark><small>Расставить атрибуты категории в товары</small></mark>, то будет выполнена так же задача добавления <span class="node">Атрибутов</span> и их <span class="node">Значений</span> во все товары выбранной категории.</p>
+					<p>Расстановка или добавление <span class="node">Атрибутов</span> и их <span class="node">Значений</span> в товары будет производится в соответствии с <a href="#settings-product"><mark><small>алгоритмом</small></mark></a>, указанными в настройках.</p>
+					<a class="lightgallery" href="/img/help/attributico/update_settings.jpg" title="Values update settings"><img src="/img/help/attributico/update_settings.jpg" alt="Values update settings" class="img-thumbnail img-responsive mrb15"></a>					
+					<p>Уместно заметить, что добавление <span class="node">Дежурных шаблонов</span> происходит только если сами <span class="node">Дежурные шаблоны</span> заполнены информацией. Поэтому, если вам необходимо добавить <span class="node">Атрибуты</span>
+					 даже с пустыми <span class="node">Значениями</span>, выберите пункт  <code>Оставлять</code>.</p>
+					<div class="callout callout-info">
+						<h4>Для больших магазинов.</h4>
+						<p>Не отмечайте сразу много категорий. Есть вероятность, что на хостинге есть ограничения на время выполнения скрипта. Высока вероятность прерывания сервером операции по тайм-ауту</p>
+					</div>
+					<p>При успеном выполнении задачи должно появиться соответсвующее сообщение.</p>
+					<div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Сформировано атрибутов категории: 12 Добавлено атрибутов в товары: 758</div>
+					<h3 id="tools-cache">Очистить кэш деревьев.</h3>
+					<p>В процессе эксплуатации модуля выяснилось, что на магазинах с большим количеством <span class="node">Атрибутов</span> деревья загружаются медленно. Поскольку синхронизация данных
+					заставляет перезагружать деревья при любом изменении данных, то работать становится трудно. Для ускорения загрузки деревьев начиная с версии 2.1.7 предусмотрен кэш. Деревья
+					кэшируются целиком. Если настройки дерева совпадают с тем, что уже есть в кэше, то данные будут загружаться из кэш файла.</p>
+					<p>Очистка подразумевает удаление из кэша всех файлов соответсвующих деревьям, т.е. файлов с именем <code>cache.attributico...</code>. Другие файлы кэша не затрагиваются.</p>
+					<div class="callout callout-warning">
+						<h4>Есть нюанс!</h4>
+						<p>Если во время использования этого инструмента кэш не отключен в настройках на вкладке <mark><small>Общие</small></mark>, то произойдет не очистка, а перезагрузка кэша. Таким образом, если вы хотите
+						действительно удалить кэш, то отключите этот чекбокс в настройках, не забывая эти настройки сохранить.</p>						
+					</div>
+					<h3 id="tools-standart">Стандартизация атрибутов.</h3>					
+					<div class="alert alert-info" role="alert"> Извините! В данной версии не реализовано. </div>				
+				</div>
+				<!-- problems -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="problems">Проблемы и ошибки.</h1>
+					</div>
+					<p class="lead">Ошибки из-за неправильной установки модуля.</p>
+					<p class="bg-danger">Notice: Undefined variable: vendor in .....\www\admin\controller\module\attributico.php on line 51</p>
+					<p>или</p>
+					<p class="bg-danger">Fatal error: Call to a member function franchise() on a non-object in .../admin/controller/module/attributico.php on line51</p>
+					<p>Ошибка возникает из-за отсутствия файла <code>/system/license/sllic.lic</code>. Возможно Вы не установили, или установили неправильно файл лицензии. Прочтите
+					   раздел документации <a href="#license">Лицензия</a>.</p>
+					<p class="bg-danger">This is not licensed copy of attributico</p>
+					<p>Ошибка возникает из-за того, что название Вашего домена не согласовано с файлом лицензии. Прочтите раздел документации <a href="#license">Лицензия</a>.</p>
+					<p>Эти ошибки являются наиболее распростаненными. Кроме того были выявлены проблемы совместимости с модулями, которые используют другие версии <code>jquery.ui</code>.
+					Например, <code>Admin_quick_edit_product_opencart1.5x.vqmod</code>. В последних версиях эта проблема решена.</p>					
+					<p class="lead">Конфликты с другими модулями.</p>
+					<p>Если Вы используете несколько модулей, работающих с атрибутами, имейте в виду, что большинство из них, как и Attribut&amp;co, модифицируют форму редактирования
+					товара или "подставляют" свою страницу с формой. В этом случае все, что связано с интеграцией Attribut&amp;co в движок работать не будет и Вам остается пользоваться
+					только самим модулем, но и в этом случае корректная работа не гарантируется, т.к. возможны конфликты в Базе Данных.</p>
+					<p class="lead">Ошибки во время работы модуля.</p>
+					<p class="bg-danger">Load error! (SyntaxError: Unexpected token < in JSON at position 0)</p>
+					<p>Вероятнее всего, что это ошибка структуры данных. Например, <code>attribute_id</code> в таблице <code>category_attribute</code> ссылается на несуществующую запись в другой таблице БД</p>
+					<p>Причин возникновения такой ошибки может быть много, но все они связаны с "ручным" редактированием атрибутов либо атрибутов категорий. Разработчику действия пользователя воспроизвести
+					очень трудно, поэтому Вам придется вспомнить, что и где Вы редактировали и попробовать восстановить изменения до предыдущего рабочего состояния. Иногда такое "лечится" 
+					пересохранением поврежденных пунктов, например, той категории, в которой возникла ошибка.</p>
+					<div class="callout callout-warning">
+						<h4>Совет.</h4>
+						<p>Если Вы уже купили Attribut&amp;co, то делайте через него все манипуляции с атрибутами. Это гораздо удобней "ручной" работы со стандартными формами OpenCart.
+						 Это позволит избежать ошибок БД.</p>
+					</div>
+					<p>И все-таки не исключено, что это ошибка работы модуля. Например: <span class="text-danger">PHP Notice:  Undefined offset: 1 in ...\admin\controller\module\attributico.php on line ...</span>.
+					Тогда эта ошибка отразится в журнале <mark><small>Система ⇒ Инструменты ⇒ Журнал ошибок</small></mark>. В таком случае, свяжитесь с разработчиком.</p>
+					<p class="bg-danger">Load error! (Internal Server Error)</p>
+					<p>Такая ошибка иногда появляется на больших магазинах. Причина - прерывание сервером операции по тайм-ауту. Ошибка может возникнуть как при загрузке деревьев, так и во время применения
+					инструментов. Если простыми словами, то модулю не хватает отведенного времени и ресурсов сервера для выполнения операции. Часто это связано с ограничениями на хостинге. Ограничения в основном 
+					касаются работы MySQL и надо добиваться от хостера, чтоб настройки позволяли работать с вашим объемом данных. Есть еще настройки PHP, которые ограничивают время выполнения скриптов. 
+					Попробуйте в .htaccess добавить <code>php_value max_execution_time 300</code>. Если хостер позволяет менять этот параметр, то, возможно, получится хоть как-то работать. Но настройки MySQL наиболее важны.</p>
+					<p>Что можно сделать в таких случаях со стороны модуля? Самый "щадящий" режим это "Ленивая загрузка". Включите так же кэш. В настройках деревьев можно попробовать отключить один из дочерних узлов.
+					В общем, варианты есть.</p>
+					<p class="lead">Ошибки которые не хочется комментировать.</p>
+					<p class="bg-danger">Я ничего не делал, а у меня два пункта в меню...</p>
+					<a class="lightgallery" href="/img/help/attributico/dublmenu.png" title="Ocmod double"><img src="/img/help/attributico/dublmenu.png" alt="Ocmod double" class="img-thumbnail img-responsive mrb15"></a>
+					<p>Вы не только ничего не делали, но даже не читали <a href="#install">Установка/обновление</a>. Ну не хотите читать это, читайте инструкцию на Opencart. В общем, у вас установлено два модификатора.</p>
+					<div class="callout callout-warning">
+						<h4>Редко, но бывает.</h4>
+						<p>Не закачивайте, пожалуйста через установщик дополнений модификаторы из папки <code>vqumod/xml/</code> если у Вас движок версии 2.x. Эти файлы толко для версий 1.5.x.
+						Ваши модификаторы находятся в папке <code>system/</code>.</p>
+					</div>
+				</div>
+				<!-- FAQs-->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="faq">FAQ.</h1>
+					</div>
+					<p class="bg-info">Здравствуйте! Я заинтересован в покупке модуля, но есть вопрос не будет ли он конфликтовать с модулем DreamFilter ?</p>
+					<p class="bg-warning">Ни с этим фильтром, ни с megaFilter, ни с каким другим фильтром модуль конфликтовать не может. Модуль не работает с фасадом, модуль не взаимодействует с фильтрами,
+					 а только с базой данных, приводя в порядок атрибуты, которые позже используют фильтры.</p>
+					 <p class="bg-info">Я сейчас могу указать только тестовый можно будет дополнить домен позже ?</p>
+					<p class="bg-warning">Можете. Только при таком способе выдачи лицензий, получения лицензии на второй домен, возможно придется подождать несколько дней. 
+					Это связано с тем, что каждое кодирование лицензии стоит денег на ionCube. Я добавлю ваш домен одновременно с чьей либо покупкой.</p>
+					<p class="bg-info">Подскажите, у меня перестал модуль работать. Переезжал на новый хостинг, может из-за этого!?</p>
+					<p class="bg-warning">Попробуйте очистить кэш магазина. Очистить кэш и куки браузера. Обновить модификаторы. Выставить заново и сохранить настройки.</p>
+					<p class="bg-info">Можно ли допилить модуль, чтоб атрибуты выводились на главной странице под фотографией товара?</p>
+					<p class="bg-warning">Нет. Не можно. Этот модуль разработан для админки и с фасадом не работает. То что вы хотите, давно реализовано не лучшим способом - подменой
+					содержимого описания товара на атрибуты с помощью модификаторов. Да и сомневаюсь, что кто-то работает на дефолтном шаблоне. Так что этот вопрос надо задавать разработчикам шаблона (дизайна).</p>
+				</div>	
+				<!-- history -->
+				<div class="docs-section">
+					<div class="page-header">
+						<h1 id="history">История изменений.</h1>
+					</div>
+					<p class="lead">Версия 3.0.2.</p>
+					<ul>
+						<li>Добавлена возможность работать со списком категорий мультимагазинов. Для этого в настройках,
+							на вкладке "Общие" надо отметить чекбокс "Все магазины";</li>
+						<li>Добавлен оперативный контроль кэшем модуля. При изменении чекбокса "Кэш деревьев атрибутов", 
+							деревья сразу перезагружаются в зависимости от состояния этого чекбокса;</li>						
+					</ul>
+					<p class="lead">Версия 3.0.1.</p>
+					<ul>
+						<li>Добавлена поддержка магазинов третьй версии;</li>
+						<li>Изменены алгоритмы загрузки языковых файлов для совместимости с магазинами версий 3.x. Теперь деревья грузятся быстрее;</li>
+						<li>Исправлена ситуация, когда слияние атрибутов с помощью Drag&Drop было невозможно при отключенной настройке "Учитывать порядок сортировки". 
+						  Теперь слияние можно делать независимо от этого параметра;</li>
+						<li>Изменена структура архива;</li>
+					</ul>
+					<p class="lead">Версия 2.2.0.</p>
+					<ul>
+						<li>В карточке товаров сделан фильтр для формирования списка <span class="node">Значений</span> атрибутов;</li>
+						<li>Добавлены некоторые настройки по умолчанию (важно при первом запуске после инсталляции);</li>		
+					</ul>
+					<p class="lead">Версия 2.1.9.</p>
+					<ul>
+						<li>теперь модуль умеет строить <span class="node">Атрибуты категорий</span> самостоятельно и размещать <span class="node">Атрибуты</span> и <span class="node">Значения</span> атрибутов в товарах
+						согласно правилам заданным в настройках модуля. Для этого предназначен инструмент "Атрибуты категорий";</li>											
+					</ul>
+					<p class="lead">Версия 2.1.8.</p>
+					<ul>
+						<li>добавлена возможность проверить наличие обновлений. Кнопка  <button type="button" data-toggle="tooltip" title="Проверить обновления" class="btn btn-warning"><i class="fa fa-cloud-download"></i></button>;</li>
+						<li>добавлена функция слияния атрибутов и групп без потери связей с товарами и категориями. Если выполнить перетаскивание с нажатой кнопкой Ctrl (Ctrl + Drag&Drop), то произойдет слияние выбранных узлов с целевым;</li>
+						<li>устранен баг с ошибкой "debug_mode";</li>						
+					</ul>
+					<p class="lead">Версия 2.1.7.</p>
+					<ul>
+						<li>теперь работает кэширование деревьев атрибутов. Кэш позволяет ускорить загрузку деревьев, что очень важно для больших магазинов;</li>
+						<li>добавлен инструмент для очистки кэша;</li>
+						<li>устранен баг, вследствие которого не на всех вкладках поддерживалась "Ленивая загрузка", что замедляло процесс загрузки;</li>
+						<li>появилась возможность раздельной дефрагментации <span class="node">Групп</span> и <span class="node">Атрибутов</span>;</li>
+						<li>изменен метод передачи параметров при добавлении <span class="node">Атрибутов категории</span>, некоторые сервера ругались на слишком длинный GET-запрос;</li>
+						<li>устранен баг с индексом языка, из-за которого после манипуляций с языками (н-р удаления языка) неправильно работала функция Copy-Paste;</li>	
+					</ul>
+					<p class="lead">Версия 2.1.6.</p>
+					<ul>
+						<li>изменения коснулись алгоритма объединения дублей. После того, как появилась возможность опробовать этот инструмент на больших магазинах,
+                            выяснилось, что при ограничениях ресурсов для MySQL, которые вводят хостеры, а иногда просто не хотят ничего настраивать, инструмент не работает.
+                            Скрипту не хватает отведенного времени на обработку и происходит прерывание по тайм-ауту. Алгоритм полностью изменен. Время обработки дублей
+                            многократно сокращено.;</li>																					
+					</ul>
+					<p class="lead">Версия 2.1.5.</p>
+					<ul>
+						<li>добавлены инструменты "Удалить не связанные с товаром" и "Объединить дубли". В результате парсинга, автоматической загрузки прайс-листов и других операций с товарами 
+						    и атрибутами часто появляются дубликаты атрибутов или атрибуты, которые не принадлежат ни одному товару. Данные инструменты позволяют привести атрибуты в порядок. 
+						    Инструмент "Объединить дубли" пока работает в режиме beta-версии;</li>
+						<li>устранен баг, вследствие которого было невозможно редактировать атрибуты, содержащие кавычки и другие html-спецсимволы;</li>																
+					</ul>
+					<p class="lead">Версия 2.1.4.</p>
+					<ul>
+						<li>добавлена возможность управлять режимом загрузки деревьев. До этого, по умолчанию, был установлен режим так называемой "Ленивой загрузки". Это было сделано для ускорения загрузки деревьев (визуально).
+							Однако выйгрыш в скорости загрузки оказался проигрышем при использования поиска. Теперь по умолчанию деревья грузятся полностью и поиск работает быстрее. Если надо как раньше, 
+							то в Общих настройках надо включить пункт "Ленивая загрузка". Для оперативного управления эта настройка доступна также из контекстного меню;</li>
+						<li>в Инструменты добавлена функция "Удаление ошибочных ссылок". Инструмент удаляет ссылки на несуществующие атрибуты. Такие ссылки возникают при ручном удалении атрибутов,
+						    (несмотря на рекомендацию - удалять только с помощью модуля), вследствие чего появляются ошибки типа: Load error! (SyntaxError: Unexpected token < in JSON at position 0);</li>																
+					</ul>
+					<p class="lead">Версия 2.1.3.</p>
+					<ul>
+						<li>добавлена возможность открытия страницы товара в новом окне;</li>
+						<li>добавлен инструмент "Дефрагментация". Восстанавливает структуру таблиц групп и атрибутов. Создает группу с id = 1, что необходимо для парсинга и автоматической загрузки прайс-листов;</li>																
+					</ul>
+					<p class="lead">Версия 2.1.2.</p>
+					<ul>
+						<li>фильтр добавлен на все вкладки. Его можно скрывать (двойная стрелка вниз справа). Состояние фильтра и всех настроек сохраняется по нажатию кнопки "Применить" или "Сохранить";</li>
+						<li>для ускоренного поиска в атрибутах в фильтре добавлена настройка "Только атрибуты";</li>
+						<li>добавлена вкладка "Товары". Теперь можно оперативно просмотреть товары по атрибуту, шаблону или значению;</li>											
+					</ul>
+					<p class="lead">Версия 2.1.1.</p>
+					<ul>
+						<li>теперь отображается версия модуля;</li>
+						<li>сохраняются состяния чекбоксов фильтра для каждой вкладки по нажатию кнопки "Применить" или "Сохранить";</li>
+						<li>появилась возможность управлять отображением пустых значений атрибута. В "Общих настройках" надо отметить соответствующий чекбокс;</li>
+						<li>в фильтр добавлено меню команд для поиска по наиболее популярным регулярным выражениям;</li>
+						<li>добавлена вкладка "Инструменты". Там пока один инструмент "Удаление пустых значений";</li>							
+					</ul>
+					<p class="lead">Версия 2.1.0.</p>
+					<ul>
+						<li>появилась возможность настраивать дочерние узлы атрибутов. Для больших магазинов удобно, т.к. можно убрать лишнюю информацию;</li>
+						<li>еще одна опция так же полезна для больших магазинов. Это смарт скроллинг. Прокрутка деревьев осуществляется в пределах фиксированных областей, 
+						что позволяет держать все деревья в области видимости;</li>
+						<li>расширено наследование. Теперь можно выбрать или исключить некоторые подкатегории, куда надо будет добавлять атрибуты;</li>
+						<li>началась поддержка магазинов на v2.3.x;</li>	
+					</ul>
+					<p class="lead">Версия 2.0.3.</p>
+					<ul>
+						<li>добавлена кнопка "Применить", чтоб созранять настройки модуля не выходя из формы редактирования;</li>
+						<li>доработан фильтр. Теперь есть возможность отключить автозаполнение - т.е. поиск по каждой нажатой букве. При отключенном автозаполнении можно набрать фразу целиком 
+						    и затем нажать на кнопку "поиск". Очень полезно для магазинов с большим количеством атрибутов, где есть риск зависания фильтра;</li>
+						<li>добавлены функции наследования. Т.е. можно установить рекурсивное добавление атрибутов во все подкатегории выбранной категории и значений
+                           (шаблонов) атрибутов во все товары этих подкатегорий. Точно так же можно установить рекурсивное удаление;</li>						
+					</ul>
+					<p class="lead">Версия 2.0.2.</p>
+					<ul>
+						<li>обеспечена совместимость с OpenCart  v.2.2.x;</li>
+						<li>исправлена ошибка: <span class="text-danger">не выводятся атрибуты при ручном редактировании стандартной формы категории</span>;</li>
+						<li>для магазинов на 1.5.x устранены конфликты vqmod модификаторов. Были проблемы, например, с Admin_quick_edit_product_opencart1.5x.vqmod;</li>						
+					</ul>
+					<p class="lead">Версия 2.0.1.</p>
+					<ul>
+						<li>добавлена возможность назначать каждому атрибуту "дежурные" значения или шаблоны. Дежурные шаблоны предназначены для автоматического 
+                            добавления в товар при ручном редактировании или для автоматического добавления во все товары выбранной категории при добавлении атрибута 
+                            в категорию;</li>
+						<li>при переходе с более ранних версий на вкладке <mark><small>Дежурные шаблоны</small></mark> будет предложено изменить структуру БД. В случае подтверждения, модуль
+                            добавит поле <code>'duty'</code> к существующей таблице <code>attribute_description</code>;</li>						
+					</ul>
+					<p class="lead">Версия 1.0.3.</p>
+					<ul>
+						<li>добавлена Drag-and-drop сортировка атрибутов и групп атрибутов;</li>
+						<li>появилась возможность Drag-and-drop изменить порядок сортировки сразу нескольких атрибутов или групп, выбрав их по <kbd>ctrl + mouse left button</kbd>;</li>						
+						<li>при ручном добавлении атрибутов в товар теперь добавление происходит и при изменении главной категории;</li>
+					</ul>
+					<p class="lead">Версия 1.0.2.2.</p>
+					<ul>
+						<li>при построении деревьев появилась возможность учитывать порядок сортировки. Если отметить этот чекбокс в настройках, то при выводе
+                            будет учтен порядок сортировки групп атрибутов и самих атрибутов;</li>
+						<li>есть возможность оперативного включения/отключения порядка сортировки <mark><small>Правая кнопка мыши ⇒ Настройки ⇒ Порядок сортировки</mark></small> 
+                            для каждого дерева индивидуально;</li>						
+						<li>появилась возможность сохранить существующие значения атрибутов, если они там были до этого, в момент пакетного изменения атрибута 
+					 	    в товаре соответствующей категории;</li>
+					</ul>
+					<p class="lead">Версия 1.0.2.1.</p>
+					<ul>
+						<li>добавлено пакетное добавление(удаление) атрибутов в товары соответствующей категории в момент добавления(удаления) атрибута в(из) категории;</li>
+						<li>есть возможность включения/отключения этого функционала на вкладке  <mark><small>Общие</mark></small>;</li>	
+					</ul>
+					<p class="lead">Версия 1.0.2.</p>
+					<ul>
+						<li>добавлен  функционал copy-paste;</li>
+						<li>изменена система лицензирования модуля;</li>	
+					</ul>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">			
+			<ul class="footer-links">
+				<li><?php echo $version;?></li>
+				<li class="muted">&middot;</li>
+				<li><?php echo $copyright;?></li>
+				<li class="muted">&middot;</li>
+				<li>Демо:<a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange">  http://demo.radiocity.kz/admin (demo/demo)</span></a></li>
+				<li class="muted">&middot;</li>
+				<li>Для покупки:</li>				
+				   <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
+				   <li class="muted">&middot;</li>
+				   <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
+				   <li class="muted">&middot;</li>
+				   <li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>				
+			</ul>
+		</div>
+	</footer>
+	<script src = "/js/jquery/jquery-2.1.1.min.js"></script>		
+	<script src = "/js/bootstrap.min.js"></script>	
+	<script src="/js/lightgallery-all.min.js"></script>	
+	<script src="/js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40630080 = new Ya.Metrika({
+                    id:40630080,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40630080" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->	
+</body>
+</html>
+													
