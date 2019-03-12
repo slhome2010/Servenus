@@ -181,3 +181,9 @@ a {
 .well-lg {
 	font-size: 90%;
 }
+
+.underpicture {
+  font-size: 14px;
+  font-style: oblique;
+  margin-bottom: 10px;
+}
