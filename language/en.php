@@ -20,6 +20,7 @@ $entry_file_name = 'File name';
 $entry_news = 'What news?';
 $entry_licence = 'Don\'t forget licence!';
 $entry_archive = 'Archive of version';
+$entry_download = 'Download';
 
 // Buttons
 $button_buy = 'Buy right here, right now!';

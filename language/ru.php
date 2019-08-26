@@ -20,6 +20,7 @@ $entry_file_name = 'Имя файла';
 $entry_news = 'Что нового?';
 $entry_licence = 'Не забудьте лицензию!';
 $entry_archive = 'Архив версий';
+$entry_download = 'Скачать';
 
 // Buttons
 $button_buy = 'Купить здесь и сейчас!';
