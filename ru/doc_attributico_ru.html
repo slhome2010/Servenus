@@ -393,15 +393,15 @@ Attributico_v3.0.1/
 					</div>
 					<p class="lead">Установка.</p>
 					<p>1. Распакуйте архив. Содержимое папки <code>upload.../</code>, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
-					<p>2. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> должен появиться модуль "Attribut&amp;co". Его необходимо установить. <button type="button" class="btn btn-success"
-							data-toggle="tooltip" title="Установить">
-							<i class="fa fa-plus-circle"></i></button></p>
-					<p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установиить разрешения на просмотр и редактирование для <code>module/attributico</code></p>
+					<p>2. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> должен появиться модуль "Attribut&amp;co". Его необходимо установить. Кнопка 
+						<button type="button" class="btn btn-success" data-toggle="tooltip" title="Установить"><i class="fa fa-plus-circle"></i></button></p>
+					<p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установиить разрешения на просмотр и редактирование для 
+						<code>module/attributico</code> или <code>extension/module/attributico</code> для магазинов версии >2.2 .</p>
 					<p>4. Распакуйте архив <code>License.zip</code>. Содержимое папки, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
 					<p>5. В административной панели в разделе <mark><small>Дополнения ⇒ Установка дополнений</small></mark> загрузите файлы <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code>
 						для магазинов второй версии (2.x) или <code>attributico.3.x.ocmod.zip</code> для магазинов третьей версии (3.x) из папки <code>ocmod</code>. Для магазинов версии 1.5.x скопируйте
 						папку <code>vqumod/</code> поверх структуры сайта. </p>
-					<p>6. В административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> необходимо обновить модификаторы. <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить">
+					<p>6. В административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> необходимо обновить модификаторы. Кнопка <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить">
 							<i class="fa fa-refresh"></i></button>&nbsp;&nbsp;</p>
 					<p>После этого должен появиться пункт меню <mark><small>Каталог ⇒ Атрибуты ⇒ Attribut&amp;co.</small></mark></p>
 					<div class="callout callout-danger">
@@ -444,7 +444,7 @@ Attributico_v3.0.1/
 					<p class="lead">База данных.</p>
 					<p>В процессе установки модуля в базе данных будет создана таблица <mark><small>"category_attribute"</small></mark> с полями <code>`category_id` INTEGER(11) NOT NULL</code> и <code>`attribute_id` INTEGER(11) NOT
 							NULL.</code></p>
-					<p>Начиная с версии 2.0.1 в стандартной таблице OpenCart <mark><small>"attribute_description"</small></mark> создается дополнительное поле <code>`duty` TEXT NOT NULL</code> для хранения <a href="#theory-terms"><span class="node">Дежурных шаблонов</span></a>.</p>
+					<p>Начиная с версии 2.0.1 в стандартной таблице OpenCart <mark><small>"attribute_description"</small></mark> создается дополнительное поле <code>`duty` TEXT NOT NULL</code> для хранения <a href="#theory-duty"><span class="node">Дежурных шаблонов</span></a>.</p>
 					<p>В процессе удаления модуля все вышеперечисленные таблицы и поля удаляются.</p>
 				</div>
 				<!-- theory -->
@@ -568,7 +568,7 @@ Attributico_v3.0.1/
 									<td>2</td>
 									<td>Дежурные шаблоны</td>
 									<th class="tree">Дежурные шаблоны</th>
-									<td>Дерево для работы с <a href="#theory-terms"><span class="node">Дежурными шаблонами</span></a>. Редактирование, поиск.</td>
+									<td>Дерево для работы с <a href="#theory-duty"><span class="node">Дежурными шаблонами</span></a>. Редактирование, поиск.</td>
 								</tr>
 								<tr>
 									<td>3</td>
@@ -675,6 +675,13 @@ Attributico_v3.0.1/
 					</ul>
 					<p>Необходимо отметить, что <span class="node">Значение</span> уникально для каждого товара. Если в каком-то товаре изменить одну букву в тексте, то остальных товаров это не коснется,
 						даже если до этого <span class="node">Значения</span> совпадали, а у вас появится еще одно <span class="node">Значение</span>. То же самое верно и для <span class="node">Шаблонов</span>. </p>
+					<p class="lead" id="theory-duty">Значение по умолчанию.</p>
+					<p>Естественным желанием является то, чтобы при добавлении <span class="node">Атрибута</span> в товар, синхронно добавлялось <span class="node">Значение</span> или 
+						набор <span class="node">Значений</span>. Особенно если <span class="node">Значения</span> одни и те же, а операций надо выполнить много.</p>
+					<p>Эти <span class="node">Значения</span> должны где-то храниться. Для этого и служит <span class="node">Дежурный Шаблон</span>. Именно там храняться <span class="node">Значения</span>,
+					которые будут по умолчанию подставляться в товар, как только вы добавите туда <span class="node">Атрибут</span>.</p>
+					<p>Для того чтобы подстановка состоялась, надо не забывать про <a href="#settings-product">настройки</a>.</p>
+					<p><span class="node">Дежурный Шаблон</span> можно изменять для подстановки других <span class="node">Значений</span> в другие товары, можно <a href="#using-duty">удалять</a>.</p>
 					<h3 id="theory-product">Принцип фильтрации товаров.</h3>
 					<p class="lead">Режим совпадений.</p>
 					<div class="table-responsive">
@@ -943,7 +950,7 @@ Attributico_v3.0.1/
 							<tbody>
 								<tr>
 									<th class="im">Значения атрибутов</th>
-									<td>Этот пункт задает <mark><small>алгоритм</small></mark> действий со <span class="node">Значениями</span> атрибута в момент добавления <span class="node">Атрибута</span> в категрию.</td>
+									<td>Этот пункт задает <mark><small>алгоритм</small></mark> действий со <span class="node">Значениями</span> атрибута в момент добавления <span class="node">Атрибута</span> в категорию.</td>
 								</tr>
 								<tr>
 									<th><code>Обновлять</code></th>
@@ -955,12 +962,12 @@ Attributico_v3.0.1/
 								</tr>
 								<tr>
 									<th><code>Подставлять дежурный шаблон</code></th>
-									<td> При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-terms"><span class="node">Дежурным шаблоном</span></a>, если
+									<td> При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-duty"><span class="node">Дежурным шаблоном</span></a>, если
 										сам этот шаблон не пустой.</td>
 								</tr>
 								<tr>
 									<th><code>Подставлять дежурный только в пустые</code></th>
-									<td>При добавлении <span class="node">Атрибута</span> в категорию, пустые <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-terms"><span class="node">Дежурным шаблоном</span></a>,
+									<td>При добавлении <span class="node">Атрибута</span> в категорию, пустые <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-duty"><span class="node">Дежурным шаблоном</span></a>,
 										если сам этот шаблон не пустой, непустые <span class="node">Значения</span> атрибута останутся без изменений.</td>
 								</tr>
 							</tbody>
@@ -970,7 +977,7 @@ Attributico_v3.0.1/
 						<h4>Ручной ввод.</h4>
 						<p>По точно такому же <mark><small>алгоритму</small></mark>, значения атрибутов будут изменяться при "ручном" редактировании карточки товара. Например, отметка
 							пункта "Показывать в категории" на вкладке "Связи" приведет к добавлению в этот товар всех атрибутов данной категории, а в поле <span class="node">Значение</span> в колонке "Текст" подставится
-							<a href="#theory-terms"><span class="node">Дежурный шаблон</span></a>.</p>
+							<a href="#theory-duty"><span class="node">Дежурный шаблон</span></a>.</p>
 					</div>
 					<div class="callout callout-warning">
 						<h4>Внимание!</h4>
@@ -1154,7 +1161,7 @@ Attributico_v3.0.1/
 								<span class="node">Значение</span>.</p>
 						</div>
 					<h3 id="using-duty">Удаление дежурного шаблона.</h3>
-					<p>Удаление (очистка) <a href="#theory-terms"><span class="node">Дежурного шаблона</span></a> производится через <a href="#context-menu">контекстное меню</a> или клавишей <kbd>Del</kbd>.</p>
+					<p>Удаление (очистка) <a href="#theory-duty"><span class="node">Дежурного шаблона</span></a> производится через <a href="#context-menu">контекстное меню</a> или клавишей <kbd>Del</kbd>.</p>
 					<p>Операцию можно производить только на вкладке <mark><small>Дежурные шаблоны</small></mark>. Данная операция не затрагивает товары. Удаляется только <span class="node">Дежурный шаблон</span>.</p>
 					<h3 id="using-dnd">Drag-and-Drop технологии.</h3>
 					<p>Даже ради этого стоит использовать Attribut&amp;co. Насколько удобней например, перетащить мышкой <span class="node">Атрибут</span> из <span class="node">Группы</span> в <span class="node">Группу</span>
@@ -1451,7 +1458,7 @@ Attributico_v3.0.1/
 					<p>Напомню, что <span class="node">Значения</span> это "разобранные" по разделителю <span class="node">Шаблоны</span>.</p>
 					<p class="lead">Фильтр значений.</p>
 					<p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным.
-						Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <a href="#theory-terms"><span class="node">Дежурного шаблона</span></a></p>
+						Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <a href="#theory-duty"><span class="node">Дежурного шаблона</span></a></p>
 					<div>
 						<label class="radio-inline">
 							<input type="radio" name="filter-values" id="filter-nofilter" value="all" checked> Все
@@ -1520,7 +1527,7 @@ Attributico_v3.0.1/
 						товара, нажать на кнопку "Сохранить" при добавленном <span class="node">Атрибуте</span>, но не вписанном <span class="node">Значении</span>. Второй: используя Attribut&amp;co, добавить <span
 							class="node">Атрибут</span> с
 						незаполненным
-						<a href="#theory-terms"><span class="node">Дежурным шаблоном</span></a> в категорию.</p>
+						<a href="#theory-duty"><span class="node">Дежурным шаблоном</span></a> в категорию.</p>
 					<ul id="gallery_3" class="list-unstyled row">
 						<li class="col-xs-6 col-md-6">
 							<a class="lg-item" href="/img/help/attributico/empty4.jpg" title="Empty values"><img src="/img/help/attributico/empty4.jpg" alt="Empty4" class="img-thumbnail img-responsive mrb15"></a>
@@ -1735,7 +1742,7 @@ Attributico_v3.0.1/
 						в настройках.</p>
 					<a class="lightgallery" href="/img/help/attributico/update_settings.jpg" title="Values update settings"><img src="/img/help/attributico/update_settings.jpg" alt="Values update settings"
 							class="img-thumbnail img-responsive mrb15"></a>
-					<p>Уместно заметить, что добавление <a href="#theory-terms"><span class="node">Дежурных шаблонов</span></a> происходит только если сами <span class="node">Дежурные шаблоны</span> заполнены информацией. Поэтому, если вам необходимо добавить <span
+					<p>Уместно заметить, что добавление <a href="#theory-duty"><span class="node">Дежурных шаблонов</span></a> происходит только если сами <span class="node">Дежурные шаблоны</span> заполнены информацией. Поэтому, если вам необходимо добавить <span
 							class="node">Атрибуты</span>
 						даже с пустыми <span class="node">Значениями</span>, выберите пункт <code>Оставлять</code>.</p>
 					<div class="callout callout-info">
