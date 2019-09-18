@@ -2,7 +2,7 @@
 $language = 'en';
 $language_name = 'English';
 $version = 'Currently v3.0.6';
-$copyright = 'Copyright &copy; 2016-2018&nbsp; Servenus.';
+$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Servenus.';
 
 // Menu items
 $entry_home = '<span> Attribut<b style="color: #2199C7;">&</b>co</span>';
