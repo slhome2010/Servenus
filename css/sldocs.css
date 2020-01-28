@@ -124,6 +124,9 @@ a {
     color: #428bca;
     text-decoration: none;
 }
+a span.node {
+  text-decoration: underline;
+}
 /* Callouts */
 .callout {
     padding: 20px;

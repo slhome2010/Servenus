@@ -1,7 +1,7 @@
 <?php
 $language = 'ru';
 $language_name = 'Русский';
-$version = 'Версия v3.0.7';
+$version = 'Версия v3.0.8';
 $copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Servenus.';
 
 // Menu items
