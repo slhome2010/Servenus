@@ -22,11 +22,8 @@ if(isset($_GET['lang'])) { 						// Выбранный язык отправле
 
 // Открываем текущий язык
 $CurentLang = addslashes($_SESSION['lang']);
-//if (is_file('/language/'.$CurentLang.'.php')) {
-//	require_once('/language/'.$CurentLang.'.php');
-//}
-header("Location: /".$CurentLang."/index.html");
 
-// Language Detection
-//$languages = array();
+/* header("Location: /".$CurentLang."/index.html"); */
+header("Location: /start.html");
+
 ?>
