@@ -1,7 +1,7 @@
 <?php
 
 $responce = array(
-	'lastversion' => 'v3.0.7',
+	'lastversion' => 'v3.0.8',
 	'news' => '<h4>Есть обновления!</h4> 
 				<p class="lead">Версия 3.0.7.</p>
 				<ul>
