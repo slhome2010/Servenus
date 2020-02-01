@@ -88,15 +88,11 @@ mark { background-color: #f7f7f9;}
   padding-left: 30px;
   font-size: 90%;
 }
-
-.sidebar .nav .nav {
-  display: none; /* Hide by default, but at >768px, show it */
-  margin-bottom: 8px;
-}
-.sidebar .nav .nav > li > a {
+/* Nav: third level (shown on .active) */
+.sidebar .nav .nav .nav> li > a {
   padding-top:    3px;
   padding-bottom: 3px;
-  padding-left: 30px;
+  padding-left: 50px;
   font-size: 90%;
 }
 
@@ -127,6 +123,9 @@ h3[id] {
 a {
     color: #428bca;
     text-decoration: none;
+}
+a span.node {
+  text-decoration: underline;
 }
 /* Callouts */
 .callout {
@@ -180,4 +179,15 @@ a {
 }
 .well-lg {
 	font-size: 90%;
+}
+
+.underpicture {
+  font-size: 14px;
+  font-style: oblique;
+  margin-bottom: 10px;
+}
+
+span.required:after { 
+  content:"*";
+  color:red;
 }

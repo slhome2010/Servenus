@@ -1,6 +1,6 @@
 <?php
 // Global define
-define('VERSION', 'v3.0.1');
+define('VERSION', 'v3.0.8');
 define('DIR_DOWNLOAD', '/downloads');
 
 // Configuration

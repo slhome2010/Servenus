@@ -1,8 +1,8 @@
 <?php
 $language = 'en';
 $language_name = 'English';
-$version = 'Currently v3.0.2';
-$copyright = 'Copyright &copy; 2016-2018&nbsp; Servenus.';
+$version = 'Currently v3.0.8';
+$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Servenus.';
 
 // Menu items
 $entry_home = '<span> Attribut<b style="color: #2199C7;">&</b>co</span>';
@@ -20,6 +20,7 @@ $entry_file_name = 'File name';
 $entry_news = 'What news?';
 $entry_licence = 'Don\'t forget licence!';
 $entry_archive = 'Archive of version';
+$entry_download = 'Download';
 
 // Buttons
 $button_buy = 'Buy right here, right now!';
