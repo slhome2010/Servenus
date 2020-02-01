@@ -27,14 +27,11 @@
                 <?php } ?>    
 			</div>
 		</footer>
+		</footer>
 		<script src="/js/jquery/jquery-2.1.1.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
-        <script src="/js/lightgallery-all.min.js"></script>
-        <script src="/js/jquery.justifiedGallery.min.js"></script> 
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyB4NCqhtdzsS7HETLcSIsPFsX-3NhCvRUo"></script>	
-        <script src="/js/main.js"></script>
-        <!-- Google map -->
-        <script> initmap(); </script>
+		<script src="/js/lightgallery-all.min.js"></script>
+		<script src="/js/main.js"></script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
 			(function (d, w, c) {
