@@ -1,21 +1,10 @@
-<?php header('Content-type: text/html; charset=utf-8')?>
-<?php require_once("../language/ru.php");?>
-<!DOCTYPE html>
-<html lang="en">
-<head>		
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<title>Attribut&amp;co documentation</title>
-    <meta name="description" content="Attribut&amp;co lets you to create rename delete products attributes for your OpenCart administration."/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'/>	
-	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/> 
-	<link type="text/css" rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css"/>	
-	<link type="text/css" rel="stylesheet" href="/css/jquery-ui.css"/>
-	<link type="text/css" rel="stylesheet" href="/css/stylesheet.css"/>
-	<link type="text/css" rel="stylesheet" href="/css/sldocs.css"/>		
-	<link type="text/css" rel="stylesheet" href="/css/lightgallery.css"/>
-</head>
-<body data-spy="scroll" data-target="#sidebar" data-offset="0">
+<? 
+    $doc = 'Attributico';
+    $title = 'Attribut&amp;co doc page';
+    $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
+	$keywords = 'opencart, attribute';
+	require "../../common/header.php";
+?>
 	 <header class = "navbar navbar-default navbar-fixed-top" role = "navigation">
 		 <div class = "container">
 			 <div class = "navbar-header">
@@ -108,57 +97,4 @@
 		</div>
 	</div>	
 	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">			
-			<ul class="footer-links">
-				<li><?php echo $version;?></li>
-				<li class="muted">&middot;</li>
-				<li><?php echo $copyright;?></li>
-				<li class="muted">&middot;</li>
-				<li>Демо:<a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange">  http://demo.radiocity.kz/admin (demo/demo)</span></a></li>
-				<li class="muted">&middot;</li>
-				<li>Для покупки:</li>				
-				   <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
-				   <li class="muted">&middot;</li>
-				   <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
-				   <li class="muted">&middot;</li>
-				   <li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>				
-			</ul>
-		</div>
-	</footer>
-	<script src = "/js/jquery/jquery-2.1.1.min.js"></script>		
-	<script src = "/js/bootstrap.min.js"></script>	
-	<script src="/js/lightgallery-all.min.js"></script>	
-	<script src="/js/main.js"></script>	
-	<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter40630080 = new Ya.Metrika({
-                    id:40630080,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true
-                });
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/40630080" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-</body>
-</html>
-													
+	<? require "../../common/footer.php"; ?>

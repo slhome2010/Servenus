@@ -1,0 +1,309 @@
+<? 
+    $doc = 'Attributico';
+    $title = 'Attribut&amp;co landing page';
+    $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
+    $keywords = 'opencart, attribute';
+?>
+<? require "../../common/header.php"; ?>
+        <header id = "navbar-top">
+            <div class = "navbar navbar-default navbar-fixed-top" role = "navigation">
+                <div class = "container">
+                    <div class = "navbar-header">
+                        <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
+                            <span class = "sr-only"> Toggle navigation </span>
+                            <span class = "icon-bar"></span>
+                            <span class = "icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src ="/img/logo-attributico.png" alt ="Attribut&amp;co official site!" title ="Attribut&amp;co official site!"></a>
+                    </div>
+                    <div class = "navbar-collapse collapse" >
+                        <ul class = "nav navbar-nav navbar-right" >
+							<li class="menuItem active"><a href = "/start.html"><span class="glyphicon glyphicon-home"></span></a></li>	
+                            <li class="menuItem active"><a href = "#home"><?php echo $entry_home;?></a></li>
+                            <li class="menuItem"><a href = "#features" ><?php echo $entry_features;?></a></li>
+                            <li class="menuItem"><a href = "#galery" ><?php echo $entry_gallery;?></a></li>
+                            <li class="menuItem"><a href = "#compatible" ><?php echo $entry_compatible;?></a></li>                           
+                            <li class="menuItem"><a href = "#contacts" ><?php echo $entry_contacts;?></a></li>
+                            <li class="menuItem"><a href = "attributico_download.html" ><?php echo $entry_download;?></a></li>
+                            <li class = "dropdown" >
+                                <a href = "#products" class = "dropdown-toggle" data-toggle = "dropdown"><?php echo $entry_documentation;?><b class = "caret"> </b></a >
+                                <ul class = "dropdown-menu" >                                    									
+									<li><a href = "doc_attributico_<?php echo $language;?>.html" > Attribut&amp;co (<?php echo $language;?>)</a></li>									
+									<li><a href = "doc_attributico_v_<?php echo $language;?>.html" > Attribut&amp;co Viewer (<?php echo $language;?>) </a></li>                                   
+                                </ul>
+                            </li>
+							<li class = "dropdown" >
+                                <a href = "#language" class = "dropdown-toggle" data-toggle = "dropdown"><?php echo $entry_language;?><b class = "caret"> </b></a >
+                                <ul class = "dropdown-menu" >
+                                    <li><a href="/ru/attributico.html"><img src="/img/ru.png">  Русский</a></li >	
+							        <li><a href="/en/attributico.html"><img src="/img/en.png">  English</a></li >                                   
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id = "home" class = "pdb0" >
+            <div id = "top-banner-attributico">
+				<div class ="language">	
+					<img src="/img/<?php echo $language;?>.png" data-toggle="tooltip" title="<?php echo $language_name;?>">
+				</div>
+				<div class = "container"> 
+					<div class = "header-button">
+						<p>	<a class="btn btn-green btn-lg" href="payment.html" role="button"><?php echo $button_buy;?></a>
+							<a class="btn btn-green btn-lg" href="attributico_download.html" role="button"><?php echo $button_download;?></a>
+						</p>
+					</div>					
+				</div>
+			</div>
+        </div>
+		
+        <section id = "features" class = "section pdb0" >
+            <div class = "container-fluid" >
+				<div class = "section-header  mrb50" >
+					<h1 class = "page-header mrb15"><?php echo $entry_features;?></h1>
+				</div>
+				<div class="row">
+				  <div class="feature_wrap">
+					<div class="col-xs-12 col-md-4 col-sm-6">
+					  <ul>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-tree"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_tree;?></h3>
+							<p><?php echo $overview_tree;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-sort-numeric-asc"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_sort;?></h3>
+							<p><?php echo $overview_sort;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-pie-chart"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_defrag;?></h3>
+							<p><?php echo $overview_defrag;?></p>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+					<div class="col-xs-12 col-md-4 col-sm-6">
+					  <ul>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-pencil"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_edit;?></h3>
+							<p><?php echo $overview_edit;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-search"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_search;?></h3>
+							<p><?php echo $overview_search;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-eraser"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_empty;?></h3>
+							<p><?php echo $overview_empty;?></p>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+					<div class="col-xs-12 col-md-4 col-sm-6">
+					  <ul>
+						<li>
+						  <div class="icon_feature"><img src="/img/Cursor-Select-icon.png"/></div>
+						  <div class="wrap">
+							<h3><?php echo $header_dnd;?></h3>
+							<p><?php echo $overview_dnd;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-paste"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_duty;?></h3>
+							<p><?php echo $overview_duty;?></p>
+						  </div>
+						</li>
+						<li>
+						  <div class="icon_feature"><i class="fa fa-copy"></i></div>
+						  <div class="wrap">
+							<h3><?php echo $header_duplicate;?></h3>
+							<p><?php echo $overview_duplicate;?></p>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>               
+            </div>
+        </section>
+        <section id = "galery" class = "section pdb0" >
+            <div class = "container-fluid" >
+                <div class = "section-header  mrb50" >
+                    <h1 class = "page-header mrb15"><?php echo $entry_gallery;?></h1>
+                    <p><?php echo $slogan_gallery;?></p>
+                </div>
+                <div class = "demo-gallery mrb50" >
+                    <div id = "thumbnials" class = "list-unstyled" >
+                        <a class = "video" href = "<?php echo $media_link_overview;?>" data-poster = "/img/videos/thumb/thumb-v-1.jpg" data-sub-html = "<?php echo $media_heading_overview;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-1.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+                        <a class = "video" href = "<?php echo $media_link_edit;?>" data-poster = "/img/videos/thumb/thumb-v-2.jpg" data-sub-html = "<?php echo $media_heading_edit;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-2.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+                        <a class = "video" href = "<?php echo $media_link_search;?>" data-poster = "/img/videos/thumb/thumb-v-3.jpg" data-sub-html = "<?php echo $media_heading_search;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-3.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+                        <a class = "video" href = "<?php echo $media_link_values;?>" data-poster = "/img/videos/thumb/thumb-v-4.jpg" data-sub-html = "<?php echo $media_heading_values;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-4.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+                        <a class = "video" href = "<?php echo $media_link_dnd;?>" data-poster = "/img/videos/thumb/thumb-v-5.jpg" data-sub-html = "<?php echo $media_heading_dnd;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-5.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+						<a class = "video" href = "<?php echo $media_link_sort;?>" data-poster = "/img/videos/thumb/thumb-v-6.jpg" data-sub-html = "<?php echo $media_heading_sort;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-6.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+						<a class = "video" href = "<?php echo $media_link_category;?>" data-poster = "/img/videos/thumb/thumb-v-7.jpg" data-sub-html = "<?php echo $media_heading_category;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-7.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+						<a class = "video" href = "<?php echo $media_link_integro;?>" data-poster = "/img/videos/thumb/thumb-v-8.jpg" data-sub-html = "<?php echo $media_heading_integro;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-8.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+						<a class = "video" href = "<?php echo $media_link_duty;?>" data-poster = "/img/videos/thumb/thumb-v-9.jpg" data-sub-html = "<?php echo $media_heading_duty;?>" >
+                            <img class = "img-responsive" src = "/img/videos/thumb/thumb-v-9.jpg" >
+                            <div class = "video" >
+                                <div class = "demo-gallery-poster" >
+                                    <img src = "/img/play-button.png" >
+                                </div>
+                            </div>
+                        </a>
+                        <a class = "" href = "/img/pictures/5.jpg" data-responsive = "/img/10-375.jpg 375, img/10-480.jpg 480, img/10-800.jpg 800"  data-sub-html = "<?php echo $media_heading_end;?>" >
+                            <img class = "img-responsive" src = "/img/pictures/thumb/thumb-10.jpg" >
+                            <div class = "demo-gallery-poster" >
+                                <img src = "/img/zoom.png" >
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id = "compatible" class = "section pdb0" >
+            <div class = "container-fluid" >
+                <div class = "section-header  mrb50" >
+					<h1 class = "page-header mrb15" ><?php echo $entry_compatible;?></h1>
+				</div>
+				<p><?php echo $slogan_compatible;?></p>
+				<ul>	
+					<li>OpenCart 1.5.5.1</li>	
+					<li>OpenCart 1.5.6.x</li>						
+					<li>OpenCart 2.0.x</li>	
+					<li>OpenCart 2.1.x</li>	
+					<li>OpenCart 2.2.0</li>
+                    <li>OpenCart 2.3.x</li>	
+                    <li>OpenCart 3.0.x</li>	
+					<li>OCStore 1.5.5.1.x</li>	
+					<li>OCStore 2.1.x</li>
+                    <li>OCStore 2.3.x</li>	
+                    <li>OCStore 3.0.x</li>	
+					<li>OcShop 1.5.6.4.х</li>	
+					<li>OpenCart.pro 2.0.3.х</li>	
+					<li>OpenCart.pro 2.1</li>	
+					<li>MaxyStore 1.5.5.1.1</li>	
+					<li>MaxyStore 2.0.1.1</li>	
+				</ul>
+                 <p class="mrb50"><?php echo $comment_ioncube;?></p>
+            </div>
+        </section>        
+        <section id = "contacts" class = "section" >
+            <div class = "container-fluid" >
+                <div class = "section-header  mrb50" >
+                    <h1 class = "page-header mrb15" ><?php echo $entry_contacts;?></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p><?php echo $slogan_sites;?></p>
+						<ul>
+							<li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>				  
+							<li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>				   
+							<li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>							
+						</ul>
+						<p>Demo-site:</p>
+						<ul>
+							<li><a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange"> http://demo.radiocity.kz/admin</span></a>
+								<ul>
+									<li>Login: demo</li>	
+									<li>Password: demo</li>				  
+								</ul>
+							</li>	
+						</ul>
+                    </div>
+                    <div class="col-md-4 contact_right">
+                        <p><?php echo $slogan_mail;?></p>                       
+                        <form id="form" class="form-horizontal">
+                            <div class="form-group">
+                                <input name="yourname" type="text" required="required" class="form-control" placeholder="Your Name..." maxlength="40" />
+                            </div>
+                            <div class="form-group">
+                                <input name="youremail" type="email" required="required" class="form-control" placeholder="Your Email..." maxlength="40" />
+                            </div>
+                            <div class="form-group">
+                                <textarea name="yourmessage" class="form-control" style="height: 130px;" placeholder="Write down your message..."></textarea>
+                            </div>
+                            <button type="button" id="send" class="btn btn-orange pull-right"><?php echo $button_send;?></button>
+                        </form>
+
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+		<!-- Footer -->
+		<? require "./common/footer.php"; ?>

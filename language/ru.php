@@ -2,7 +2,8 @@
 $language = 'ru';
 $language_name = 'Русский';
 $version = 'Версия v3.0.8';
-$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Servenus.';
+$version_short = 'v3.0.8';
+$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Comtronics.';
 
 // Menu items
 $entry_home = '<span> Attribut<b style="color: #2199C7;">&</b>co</span>';
@@ -12,15 +13,16 @@ $entry_compatible = 'Совместимость';
 $entry_contacts = 'Контакты';
 $entry_documentation = 'Документация';
 $entry_language = 'Язык';
-$entry_portfolio = 'Портфолио';
+$entry_portfolio = 'Продукты';
 $entry_products = 'Продукты';
 $entry_download = 'Скачать';
 $entry_downloads = 'Файлы для скачивания';
 $entry_file_name = 'Имя файла';
 $entry_news = 'Что нового?';
-$entry_licence = 'Не забудьте лицензию!';
-$entry_archive = 'Архив версий';
+$entry_licence = 'Лицензия';
+$entry_archive = 'Архив';
 $entry_download = 'Скачать';
+$entry_buy = 'Купить';
 
 // Buttons
 $button_buy = 'Купить здесь и сейчас!';
@@ -35,8 +37,8 @@ $slogan_sites = 'Список сайтов, где можно купить Attri
 $slogan_compatible = 'Attribut&co может работать на следующих версиях OpenCart:';
 
 // Overview
-$overview_attributico = 'OpenCart. Атрибуты - это легко! Attribut&co позволяет создавать, переименовывать, удалять атрибуты в вашем OpenCart-магазине.
-Атрибуты представлены в виде деревьев. Для редактирования используются технологии Copy-Paste или Drag-и-Drop ...';
+$overview_attributico = 'Attribut&co позволяет создавать, переименовывать, удалять атрибуты в вашем OpenCart-магазине.
+Атрибуты представлены в виде деревьев. Используются технологии Copy-Paste или Drag-и-Drop ...';
 $overview_attributico_v = 'Бесплатная версия. Возможен только просмотр атрибутов. Сделано для того чтобы убедиться, что модуль может работать на вашем OpenCart магазине.';
 $overview_jumbo = 'Обзор Attribut&amp;co, как загрузить и использовать, основные примеры и многое другое.';
 // Overview features

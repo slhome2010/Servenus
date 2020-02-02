@@ -1,11 +1,24 @@
 body {
-  position: relative;   
+  position: relative;
+  overflow-y: scroll;   
 }
-mark { background-color: #f7f7f9;}
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+.section{
+  padding-top:50px;  
+}
 /*
  * Footer 
  */
-
+ .blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+  margin-top: 30px;
+}
 .footer {
   padding-top: 40px;
   padding-bottom: 30px;
@@ -190,4 +203,28 @@ a span.node {
 span.required:after { 
   content:"*";
   color:red;
+}
+
+/* Features */
+.feature_wrap {  margin: 0; overflow: hidden; padding: 15px 0; }
+.feature_wrap ul { overflow: hidden; padding: 0; list-style: none;}
+.feature_wrap ul li { margin-bottom: 0; overflow: hidden; }
+.feature_wrap .icon_feature { border: 1px solid #666D89; -moz-border-radius: 045px 45px 45px 45px; -webkit-border-radius: 45px 45px 45px 45px; border-radius: 45px 45px 45px 45px; color: #666D89; float: left; font-size: 1.9em; height: 50px; line-height: 50px; text-align: center; vertical-align: middle; width: 50px; }
+.feature_wrap .wrap { float: left; margin: 0 0 10px 10px; width: 79%; }
+.feature_wrap .wrap h3 { margin: 5px 0 }
+.feature_wrap.option3 ul li { text-align: center; }
+.feature_wrap.option3 .icon_feature { border: 2px solid; display: block; float: none; font-size: 3em; height: 75px; line-height:75px; margin: 0 auto 20px; width:75px }
+.feature_wrap.option3 .wrap { float: none; width: 100%; }
+
+mark { background-color: #f7f7f9;}
+.badge-version {
+  color: #fff;
+  background-color: #F6575E;
+}
+.txt_orange {
+  color: #F6575E;
+}
+.link_orange:hover {
+color: #F6575E;
+  text-decoration: underline;
 }

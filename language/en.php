@@ -2,25 +2,27 @@
 $language = 'en';
 $language_name = 'English';
 $version = 'Currently v3.0.8';
-$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Servenus.';
+$version_short = 'v3.0.8';
+$copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Comtronics.';
 
 // Menu items
 $entry_home = '<span> Attribut<b style="color: #2199C7;">&</b>co</span>';
 $entry_features = 'Features';
 $entry_gallery = 'Gallery';
 $entry_compatible = 'Compatible';                         
-$entry_contacts = 'Contact us';
+$entry_contacts = 'Contacts';
 $entry_documentation = 'Documentation';
 $entry_language = 'Language';
-$entry_portfolio = 'Portfolio';
+$entry_portfolio = 'Products';
 $entry_products = 'Products';
 $entry_download = 'Download';
 $entry_downloads = 'Files for download';
 $entry_file_name = 'File name';
 $entry_news = 'What news?';
-$entry_licence = 'Don\'t forget licence!';
-$entry_archive = 'Archive of version';
+$entry_licence = 'Licence';
+$entry_archive = 'Archive';
 $entry_download = 'Download';
+$entry_buy = 'Buy now';
 
 // Buttons
 $button_buy = 'Buy right here, right now!';
@@ -35,7 +37,7 @@ $slogan_sites = 'A list of sites where you can buy Attribut&co:';
 $slogan_compatible = 'Attribut&amp;co can run on version OpenCart:';
 
 // Overview
-$overview_attributico = 'OpenCart. Attributes - it\'s easy! Attribut&amp;co lets you to create, rename, delete attributes for your OpenCart-store. 
+$overview_attributico = 'Attribut&amp;co lets you to create, rename, delete attributes for your OpenCart-store. 
 Attributes are represented as trees. Easy to edit using the Copy-Paste technology, or Drag-and-Drop...';
 $overview_attributico_v = 'Free version. This is only possible to view attributes. It does to make sure the module can run on your OpenCart store.';
 $overview_jumbo = 'An overview of Attribut&amp;co, how to download and use, basic examples, and more.';

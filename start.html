@@ -3,198 +3,173 @@
     $title = 'Servenus';
     $description = 'Modules for your OpenCart.';
     $keywords = 'opencart, attribute';
+    require "./common/header.php"; 
 ?>
-<? require "./common/header.php"; ?>
 
-<header id="navbar-top">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<header>
+    <nav id="navbar-top" class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"> Toggle navigation </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Servenus</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="menuItem active"><a href="#home"><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li class="menuItem"><a href="#blog"><?php echo $entry_portfolio;?></a></li>
-                    <li class="menuItem"><a href="#features"><?php echo $entry_features;?></a></li>
-                    <li class="menuItem"><a href="#contacts"><?php echo $entry_contacts;?></a></li>
-                    <li class="menuItem"><a href="/doc/<?php echo addslashes($_SESSION['lang']);?>/doc_attributico_ru.html"><?php echo $entry_documentation;?></a></li>
-                    <li class="dropdown">
-                        <a href="#language" class="dropdown-toggle" data-toggle="dropdown"><?php echo $entry_language;?><b class="caret"> </b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/index.php?lang=ru"><img src="/img/ru.png"> Русский</a></li>
-                            <li><a href="/index.php?lang=en"><img src="/img/en.png"> English</a></li>
-                        </ul>
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+                Attribut&amp;co
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="badge badge-version"><?php echo $version_short;?></span>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="col-8">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"><?php echo $entry_portfolio;?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features"><?php echo $entry_features;?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts"><?php echo $entry_contacts;?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico.html"><?php echo $entry_documentation;?></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/index.php?lang=ru"><img src="/img/ru.png"> Русский</a>
+                            <a class="dropdown-item" href="/index.php?lang=en"><img src="/img/en.png"> English</a>
+                        </div>
                     </li>
-                    <li class="menuItem"><a href="attributico_download.html"><?php echo $entry_download;?></a></li>
+                </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">                        
+                        <a class="nav-item btn btn-sm btn-outline-light" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico_download.html"><?php echo $entry_download;?></a>
+                        <a class="nav-item btn btn-sm btn-outline-light ml-2" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/payment.html"><?php echo $entry_buy;?></a>
+                    </div>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 </header>
-<section id="blog" class="section">
-    <div class="container-fluid">
-        <div class="section-header has-desc mrb50">
-            <h1 class="page-header mrb15"><?php echo $entry_portfolio;?></h1>
-        </div>
-        <div class="blog_box">
-            <div class="col-sm-5 col-md-6 blog_post">
-                <ul class="list-inline">
-                    <li class="col-md-4">
-                        <a href="#">
-                            <img class="img-responsive" src="/img/blog/blog-image-1.jpg" alt="gallery 1" />
-                        </a>
-                    </li>
-                    <li class="col-md-8">
-                        <div class="pull-left">
-                            <span class="blog_header">Attribut&amp;co</span><br />
-                            <span>Designed by : <a class="link_orange" href="#contacts"><span class="txt_orange">Servenus</span></a></span>
-                        </div>
-                        <div class="pull-right">
-                            <a class="btn btn-orange" href="attributico.html" role="button"><?php echo $button_more;?></a>
-                        </div>
-                        <div class="clearfix"> </div>
-                        <p class="blog_text"><?php echo $overview_attributico;?></p>
-                    </li>
-                </ul>
-            </div> <!-- /.blog_post 1 -->
-            <div class="col-sm-5 col-md-6 blog_post">
-                <ul class="list-inline">
-                    <li class="col-md-4"><a href="#">
-                            <img class="img-responsive" src="/img/blog/blog-image-2.jpg" alt="gallery 2" /></a>
-                    </li>
-                    <li class="col-md-8">
-                        <div class="pull-left">
-                            <span class="blog_header">Attribut&amp;co-view</span><br />
-                            <span>Designed by : <a class="link_orange" href="#contacts"><span class="txt_orange">Servenus</span></a></span>
-                        </div>
-                        <div class="pull-right">
-                            <a class="btn btn-orange" href="attributico.html" role="button"><?php echo $button_more;?></a>
-                        </div>
-                        <div class="clearfix"> </div>
-                        <p class="blog_text"><?php echo $overview_attributico_v;?></p>
-                    </li>
-                </ul>
-            </div><!-- /.blog_post 2 -->
-        </div>
-    </div>
-</section>
-<section id="features" class="section pdb0">
-    <div class="container-fluid">
-        <div class="section-header  mrb50">
-            <h1 class="page-header mrb15"><?php echo $entry_features;?></h1>
-        </div>
+<div class="container">
+    <section id="portfolio" class="section mt-3">
+        <h1 class="mb-3 text-center"><?php echo $entry_portfolio;?></h1>
         <div class="row">
-            <div class="feature_wrap">
-                <div class="col-xs-12 col-md-4 col-sm-6">
-                    <ul>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-tree"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_tree;?></h3>
-                                <p><?php echo $overview_tree;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-sort-numeric-asc"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_sort;?></h3>
-                                <p><?php echo $overview_sort;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-pie-chart"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_defrag;?></h3>
-                                <p><?php echo $overview_defrag;?></p>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="col-md-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h5 class="card-title mb-0">Attribut&amp;co</h5>
+                        <div class="mb-1 text-muted"><span>Designed by : Comtronics</span></div>
+                        <p class="card-text mb-auto font-weight-light" style="font-size: 90%;"><?php echo $overview_attributico;?></p>
+                        <a class="stretched-link" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico.html" role="button"><?php echo $button_more;?></a>
+                    </div>
+                    <!-- <div class="col-auto d-none d-lg-block"> -->
+                    <object type="image/svg+xml" data="/img/portfolio/attributico-main.svg" height="250px"></object>
+                    <!-- </div> -->
                 </div>
-                <div class="col-xs-12 col-md-4 col-sm-6">
-                    <ul>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-pencil"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_edit;?></h3>
-                                <p><?php echo $overview_edit;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-search"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_search;?></h3>
-                                <p><?php echo $overview_search;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-eraser"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_empty;?></h3>
-                                <p><?php echo $overview_empty;?></p>
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h5 class="card-title mb-0">Attribut&amp;co-view</h5>
+                        <div class="mb-1 text-muted"><span>Designed by : Comtronics</span></div>
+                        <p class="card-text mb-auto font-weight-light" style="font-size: 90%;"><?php echo $overview_attributico_v;?></p>
+                        <a class="stretched-link" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico.html" role="button"><?php echo $button_more;?></a>
+                    </div>
+                    <!-- <div class="col-auto d-none d-lg-block"> -->
+                    <object type="image/svg+xml" data="/img/portfolio/attributico-main.svg" height="250px"></object>
+                    <!-- </div> -->
                 </div>
-                <div class="col-xs-12 col-md-4 col-sm-6">
+            </div>
+        </div>
+    </section>
+    <section id="features" class="section">
+        <h1 class="mb-3 text-center"><?php echo $entry_features;?></h1>
+        <div class="row feature_wrap">
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-tree"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_tree;?></h3>
+                    <p><?php echo $overview_tree;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-sort-numeric-asc"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_sort;?></h3>
+                    <p><?php echo $overview_sort;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-pie-chart"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_defrag;?></h3>
+                    <p><?php echo $overview_defrag;?></p>
+                </div>
+            </div>
+        </div>
+        <div class="row feature_wrap">
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-pencil"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_edit;?></h3>
+                    <p><?php echo $overview_edit;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-search"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_search;?></h3>
+                    <p><?php echo $overview_search;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-eraser"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_empty;?></h3>
+                    <p><?php echo $overview_empty;?></p>
+                </div>
+            </div>
+        </div>
+        <div class="row feature_wrap">
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><img src="/img/Cursor-Select-icon.png" /></div>
+                <div class="wrap">
+                    <h3><?php echo $header_dnd;?></h3>
+                    <p><?php echo $overview_dnd;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-paste"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_duty;?></h3>
+                    <p><?php echo $overview_duty;?></p>
+                </div>
+            </div>
+            <div class="col-sm shadow-sm mx-1">
+                <div class="icon_feature"><i class="fa fa-copy"></i></div>
+                <div class="wrap">
+                    <h3><?php echo $header_duplicate;?></h3>
+                    <p><?php echo $overview_duplicate;?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts" class="section">
+        <h1 class="mb-3 text-center"><?php echo $entry_contacts;?></h1>
+        <div class="row mx-md-n5">
+            <div class="col py-3 px-lg-5 border bg-light ">
+                <div class="pl-3">
+                    <h5><?php echo $slogan_sites;?></h5>
                     <ul>
-                        <li>
-                            <div class="icon_feature"><img src="/img/Cursor-Select-icon.png" /></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_dnd;?></h3>
-                                <p><?php echo $overview_dnd;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-paste"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_duty;?></h3>
-                                <p><?php echo $overview_duty;?></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon_feature"><i class="fa fa-copy"></i></div>
-                            <div class="wrap">
-                                <h3><?php echo $header_duplicate;?></h3>
-                                <p><?php echo $overview_duplicate;?></p>
-                            </div>
+                        <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
+                        <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
+                        <li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>
+                    </ul>
+                    <h5>Demo-site:</h5>
+                    <ul>
+                        <li><a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange"> http://demo.radiocity.kz/admin</span></a>
+                            <ul>
+                                <li>Login: demo</li>
+                                <li>Password: demo</li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="contacts" class="section">
-    <div class="container-fluid">
-        <div class="section-header  mrb50">
-            <h1 class="page-header mrb15"><?php echo $entry_contacts;?></h1>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <p><?php echo $slogan_sites;?></p>
-                <ul>
-                    <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
-                    <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
-                    <li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>
-                </ul>
-                <p>Demo-site:</p>
-                <ul>
-                    <li><a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange"> http://demo.radiocity.kz/admin</span></a>
-                        <ul>
-                            <li>Login: demo</li>
-                            <li>Password: demo</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4 contact_right">
-                <p><?php echo $slogan_mail;?></p>
+            <div class="col py-3 px-lg-5 border bg-light">
+                <h5><?php echo $slogan_mail;?></h5>
                 <form id="form" class="form-horizontal">
                     <div class="form-group">
                         <input name="yourname" type="text" required="required" class="form-control" placeholder="Your Name..." maxlength="40" />
@@ -207,10 +182,9 @@
                     </div>
                     <button type="button" id="send" class="btn btn-orange pull-right"><?php echo $button_send;?></button>
                 </form>
-
             </div>
         </div><!-- /.row -->
-    </div><!-- /.container -->
-</section>
+    </section>
+</div>
 <!-- Footer -->
 <? require "./common/footer.php"; ?>
