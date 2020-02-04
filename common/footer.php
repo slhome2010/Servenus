@@ -1,29 +1,23 @@
 <footer class="blog-footer">
 	<div class="container text-muted">
 		<?php if ($doc) { ?>
-			<ul class="footer-links">
-				<li>
-					<?php echo $version; ?>
-				</li>
-				<li class="muted">&middot;</li>
-				<li>
-					<?php echo $copyright; ?>
-				</li>
-				<li class="muted">&middot;</li>
-				<li>Демо:<a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange"> http://demo.radiocity.kz/admin (demo/demo)</span></a></li>
-				<li class="muted">&middot;</li>
-				<li>Для покупки:</li>
-				<li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
-				<li class="muted">&middot;</li>
-				<li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
-				<li class="muted">&middot;</li>
-				<li><a class="link_orange" href="payment.html"><span class="txt_orange">
-							<?php echo $right_here; ?></span></a></li>
-			</ul>
+			<div class="row">
+				<div class="col-6">
+					Demo:<a class="link_orange" target="_blanc" href="http://demo.radiocity.kz/admin"><span class="txt_orange"> http://demo.radiocity.kz/admin (demo/demo)</span></a>
+				</div>
+				<div class="col-6">
+					Partner stores:
+					<a class="link_orange" target="_blanc" href="https://opencartforum.com/files/file/3213-attributco-opencart-atributy-eto-legko/"><span class="txt_orange">Opencartforum.com</span></a>,
+					<a class="link_orange" target="_blanc" href="https://liveopencart.ru/opencart-moduli-shablony/moduli/adminka/attribut-co-opencart-atributyi-eto-legko"><span class="txt_orange">Liveopencart.ru</span></a>
+				</div>
+			</div>
+			<div class="mt-3">
+				<?php echo $copyright; ?> All rights reserved.
+			</div>
 		<?php } else { ?>
-			<ul class="footer-links">
-				<li><?php echo $copyright; ?> All rights reserved.</li>
-			</ul>
+			<div>
+				<?php echo $copyright; ?> All rights reserved.
+			</div>
 		<?php } ?>
 	</div>
 </footer>

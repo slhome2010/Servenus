@@ -4,15 +4,18 @@ header('Set-Cookie: same-site-cookie=foo; SameSite=Lax');
 header('Set-Cookie: cross-site-cookie=bar; SameSite=None; Secure');
 session_start();
 require_once(__DIR__ . "/../language/" . addslashes($_SESSION['lang']) . ".php");
-$dir_download = __DIR__ . "/../downloads/attributico/";
-$entries = scandir($dir_download, SCANDIR_SORT_DESCENDING);
-$filelist = $license = array();
-foreach ($entries as $entry) {
-    if (strpos($entry, "Attributico") === 0) {
-        $filelist[] = $entry;
-    }
-    if (strpos($entry, "License") === 0) {
-        $license[] = $entry;
+
+if (basename($_SERVER["PHP_SELF"]) === "download.html") {
+    $dir_download = __DIR__ . "/../downloads/attributico/";
+    $entries = scandir($dir_download, SCANDIR_SORT_DESCENDING);
+    $filelist = $license = array();
+    foreach ($entries as $entry) {
+        if (strpos($entry, "Attributico") === 0) {
+            $filelist[] = $entry;
+        }
+        if (strpos($entry, "License") === 0) {
+            $license[] = $entry;
+        }
     }
 }
 ?>
@@ -37,4 +40,4 @@ foreach ($entries as $entry) {
 
 <!-- <body class = "home" data-spy="scroll" data-target="#navbar-top" data-offset="60"> -->
 
-<body data-spy="scroll" data-target="#navbar-top" data-method="offset" data-offset="50">
+<body  data-target="#navbar-top" data-method="offset" data-offset="50">

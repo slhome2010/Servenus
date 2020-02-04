@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <div class="col-8">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li>
+                    <!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#portfolio"><?php echo $entry_portfolio;?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#features"><?php echo $entry_features;?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacts"><?php echo $entry_contacts;?></a></li>
@@ -34,8 +34,8 @@
                     </li>
                 </div>
                     <div class="col-4 d-flex justify-content-end align-items-center">                        
-                        <a class="nav-item btn btn-sm btn-outline-light" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico_download.html"><?php echo $entry_download;?></a>
-                        <a class="nav-item btn btn-sm btn-outline-light ml-2" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/payment.html"><?php echo $entry_buy;?></a>
+                        <a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
+                        <a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
                     </div>
                 </ul>
             </div>
@@ -65,7 +65,7 @@
                         <h5 class="card-title mb-0">Attribut&amp;co-view</h5>
                         <div class="mb-1 text-muted"><span>Designed by : Comtronics</span></div>
                         <p class="card-text mb-auto font-weight-light" style="font-size: 90%;"><?php echo $overview_attributico_v;?></p>
-                        <a class="stretched-link" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico.html" role="button"><?php echo $button_more;?></a>
+                        <a class="stretched-link" href="/doc/<?php echo addslashes($_SESSION['lang']);?>/attributico.html#free" role="button"><?php echo $button_more;?></a>
                     </div>
                     <!-- <div class="col-auto d-none d-lg-block"> -->
                     <object type="image/svg+xml" data="/img/portfolio/attributico-main.svg" height="250px"></object>
@@ -153,9 +153,9 @@
                 <div class="pl-3">
                     <h5><?php echo $slogan_sites;?></h5>
                     <ul>
-                        <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/"><span class="txt_orange">Opencartforum.com</span></a></li>
-                        <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru"><span class="txt_orange">Liveopencart.ru</span></a></li>
-                        <li><a class="link_orange" href="payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>
+                        <li><a class="link_orange" target="_blanc" href="https://opencartforum.com/files/file/3213-attributco-opencart-atributy-eto-legko/"><span class="txt_orange">Opencartforum.com</span></a></li>
+                        <li><a class="link_orange" target="_blanc" href="https://liveopencart.ru/opencart-moduli-shablony/moduli/adminka/attribut-co-opencart-atributyi-eto-legko"><span class="txt_orange">Liveopencart.ru</span></a></li>
+                        <li><a class="link_orange" href="common/payment.html"><span class="txt_orange"><?php echo $right_here;?></span></a></li>
                     </ul>
                     <h5>Demo-site:</h5>
                     <ul>

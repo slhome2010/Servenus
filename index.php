@@ -1,7 +1,7 @@
 <?php
 // Global define
-define('VERSION', 'v3.0.1');
-define('DIR_DOWNLOAD', '/downloads');
+/* define('VERSION', 'v3.0.1');
+define('DIR_DOWNLOAD', '/downloads'); */
 
 // Configuration
 if (is_file('config.php')) {
@@ -21,9 +21,12 @@ if(isset($_GET['lang'])) { 						// Выбранный язык отправле
 }
 
 // Открываем текущий язык
-$CurentLang = addslashes($_SESSION['lang']);
-
+/* $CurentLang = addslashes($_SESSION['lang']); */
 /* header("Location: /".$CurentLang."/index.html"); */
-header("Location: /start.html");
+if(isset($_GET['page'])) { 
+	header("Location: " . $_GET['page'] . ".html");
+} else {
+	header("Location: /start.html");
+}
 
 ?>

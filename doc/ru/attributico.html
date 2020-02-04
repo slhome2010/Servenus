@@ -5,171 +5,146 @@
 	$keywords = 'opencart, attribute';
 	require "../../common/header.php";
 ?>
-<header class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only"> Toggle navigation </span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#"><img src="/img/logo-attributico.png" alt="Attribut&amp;co official site!" title="Attribut&amp;co official site!"></a>
-		</div>
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
-				<li class="menuItem active"><a href="attributico.html"><?php echo $entry_home;?></a></li>
-				<li class="menuItem"><a href="attributico_download.html"><?php echo $entry_download;?></a></li>
-				<li class="dropdown">
-					<a href="#products" class="dropdown-toggle" data-toggle="dropdown">
-						<?php echo $entry_documentation;?><b class="caret"> </b></a>
-					<ul class="dropdown-menu">
-						<li><a href="doc_attributico_<?php echo $language;?>.html"> Attribut&amp;co (
-								<?php echo $language;?>)</a></li>
-						<li><a href="doc_attributico_v_<?php echo $language;?>.html"> Attribut&amp;co Viewer (
-								<?php echo $language;?>) </a></li>
-						<li class="divider"></li>
-						<li><a href="attributico_download.html">
-								<?php echo $entry_archive;?> </a></li>
-						<li> <a href="index.html">Servenus</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#language" class="dropdown-toggle" data-toggle="dropdown">
-						<?php echo $entry_language;?><b class="caret"> </b></a>
-					<ul class="dropdown-menu">
-						<li><a href="/ru/doc_attributico_ru.html"><img src="/img/ru.png"> Русский</a></li>
-						<li><a href="/en/doc_attributico_en.html"><img src="/img/en.png"> English</a></li>
-					</ul>
-				</li>
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
+		<a class="navbar-brand" href="/">
+			<img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+			Attribut&amp;co
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<span class="badge badge-version"><?php echo $version_short;?></span>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<div class="col-8">
+				<ul class="navbar-nav">
+					<!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/index.php?lang=ru&page=/doc/ru/attributico"><img src="/img/ru.png"> Русский</a>
+							<a class="dropdown-item" href="/index.php?lang=en&page=/doc/en/attributico"><img src="/img/en.png"> English</a>
+						</div>
+					</li>
+			</div>
+			<div class="col-4 d-flex justify-content-end align-items-center">
+				<a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
+				<a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
+			</div>
 			</ul>
 		</div>
-	</div>
+	</nav>
 </header>
 <!-- Docs page layout -->
-<div class="jumbotron">
-	<div class="language">
-		<img src="/img/<?php echo $language;?>.png" data-toggle="tooltip" title="<?php echo $language_name;?>">
-	</div>
-	<div class="container">
-		<h1>
-			<?php echo $header_jumbo;?>
-		</h1>
-		<p>
-			<?php echo $overview_jumbo;?>
-		</p>
-		<p>
-			<?php echo $version;?>
-		</p>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-md-3">
-			<div id="sidebar" class="sidebar hidden-xs">
-				<ul class="nav nav-list" data-spy="affix" data-offset-top="150">
+<div class="container-fluid">
+	<!-- <section class="section"> -->
+	<div class="row flex-xl-nowrap section">
+		<div class="col-md-3 col-xl-2 flex-column bd-sidebar">
+			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
+			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+				<ul class="nav  nav-list">
 					<li>
-						<a href="#overview">Описание возможностей</a>
+						<a class="nav-link" href="#overview">Описание возможностей</a>
 						<ul class="nav">
-							<li><a href="#overview-mission">Миссия модуля</a></li>
-							<li><a href="#overview-idea">Основная идея</a></li>
-							<li><a href="#overview-capabilities">Возможности</a></li>
+							<li><a class="nav-link" href="#overview-mission">Миссия модуля</a></li>
+							<li><a class="nav-link" href="#overview-idea">Основная идея</a></li>
+							<li><a class="nav-link" href="#overview-capabilities">Возможности</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#free">Бесплатная версия</a>
+						<a class="nav-link" href="#free">Бесплатная версия</a>
 					</li>
 					<li>
-						<a href="#whats-included">Структура архива</a>
+						<a class="nav-link" href="#whats-included">Структура архива</a>
 					</li>
 					<li>
-						<a href="#system">Системные требования.</a>
+						<a class="nav-link" href="#system">Системные требования.</a>
 					</li>
 					<li>
-						<a href="#сompatibility">Совместимость</a>
+						<a class="nav-link" href="#сompatibility">Совместимость</a>
 					</li>
 					<li>
-						<a href="#license"><span class="required">Лицензия</span></a>
+						<a class="nav-link" href="#license"><span class="required">Лицензия</span></a>
 					</li>
 					<li>
-						<a href="#install"><span class="required">Установка/обновление</span></a>
+						<a class="nav-link" href="#install"><span class="required">Установка/обновление</span></a>
 					</li>
 					<li>
-						<a href="#theory">Теория и терминология</a>
+						<a class="nav-link" href="#theory">Теория и терминология</a>
 						<ul class="nav">
-							<li><a href="#theory-theory">Немного теории</a></li>
-							<li><a href="#theory-terms">Термины и определения</a></li>
-							<li><a href="#theory-template">Шаблоны и значения</a></li>
-							<li><a href="#theory-duty">Дежурный шаблон</a></li>
-							<li><a href="#theory-product">Фильтрация товаров</a></li>
-							<li><a href="#theory-loading">Загрузка узлов</a></li>
-							<li><a href="#theory-synchro">Синхронизация</a></li>
+							<li><a class="nav-link" href="#theory-theory">Немного теории</a></li>
+							<li><a class="nav-link" href="#theory-terms">Термины и определения</a></li>
+							<li><a class="nav-link" href="#theory-template">Шаблоны и значения</a></li>
+							<li><a class="nav-link" href="#theory-duty">Дежурный шаблон</a></li>
+							<li><a class="nav-link" href="#theory-product">Фильтрация товаров</a></li>
+							<li><a class="nav-link" href="#theory-loading">Загрузка узлов</a></li>
+							<li><a class="nav-link" href="#theory-synchro">Синхронизация</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#settings"><span class="required">Настройка</span></a>
+						<a class="nav-link" href="#settings"><span class="required">Настройка</span></a>
 						<ul class="nav">
-							<li><a href="#settings-main">Общие настройки</a></li>
-							<li><a href="#settings-tree">Настройки деревьев</a></li>
-							<li><a href="#settings-category">Атрибуты категории</a></li>
-							<li><a href="#settings-inherit">Наследование</a></li>
-							<li><a href="#settings-product">Добавление в товар</a></li>
-							<li><a href="#settings-dialog">Оперативная настройка</a></li>
+							<li><a class="nav-link" href="#settings-main">Общие настройки</a></li>
+							<li><a class="nav-link" href="#settings-tree">Настройки деревьев</a></li>
+							<li><a class="nav-link" href="#settings-category">Атрибуты категории</a></li>
+							<li><a class="nav-link" href="#settings-inherit">Наследование</a></li>
+							<li><a class="nav-link" href="#settings-product">Добавление в товар</a></li>
+							<li><a class="nav-link" href="#settings-dialog">Оперативная настройка</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#using"><span class="required">Работа с модулем</span></a>
+						<a class="nav-link" href="#using"><span class="required">Работа с модулем</span></a>
 						<ul class="nav">
-							<li><a href="#using-tree">Работа с деревом</a></li>
-							<li><a href="#using-context-menu">Контекстное меню</a></li>
-							<li><a href="#using-edit">Редактирование</a></li>
-							<li><a href="#using-value">Удаление значений</a></li>
-							<li><a href="#using-duty">Создание дежурного</a></li>
-							<li><a href="#using-duty-del">Удаление дежурного</a></li>
-							<li><a href="#using-dnd">Drag-and-Drop</a></li>
-							<li><a href="#using-select">Мультиселект</a></li>
-							<li><a href="#using-merge">Слияние</a></li>
-							<li><a href="#using-search">Фильтр атрибутов</a></li>
-							<li><a href="#using-example">Примеры</a></li>
+							<li><a class="nav-link" href="#using-tree">Работа с деревом</a></li>
+							<li><a class="nav-link" href="#using-context-menu">Контекстное меню</a></li>
+							<li><a class="nav-link" href="#using-edit">Редактирование</a></li>
+							<li><a class="nav-link" href="#using-value">Удаление значений</a></li>
+							<li><a class="nav-link" href="#using-duty">Создание дежурного</a></li>
+							<li><a class="nav-link" href="#using-duty-del">Удаление дежурного</a></li>
+							<li><a class="nav-link" href="#using-dnd">Drag-and-Drop</a></li>
+							<li><a class="nav-link" href="#using-select">Мультиселект</a></li>
+							<li><a class="nav-link" href="#using-merge">Слияние</a></li>
+							<li><a class="nav-link" href="#using-search">Фильтр атрибутов</a></li>
+							<li><a class="nav-link" href="#using-example">Примеры</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#integro"><span class="required">Интеграция с OpenCart</span></a>
+						<a class="nav-link" href="#integro"><span class="required">Интеграция с OpenCart</span></a>
 						<ul class="nav">
-							<li><a href="#integro-product">Страница товара</a></li>
-							<li><a href="#integro-category">Страница категории</a></li>
-							<li><a href="#integro-attribute">Атрибуты категории</a></li>
+							<li><a class="nav-link" href="#integro-product">Страница товара</a></li>
+							<li><a class="nav-link" href="#integro-category">Страница категории</a></li>
+							<li><a class="nav-link" href="#integro-attribute">Атрибуты категории</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#tools"><span class="required">Инструменты</span></a>
+						<a class="nav-link" href="#tools"><span class="required">Инструменты</span></a>
 						<ul class="nav">
-							<li><a href="#tools-empty">Удалить пустые значения</a></li>
-							<li><a href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
-							<li><a href="#tools-defrag">Дефрагментация атрибутов</a></li>
-							<li><a href="#tools-detach">Удалить не связанные с товаром</a></li>
-							<li><a href="#tools-duplicate">Объединить дубли (beta)</a></li>
-							<li><a href="#tools-category">Атрибуты категорий</a></li>
-							<li><a href="#tools-cache">Очистить кэш деревьев</a></li>
+							<li><a class="nav-link" href="#tools-empty">Удалить пустые значения</a></li>
+							<li><a class="nav-link" href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
+							<li><a class="nav-link" href="#tools-defrag">Дефрагментация атрибутов</a></li>
+							<li><a class="nav-link" href="#tools-detach">Удалить не связанные с товаром</a></li>
+							<li><a class="nav-link" href="#tools-duplicate">Объединить дубли (beta)</a></li>
+							<li><a class="nav-link" href="#tools-category">Атрибуты категорий</a></li>
+							<li><a class="nav-link" href="#tools-cache">Очистить кэш деревьев</a></li>
 							<li>
-								<a href="#tools-standart">Стандартизация атрибутов</a>
+								<a class="nav-link" href="#tools-standart">Стандартизация атрибутов</a>
 								<ul class="nav">
-									<li><a href="#clone">Клонировать язык</a></li>
+									<li><a class="nav-link" href="#clone">Клонировать язык</a></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="#problems">Проблемы и ошибки</a>
+						<a class="nav-link" href="#problems">Проблемы и ошибки</a>
 					</li>
 					<li>
-						<a href="#faq">FAQ</a>
+						<a class="nav-link" href="#faq">FAQ</a>
 					</li>
 					<li>
-						<a href="#history">История изменений</a>
+						<a class="nav-link" href="#history">История изменений</a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 		<div class="col-md-9" role="main">
 			<!-- Getting started -->
@@ -2010,7 +1985,8 @@ Attributico_v3.0.1/
 						<li>изменения коснулись алгоритма объединения дублей. После того, как появилась возможность опробовать этот инструмент на больших магазинах,
 							выяснилось, что при ограничениях ресурсов для MySQL, которые вводят хостеры, а иногда просто не хотят ничего настраивать, инструмент не работает.
 							Скрипту не хватает отведенного времени на обработку и происходит прерывание по тайм-ауту. Алгоритм полностью изменен. Время обработки дублей
-							многократно сокращено.;</li>
+							многократно сокращено.;
+						</li>
 					</ul>
 					<p class="lead">Версия 2.1.5.</p>
 					<ul>
@@ -2023,10 +1999,10 @@ Attributico_v3.0.1/
 					<ul>
 						<li>добавлена возможность управлять режимом загрузки деревьев. До этого, по умолчанию, был установлен режим так называемой "Ленивой загрузки". Это было сделано для ускорения загрузки деревьев (визуально).
 							Однако выйгрыш в скорости загрузки оказался проигрышем при использования поиска. Теперь по умолчанию деревья грузятся полностью и поиск работает быстрее. Если надо как раньше,
-							то в Общих настройках надо включить пункт "Ленивая загрузка". Для оперативного управления эта настройка доступна также из контекстного меню;</li>
+							то в Общих настройках надо включить пункт "Ленивая загрузка". Для оперативного управления эта настройка доступна также из контекстного меню;
+						</li>
 						<li>в Инструменты добавлена функция "Удаление ошибочных ссылок". Инструмент удаляет ссылки на несуществующие атрибуты. Такие ссылки возникают при ручном удалении атрибутов,
-							(несмотря на рекомендацию - удалять только с помощью модуля), вследствие чего появляются ошибки типа: Load error! (SyntaxError: Unexpected token < in JSON at position 0);</li> </ul> <p class="lead">Версия
-								2.1.3.
+							(несмотря на рекомендацию - удалять только с помощью модуля), вследствие чего появляются ошибки типа: Load error! (SyntaxError: Unexpected token < in JSON at position 0); </li> </ul> <p class="lead">Версия 2.1.3.
 								</p>
 								<ul>
 									<li>добавлена возможность открытия страницы товара в новом окне;</li>
@@ -2104,6 +2080,7 @@ Attributico_v3.0.1/
 				</div>
 			</div>
 		</div>
+		<!-- </section> -->
 	</div>
 	<!-- Footer -->
 	<? require "../../common/footer.php"; ?>

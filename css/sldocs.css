@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 /*
  * Scrollspy and affix
  */
-.affix {
+/* .affix {
       top: 50px;
   }
 @media (min-width: 1200px) {
@@ -60,58 +60,67 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 .sidebar.affix {
   position: static;
-}
+} */
 .nav-list{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 30px;
   padding-top:    10px;
   padding-bottom: 10px;
-  text-shadow: 0 1px 0 #fff;
+  /* text-shadow: 0 1px 0 #fff; */
   background-color: #f7f5fa;
   border-radius: 5px;
 }
 /* All levels of nav  sl*/
-.sidebar .nav > li > a {
+.bd-sidebar .nav>li>a {
   display: block;
-  color: #716b7a;
-  padding: 5px 20px;
+  padding: .25rem 1.5rem;
+  /* padding: 5px 20px; */
+  font-size: 90%;
+  color: rgba(0, 0, 0, .65)
 }
-.sidebar .nav > li > a:hover,
-.sidebar .nav > li > a:focus {
+
+.bd-sidebar .nav>li>a:hover {
+  color: rgba(0, 0, 0, .88);
   text-decoration: none;
-  background-color: #e5e3e9;
-  border-right: 1px solid #dbd8e0;
+  background-color: transparent;
+ /*  border-right: 1px solid rgba(0, 0, 0, .30); */
 }
-.sidebar .nav > .active > a,
-.sidebar .nav > .active:hover > a,
-.sidebar .nav > .active:focus > a {
-  font-weight: bold;
+
+.bd-sidebar .nav>li>a.nav-link.active,
+.bd-sidebar .nav>li>a.nav-link.active:hover,
+.bd-sidebar .nav>li>a.nav-link.active:focus {
+  font-weight: 600;
   color: #563d7c;
   background-color: transparent;
   border-right: 1px solid #563d7c;
 }
 /* Nav: second level (shown on .active) */
-.sidebar .nav .nav {
+.bd-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
   margin-bottom: 8px;
 }
-.sidebar .nav .nav > li > a {
+.bd-sidebar .nav>li>a.nav-link.active + ul {
+  display: block;
+} 
+
+.bd-sidebar .nav .nav > li > a {
   padding-top:    3px;
   padding-bottom: 3px;
   padding-left: 30px;
   font-size: 90%;
 }
 /* Nav: third level (shown on .active) */
-.sidebar .nav .nav .nav> li > a {
+.bd-sidebar .nav .nav .nav> li > a {
   padding-top:    3px;
   padding-bottom: 3px;
   padding-left: 50px;
   font-size: 90%;
 }
 
+
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
-  .sidebar .nav > .active > ul {
+  .bd-sidebar .nav > a.nav-link + ul {
     display: block;
   } 
 }
@@ -120,6 +129,61 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     width: 263px;
   }
 }
+
+.bd-sidebar {
+  -ms-flex-order: 0;
+  order: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+@media (min-width:768px) {
+  .bd-sidebar {
+      border-right: 1px solid rgba(0, 0, 0, .1)
+  }
+
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+      .bd-sidebar {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 4rem;
+          z-index: 1000;
+          height: calc(100vh - 4rem)
+      }
+  }
+}
+
+@media (min-width:1200px) {
+  .bd-sidebar {
+      -ms-flex: 0 1 320px;
+      flex: 0 1 320px
+  }
+}
+
+
+
+
+.bd-links {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: -15px;
+  margin-left: -15px
+}
+
+@media (min-width:768px) {
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+      .bd-links {
+          max-height: calc(100vh - 9rem);
+          overflow-y: auto
+      }
+  }
+}
+
+@media (min-width:768px) {
+  .bd-links {
+      display: block !important
+  }
+}
+
 /* Docs sections */
 .docs-section {
   padding-top: 10px;
@@ -227,4 +291,10 @@ mark { background-color: #f7f7f9;}
 .link_orange:hover {
 color: #F6575E;
   text-decoration: underline;
+}
+
+.btn-download {
+  color: #fff;
+  background-color: #156EAC;
+  border-color: #156EAC;
 }
