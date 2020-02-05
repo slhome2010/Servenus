@@ -39,10 +39,10 @@
 <div class="container-fluid">
 	<!-- <section class="section"> -->
 	<div class="row flex-xl-nowrap section">
-		<div class="col-md-3 col-xl-2 flex-column bd-sidebar">
+		<div class="col-md-3 col-xl-2  bd-sidebar">
 			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
 			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
-				<ul class="nav  nav-list">
+				<ul class="nav flex-column nav-list">
 					<li>
 						<a class="nav-link" href="#overview">Описание возможностей</a>
 						<ul class="nav">
@@ -64,10 +64,10 @@
 						<a class="nav-link" href="#сompatibility">Совместимость</a>
 					</li>
 					<li>
-						<a class="nav-link" href="#license"><span class="required">Лицензия</span></a>
+						<a class="nav-link" href="#license">Лицензия <sup><span class="badge badge-version">!!!</span></sup></a>
 					</li>
 					<li>
-						<a class="nav-link" href="#install"><span class="required">Установка/обновление</span></a>
+						<a class="nav-link" href="#install">Установка/обновление <sup><span class="badge badge-version">!!!</span></sup></a>
 					</li>
 					<li>
 						<a class="nav-link" href="#theory">Теория и терминология</a>
@@ -81,8 +81,8 @@
 							<li><a class="nav-link" href="#theory-synchro">Синхронизация</a></li>
 						</ul>
 					</li>
-					<li>
-						<a class="nav-link" href="#settings"><span class="required">Настройка</span></a>
+					<li>						
+						<a class="nav-link" href="#settings">Настройка <sup><span class="badge badge-version">!!!</span></sup></a>					
 						<ul class="nav">
 							<li><a class="nav-link" href="#settings-main">Общие настройки</a></li>
 							<li><a class="nav-link" href="#settings-tree">Настройки деревьев</a></li>
@@ -93,7 +93,7 @@
 						</ul>
 					</li>
 					<li>
-						<a class="nav-link" href="#using"><span class="required">Работа с модулем</span></a>
+						<a class="nav-link" href="#using">Работа с модулем <sup><span class="badge badge-version">!!!</span></sup></a>
 						<ul class="nav">
 							<li><a class="nav-link" href="#using-tree">Работа с деревом</a></li>
 							<li><a class="nav-link" href="#using-context-menu">Контекстное меню</a></li>
@@ -109,7 +109,7 @@
 						</ul>
 					</li>
 					<li>
-						<a class="nav-link" href="#integro"><span class="required">Интеграция с OpenCart</span></a>
+						<a class="nav-link" href="#integro">Интеграция с OpenCart <sup><span class="badge badge-version">!!!</span></sup></a>
 						<ul class="nav">
 							<li><a class="nav-link" href="#integro-product">Страница товара</a></li>
 							<li><a class="nav-link" href="#integro-category">Страница категории</a></li>
@@ -117,7 +117,7 @@
 						</ul>
 					</li>
 					<li>
-						<a class="nav-link" href="#tools"><span class="required">Инструменты</span></a>
+						<a class="nav-link" href="#tools">Инструменты <sup><span class="badge badge-version">!!!</span></sup></a>
 						<ul class="nav">
 							<li><a class="nav-link" href="#tools-empty">Удалить пустые значения</a></li>
 							<li><a class="nav-link" href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
@@ -146,7 +146,7 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="col-md-9" role="main">
+		<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 			<!-- Getting started -->
 			<div class="docs-section">
 				<div class="page-header">
@@ -158,11 +158,13 @@
 				<h3 id="overview-idea">Основная идея</h3>
 				<p>Составление набора атрибутов, одинаковых для определенной категории товара и привязка этого набора к категории. Приведение структуры атрибутов и их значений
 					к виду: </p>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>
 Категория товаров
     └── Атрибут 
           └── Значение(список значений) атрибута
-		  			</code></pre>
+					  </code></pre>
+				</div>
 				<p>Представление структуры атрибутов и значений в виде деревьев.</p>
 				<h3 id="overview-capabilities">Возможности</h3>
 				<ul>
@@ -230,7 +232,8 @@
 				<div class="page-header">
 					<h1 id="whats-included">Структура архива.</h1>
 				</div>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>
 Attributico_v3.0.1/
 │── PHP5.4-5.6/
 │       ├── upload_v1.5.x-2.2/
@@ -276,6 +279,7 @@ Attributico_v3.0.1/
 ├── News3.0.1/
 └── readme.txt	
 					</code></pre>
+				</div>
 				<div class="callout callout-info">
 					<h4>Различия версий.</h4>
 					<p>Приведенная структура архива соответствует версии модуля > 3.0.1. В более ранних версиях возможно наличие папок <code>5.4/</code>, <code>5.5/</code> и <code>5.6/</code>.
@@ -435,34 +439,42 @@ Attributico_v3.0.1/
 					или <a href="http://bono-idea.com/blog/instrukciya-po-rabote-s-opciyami-i-atributami-v-OpenCart-2/" target="blanc">здесь</a>. Если коротко, то это характеристики, которые позволяют
 					систематизировать товары, сравнивать товары, делать поиск или выборки с помощью фильтров.</p>
 				<p>В OpenCart принята следующая структура атрибутов:</p>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>
 Группа атрибутов
     └── Атрибут        
 					</code></pre>
+				</div>
 				<p>Значение атрибута относится к конкретному товару:</p>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>					
 Товар
   ├── Ссылка на атрибут
   └── Значение атрибута
 					</code></pre>
+				</div>
 				<p>Так вот, все, перечисленные выше, задачи выполняются анализируя именно значения атрибутов. Т.е. если Вы добавите атрибут в товар, но не впишите его значение,
 					то анализировать будет нечего.</p>
 				<p>Любой товар может иметь несколько атрибутов. Любой атрибут может иметь несколько значений. Значение атрибута это, на самом деле, текстовое поле, куда через разделитель
 					можно вписать несколько значений.</p>
 				<p>Модуль Attribut&amp;co (визуально) приводит структуру атрибутов и значений к удобному виду и представляет эту структуру в виде дерева.</p>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>
 Группа атрибутов
     └── Атрибут 
           └── Значение(список значений) атрибута
-		  			</code></pre>
+					  </code></pre>
+				</div>
 				<p>Понятие <mark><small>Группа атрибутов</small></mark> используется только для систематизации самих атрибутов. Товары же систематизируются по категориям. Поэтому, кажется
 					логичным, сделать привязку определенного списка атрибутов с их значениями к определенной категории. Идея эта не нова и используется многими модулями, но именно эта идея
 					лежит в основе работы данного модуля.</p>
-				<pre><code>
+				<div class="highlight">
+					<pre><code>
 Категория товаров
     └── Атрибут 
           └── Значение(список значений) атрибута
-		  			</code></pre>
+					  </code></pre>
+				</div>
 				<h3 id="theory-terms">Термины и определения.</h3>
 				<div class="table-responsive">
 					<table class="table table-bordered table-striped">
@@ -2078,7 +2090,24 @@ Attributico_v3.0.1/
 									<li>изменена система лицензирования модуля;</li>
 								</ul>
 				</div>
-			</div>
+			</main>
+			<nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
+                <ul class="section-nav">
+					<li class="right-entry"><a class="nav-link" href="#tools-empty">Удалить пустые значения</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-defrag">Дефрагментация атрибутов</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-detach">Удалить не связанные с товаром</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-duplicate">Объединить дубли (beta)</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-category">Атрибуты категорий</a></li>
+					<li class="right-entry"><a class="nav-link" href="#tools-cache">Очистить кэш деревьев</a></li>
+					<li class="right-entry">
+						<a class="nav-link" href="#tools-standart">Стандартизация атрибутов</a>
+						<ul class="nav">
+							<li class="right-entry"><a class="nav-link" href="#clone">Клонировать язык</a></li>
+						</ul>
+					</li>
+				</ul>
+				</nav>
 		</div>
 		<!-- </section> -->
 	</div>
