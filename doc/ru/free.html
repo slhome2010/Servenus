@@ -1,0 +1,133 @@
+<? 
+    $doc = 'Attributico';
+    $title = 'Attribut&amp;co doc page';
+    $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
+	$keywords = 'opencart, attribute';
+	require "../../common/header.php";
+?>
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
+		<a class="navbar-brand" href="/">
+			<img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+			Attribut&amp;co
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<span class="badge badge-version"><?php echo $version_short;?></span>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<div class="col-8">
+				<ul class="navbar-nav">
+					<!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
+					<li class="nav-item"><a class="nav-link" href="/doc/ru/attributico.html"><?php echo $entry_documentation;?></a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/index.php?lang=ru&page=/doc/ru/attributico"><img src="/img/ru.png"> Русский</a>
+							<a class="dropdown-item" href="/index.php?lang=en&page=/doc/en/attributico"><img src="/img/en.png"> English</a>
+						</div>
+					</li>
+			</div>
+			<div class="col-4 d-flex justify-content-end align-items-center">
+				<a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
+				<a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
+			</div>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- Docs page layout -->
+<div class="container-fluid">
+	<!-- <section class="section"> -->
+	<div class="row flex-xl-nowrap section">
+		<div class="col-md-3 col-xl-2  bd-sidebar">
+			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
+			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+				<ul class="nav flex-column nav-list">
+					<li>
+						<a class="nav-link" href="attributico.html">Описание</a>						
+					</li>					
+					<li>
+						<a class="nav-link" href="included.html">Структура архива</a>
+					</li>
+					<li>
+						<a class="nav-link" href="system.html">Системные требования.</a>
+					</li>					
+					<li>
+						<a class="nav-link" href="license.html">Лицензия <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+					</li>
+					<li>
+						<a class="nav-link active-page" href="free.html">Бесплатная версия</a>
+					</li>
+					<li>
+						<a class="nav-link" href="install.html">Установка/обновление <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+					</li>
+					<li>
+						<a class="nav-link" href="theory.html">Теория и терминология</a>						
+					</li>
+					<li>						
+						<a class="nav-link" href="settings.html">Настройка <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="using.html">Работа с модулем <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="integro.html">Интеграция с OpenCart <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="tools.html">Инструменты <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="example.html">Примеры</a>
+					</li>
+					<li>
+						<a class="nav-link" href="problems.html">Проблемы и ошибки</a>
+					</li>
+					<li>
+						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+					<li>
+						<a class="nav-link" href="history.html">История изменений</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+<!-- Free version differences -->
+<div class="docs-section">
+    <div class="page-header">
+        <h1 id="free">Особенности версии View.</h1>
+    </div>
+    <p>Существует бесплатный аналог модуля Attribut&amp;co. Собственно говоря это тот же модуль, только с ограниченными возможностями. Внешне бесплатная версия не отличается от платного аналога, за исключением того, что
+        в заголовке рядом с названием модуля будет пометка (free). Например, Attribut<b style="color: #2199C7;">&</b>co</span> v3.0.7 (free).</p>
+    <p>Ограничения бесплатной версии касаются физических изменений в Базе Данных.
+        Вы можете производить любые действия с <span class="node">Атрибутами</span> или <span class="node">Значениями</span> как и в платном модуле, но в Базе Данных изменения не произойдут. Т.е. после перезагрузки
+        страницы все станет как было. Бесплатная версия предназначена для изучения возможностей и понимания удобства работы с атрибутами, а так же для того чтобы убедиться, что модуль может работать на вашем OpenCart
+        магазине.</p>
+    <p>Вся терминология, все описания и характеристики не отличаются от платного аналога.</p>
+    <div class="callout callout-info">
+        <h4>Некоторые возможности</h4>
+        <p>Некоторые возможности все же сохранены в полном объеме. Например, drag-and-drop сортировка <span class="node">Групп</span> или <span class="node">Атрибутов</span>.</p>
+    </div>
+    <!-- License for free -->
+    <div class="callout callout-danger">
+        <h4>Лицензия обязятельна.</h4>
+        <d>Несмотря на то, что версия бесплатная, лицензию все же установить необходимо.</p <p>В комплект поставки модуля, отдельным архивом входит <code>License.zip</code>. В этом архиве и содержится файл лицензий.
+            Необходимо этот архив скачать, распаковать, содержимое папки <code>5.4/</code>
+            (или с вашей версией PHP) скопировать поверх структуры сайта.</p>
+            <p>Для бесплатной версии нет необходимости согласовывать названия доменов. </p>
+    </div>
+</div>
+	
+</main>	
+<nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
+    <ul class="side-nav">
+        
+    </ul>				
+    </nav>
+</div>
+<!-- </section> -->
+</div>
+<!-- Footer -->
+<? require "../../common/footer.php"; ?>

@@ -100,6 +100,7 @@ text-decoration: underline;
  /*  border-right: 1px solid rgba(0, 0, 0, .30); */
 }
 
+.bd-sidebar .nav>li>a.nav-link.active-page,
 .bd-sidebar .nav>li>a.nav-link.active,
 .bd-sidebar .nav>li>a.nav-link.active:hover,
 .bd-sidebar .nav>li>a.nav-link.active:focus {
@@ -144,16 +145,78 @@ text-decoration: underline;
   order: 1
 }
 
-.docs-section {
-  padding-top: 10px;
+.bd-content>h2[id],
+.bd-content>h3[id],
+.bd-content>h4[id] {
+    pointer-events: none
 }
-.page-header{margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid #eee}
+
+.bd-content>h2[id]::before,
+.bd-content>h3[id]::before,
+.bd-content>h4[id]::before {
+    display: block;
+    height: 6rem;
+    margin-top: -6rem;
+    content: ""
+}
+
+.bd-content>h2 {
+  font-size: 2rem
+}
+
+@media (max-width:1200px) {
+  .bd-content>h2 {
+      font-size: calc(1.325rem + .9vw)
+  }
+}
+
+.bd-content>h3 {
+  font-size: 1.75rem
+}
+
+@media (max-width:1200px) {
+  .bd-content>h3 {
+      font-size: calc(1.3rem + .6vw)
+  }
+}
+
+.bd-content>h4 {
+  font-size: 1.5rem
+}
+
+@media (max-width:1200px) {
+  .bd-content>h4 {
+      font-size: calc(1.275rem + .3vw)
+  }
+}
+
+.bd-content>h2:not(:first-child) {
+  margin-top: 3rem
+}
+
+.bd-content>h3 {
+  margin-top: 1.5rem
+}
+.docs-section {
+ /*  padding-top:50px; */
+  /* padding-top: 10px; */
+}
+.page-header{
+  text-align: center;
+  /* margin:0 0 20px; */
+  padding-bottom:10px;
+  /* border-bottom:1px solid #eee */
+}
 h1[id] {
-  padding-top: 60px;
+  padding-top: 50px;
+  margin-top: -45px;
+}
+h2[id] {
+  padding-top: 50px;
   margin-top: -45px;
 }
 h3[id] {
-  padding-top: 60px;
+  padding-top: 50px;
   margin-top: -45px;
 }
 
@@ -176,33 +239,33 @@ h3[id] {
   }
 }
 
-.section-nav {
+.side-nav {
   padding-left: 0;
   border-left: 1px solid #eee
 }
 
-.section-nav ul {
+.side-nav ul {
   padding-left: 1rem
 }
 
-.right-entry {
+.nav-item {
   display: block
 }
 
-.right-entry a {
+.nav-item a {
   display: block;
   padding: .125rem 1.5rem;
   color: #77757a
 }
 
-.right-entry a:hover {
+.nav-item a:hover {
   color: #156EAC;
   text-decoration: none
 }
 
-li.right-entry>a.nav-link.active,
-li.right-entry>a.nav-link.active:hover,
-li.right-entry>a.nav-link.active:focus {
+li.nav-item>a.nav-link.active,
+li.nav-item>a.nav-link.active:hover,
+li.nav-item>a.nav-link.active:focus {
   font-weight: 600;
   color: #156EAC;
   background-color: transparent;

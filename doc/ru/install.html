@@ -1,0 +1,167 @@
+<? 
+    $doc = 'Attributico';
+    $title = 'Attribut&amp;co doc page';
+    $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
+	$keywords = 'opencart, attribute';
+	require "../../common/header.php";
+?>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
+        <a class="navbar-brand" href="/">
+            <img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            Attribut&amp;co
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="badge badge-version"><?php echo $version_short;?></span>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="col-8">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="/doc/ru/attributico.html"><?php echo $entry_documentation;?></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/index.php?lang=ru&page=/doc/ru/attributico"><img src="/img/ru.png"> Русский</a>
+                            <a class="dropdown-item" href="/index.php?lang=en&page=/doc/en/attributico"><img src="/img/en.png"> English</a>
+                        </div>
+                    </li>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
+                <a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
+            </div>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Docs page layout -->
+<div class="container-fluid">
+    <!-- <section class="section"> -->
+    <div class="row flex-xl-nowrap section">
+        <div class="col-md-3 col-xl-2  bd-sidebar">
+            <!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
+            <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+                <ul class="nav flex-column nav-list">
+                    <li>
+                        <a class="nav-link" href="attributico.html">Описание</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="included.html">Структура архива</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="system.html">Системные требования.</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="license.html">Лицензия <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="free.html">Бесплатная версия</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active-page" href="install.html">Установка/обновление <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="theory.html">Теория и терминология</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="settings.html">Настройка <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="using.html">Работа с модулем <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="integro.html">Интеграция с OpenCart <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="tools.html">Инструменты <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="example.html">Примеры</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="problems.html">Проблемы и ошибки</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="history.html">История изменений</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <!-- install -->
+            <div class="docs-section">
+                <div class="page-header">
+                    <h1 id="install">Установка, обновление, удаление модуля.</h1>
+                </div>
+                <p class="lead">Установка.</p>
+                <p>1. Распакуйте архив. Содержимое папки <code>upload.../</code>, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
+                <p>2. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> должен появиться модуль "Attribut&amp;co". Его необходимо установить. Кнопка
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" title="Установить"><i class="fa fa-plus-circle"></i></button></p>
+                <p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установиить разрешения на просмотр и редактирование для
+                    <code>module/attributico</code> или <code>extension/module/attributico</code> для магазинов версии >2.2 .</p>
+                <p>4. Распакуйте архив <code>License.zip</code>. Содержимое папки, соответствующей вашей версии PHP скопируйте поверх структуры папок сайта.</p>
+                <p>5. В административной панели в разделе <mark><small>Дополнения ⇒ Установка дополнений</small></mark> загрузите файлы <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code>
+                    для магазинов второй версии (2.x) или <code>attributico.3.x.ocmod.zip</code> для магазинов третьей версии (3.x) из папки <code>ocmod</code>. Для магазинов версии 1.5.x скопируйте
+                    папку <code>vqumod/</code> поверх структуры сайта. </p>
+                <p>6. В административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> необходимо обновить модификаторы. Кнопка <button type="button" class="btn btn-info" data-toggle="tooltip"
+                        title="Обновиить">
+                        <i class="fa fa-refresh"></i></button>&nbsp;&nbsp;</p>
+                <p>После этого должен появиться пункт меню <mark><small>Каталог ⇒ Атрибуты ⇒ Attribut&amp;co.</small></mark></p>
+                <div class="callout callout-danger">
+                    <h4>Внимание</h4>
+                    <p>Если до этого Вы уже использовали модуль более ранних версий и устанавливали модификаторы непосредственно в папку <code>system</code>, необходимо их оттуда удалить.</p>
+                    <p>Т.е. в папке <code>system</code> вашего сайта файлов <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code> быть не должно.</p>
+                </div>
+                <div class="callout callout-warning">
+                    <h4>Обязательно</h4>
+                    <p>Очистите кэш магазина и браузера. Специфика очистки кэша для магазинов версии 3.x <a href="https://shopiweb.ru/opencart-3/kesh-opencart-3-ochistka-kesha/" target="blanc">описана, например, здесь</a>.</p>
+                </div>
+                <div class="callout callout-info">
+                    <h4>Некоторые особенности</h4>
+                    <p>В некоторых версиях перевода вместо слова <mark>Дополнения</mark> присутствует слово <mark>Расширения.</mark> А вместо <mark>Менеджер дополнений</mark> будет написано <mark>Модификаторы</mark></p>
+                    <p>Для магазинов на движке 1.5.x процедура установки та же кроме пункта 3. Обновление модификаторов не требуется. Вместо кнопок надо использовать ссылки с
+                        соответствующими названиями.</p>
+                </div>
+                <div class="callout callout-warning">
+                    <h4>Возможные проблемы OpenCart 1.5.x</h4>
+                    <p>Данный модуль использует плагины <code>jQuery UI - v1.11.4+</code>. В OpenCart 1.5.x используется <code>jQuery UI - v1.8</code>.
+                        В процессе установки модуля эта версия будет заменена однозначно, иначе Attribut&amp;co работать не будет. В связи с этим может быть временно
+                        нарушена работоспособность некоторых сторонних модулей.
+                    </p>
+                </div>
+                <p class="lead">Обновление.</p>
+                <p>1. Обновление модуля не требует его удаления. После скачивания новой версии надо распаковать архив и содержимое папки <code>upload.../</code>, соответствующей вашей версии магазина из архива скопировать поверх
+                    структуры папок сайта.</p>
+                <p>2. Для магазинов версии 2.x и 3.x надо обязательно переустановить модификаторы <code>...ocmod.xml</code> или <code>...ocmod.zip</code> описанным выше способов, затем в административной панели в разделе
+                    <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark>
+                    необходимо их обновить. <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить"><i class="fa fa-refresh"></i></button></p>
+                <p>3. Очистите <a href="https://shopiweb.ru/opencart-3/kesh-opencart-3-ochistka-kesha/" target="blanc">кэш магазина</a> и браузера.</p>
+                <p class="lead">Удаление.</p>
+                <p>1. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> напротив модуля "Attribut&amp;co" - кнопка "Удалить". <button type="button" class="btn btn-danger" data-toggle="tooltip"
+                        title="Установить">
+                        <i class="fa fa-minus-circle"></i></button></p>
+                <p>2. Для магазинов версии 2.x из папки <code>/system</code> удалить файлы <code>attribut&amp;co.2.x.ocmod.xml, attribut&amp;co.2.3.ocmod.xml, attribut&amp;co.22.ocmod.xml, autocomplete.ocmod.xml</code>.
+                    Для магазинов версии 1.5.x из папки <code>/vqmod/xml</code> удалить файлы <code>attribut&amp;co1_5_x.xml, autocomplete.xml</code></p>
+                <p class="lead">База данных.</p>
+                <p>В процессе установки модуля в базе данных будет создана таблица <mark><small>"category_attribute"</small></mark> с полями <code>`category_id` INTEGER(11) NOT NULL</code> и <code>`attribute_id` INTEGER(11) NOT
+                        NULL.</code></p>
+                <p>Начиная с версии 2.0.1 в стандартной таблице OpenCart <mark><small>"attribute_description"</small></mark> создается дополнительное поле <code>`duty` TEXT NOT NULL</code> для хранения <a href="#theory-duty"><span
+                            class="node">Дежурных шаблонов</span></a>.</p>
+                <p>В процессе удаления модуля все вышеперечисленные таблицы и поля удаляются.</p>
+            </div>
+        </main>
+        <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
+            <ul class="side-nav">
+
+            </ul>
+        </nav>
+    </div>
+    <!-- </section> -->
+</div>
+<!-- Footer -->
+<? require "../../common/footer.php"; ?>

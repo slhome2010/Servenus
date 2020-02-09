@@ -1,0 +1,377 @@
+<? 
+    $doc = 'Attributico';
+    $title = 'Attribut&amp;co doc page';
+    $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
+	$keywords = 'opencart, attribute';
+	require "../../common/header.php";
+?>
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
+		<a class="navbar-brand" href="/">
+			<img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+			Attribut&amp;co
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<span class="badge badge-version"><?php echo $version_short;?></span>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<div class="col-8">
+				<ul class="navbar-nav">
+					<!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
+					<li class="nav-item"><a class="nav-link" href="/doc/ru/attributico.html"><?php echo $entry_documentation;?></a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/index.php?lang=ru&page=/doc/ru/attributico"><img src="/img/ru.png"> Русский</a>
+							<a class="dropdown-item" href="/index.php?lang=en&page=/doc/en/attributico"><img src="/img/en.png"> English</a>
+						</div>
+					</li>
+			</div>
+			<div class="col-4 d-flex justify-content-end align-items-center">
+				<a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
+				<a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
+			</div>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- Docs page layout -->
+<div class="container-fluid">
+	<!-- <section class="section"> -->
+	<div class="row flex-xl-nowrap section">
+		<div class="col-md-3 col-xl-2  bd-sidebar">
+			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
+			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+				<ul class="nav flex-column nav-list">
+					<li>
+						<a class="nav-link" href="attributico.html">Описание</a>						
+					</li>					
+					<li>
+						<a class="nav-link" href="included.html">Структура архива</a>
+					</li>
+					<li>
+						<a class="nav-link" href="system.html">Системные требования.</a>
+					</li>					
+					<li>
+						<a class="nav-link" href="license.html">Лицензия <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+					</li>
+					<li>
+						<a class="nav-link" href="free.html">Бесплатная версия</a>
+					</li>
+					<li>
+						<a class="nav-link" href="install.html">Установка/обновление <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
+					</li>
+					<li>
+						<a class="nav-link" href="theory.html">Теория и терминология</a>						
+					</li>
+					<li>						
+						<a class="nav-link" href="settings.html">Настройка <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="using.html">Работа с модулем <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="integro.html">Интеграция с OpenCart <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link active-page" href="tools.html">Инструменты <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
+					</li>
+					<li>
+						<a class="nav-link" href="example.html">Примеры</a>
+					</li>
+					<li>
+						<a class="nav-link" href="problems.html">Проблемы и ошибки</a>
+					</li>
+					<li>
+						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+					<li>
+						<a class="nav-link" href="history.html">История изменений</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+<!-- tools -->
+<div class="docs-section">
+    <div class="page-header">
+        <h1 id="tools">Инструменты.</h1>
+    </div>
+    <div class="callout callout-danger">
+        <h4>Внимание!</h4>
+        <p>Перед применением любого инструмента за исключением очистки кэша, ОБЯЗАТЕЛЬНО сделайте резервную копию базы данных. Если операция прервется не завершившись, высока вероятность нарушения целостности данных.</p>
+    </div>
+    <h3 id="tools-empty">Удалить пустые значения.</h3>
+    <p>Пустые <span class="node">Значения</span> появляются в результате ошибок контент-менеджеров. Предлагаю два наиболее распространенных способа создать пустые <span class="node">Значения</span>. Первый: при ручном
+        редактировании
+        карточки
+        товара, нажать на кнопку "Сохранить" при добавленном <span class="node">Атрибуте</span>, но не вписанном <span class="node">Значении</span>. Второй: используя Attribut&amp;co, добавить <span class="node">Атрибут</span> с
+        незаполненным
+        <a href="#theory-duty"><span class="node">Дежурным шаблоном</span></a> в категорию.</p>
+    <ul id="gallery_3" class="list-unstyled row">
+        <li class="col-xs-6 col-md-6">
+            <a class="lg-item" href="/img/help/attributico/empty4.jpg" title="Empty values"><img src="/img/help/attributico/empty4.jpg" alt="Empty4" class="img-thumbnail img-responsive mrb15"></a>
+        </li>
+        <li class="col-xs-6 col-md-6">
+            <a class="lg-item" href="/img/help/attributico/empty5.jpg" title="Empty duty template"><img src="/img/help/attributico/empty5.jpg" alt="Empty5" class="img-thumbnail img-responsive mrb15"></a>
+        </li>
+    </ul>
+    <p>В результате, гарантировано получите товар или все товары определенной категории с пустыми <span class="node">Значениями</span> атрибутов. Такие пустышки некрасиво выглядят в фильтре вашего магазина и вводят клиентов
+        в заблуждение.</p>
+    <p>Чтобы не искать по всей БД товары с пустыми <span class="node">Значениями</span>, можно применять данный инструмент, который просто удалит ссылки на эти товары. Для запуска достаточно нажать на кнопку
+        <button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+    <p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+    <div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+    <p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено пустых значений: 48</div>
+    <h3 id="tools-scavengery">Удалить ошибочные ссылки.</h3>
+    <p>Некоторые таблицы БД, которые создает модуль, не являются "родными" для OpenCart. Соответственно, стандартные средства движка не позволяют корректно изменять данные в этих таблицах.
+        Рекомендацию - работать только через Attribut&amp;co, некоторые пользователи игнорируют. Особенно ручное удаление приводит к появлению ссылок на несуществующие атрибуты. Визуально
+        это отображается как <span class="bg-danger">Load error! (SyntaxError: Unexpected token < in JSON at position 0)</span>. </p> <p>Чтобы проверить корректность таблиц БД, можно применять данный инструмент, который
+                просто удалит ссылки
+                на несуществующие атрибуты. Для запуска достаточно нажать на кнопку
+                <button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+    <p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+    <div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+    <p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено ошибочных ссылок: 0</div>
+    <h3 id="tools-defrag">Дефрагментация атрибутов и групп.</h3>
+    <p>В процессе работы приходится удалять и добавлять <span class="node">Атрибуты</span> и <span class="node">Группы</span>. Особенность работы БД такова, что в таблицу записи добавляются по правилу автоинкремента.
+        В результате можем получить, например, такую таблицу:</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <colgroup>
+                <col class="col-xs-2">
+                <col class="col-xs-2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>attribute_group_id</th>
+                    <th>sort_order</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>68</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>146</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>363</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>364</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>366</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Нет ничего страшного в том, что между соседними записями есть большие "разрывы" в нумерации <code>attribute_group_id</code>. Неприятность заключается в том, что отсутствует <code>attribute_group_id = 1</code>
+        Дело в том, что модули автоматической загрузки прай-листов и модули парсинга используют именно <code>attribute_group_id = 1</code> для размещения всех <span class="node">Атрибутов</span>.</p>
+    <p>Теперь хорошая новость для любителей парсинга и автоматической загрузки прайс-листов. Данный инструмент восстанавливает <code>attribute_group_id = 1</code> без ущерба целостности данных, т.е. приводит таблицу к
+        такому виду:</p>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <colgroup>
+                <col class="col-xs-2">
+                <col class="col-xs-2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>attribute_group_id</th>
+                    <th>sort_order</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>8</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>В дальнейшем <span class="node">Группу</span>, у которой <code>attribute_group_id = 1</code> будем называть <span class="node">Группа парсинга</span>.</p>
+    <p>Процесс дефрагментации может занять длительное время, особенно для магазинов с большим количеством атрибутов или товаров. Ведь изменения надо внести в каждый товар. При недостатке ресурсов на хостинге есть большая
+        вероятность,
+        что операция может быть прервана по тайм-ауту. Для получения <span class="node">Группы парсинга</span> достаточно дефрагментировать только <span class="node">Группы</span>. Начиная с версии 2.1.7 есть возможность
+        раздельной
+        дефрагментации <span class="node">Групп</span> или <span class="node">Атрибутов</span>.</p>
+    <a class="lightgallery" href="/img/help/attributico/defrag.jpg" title="Defragmentation settings"><img src="/img/help/attributico/defrag.jpg" alt="Defragmentation settings" class="img-thumbnail img-responsive mrb15"></a>
+    <p>После того, как отметили <span class="node">Группы</span> или <span class="node">Атрибуты</span> для запуска задачи необходимо нажать кнопку
+        <button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+    <p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+    <div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+    <p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Упорядочено групп: 9 Упорядочено атрибутов: 31 </div>
+    <p>После того, как инструмент отработал, во всех деревьях должна появиться <span class="node">Группа парсинга</span> которая обозначается иконкой <img src="/img/home.png" alt="...">.
+        (Если не появилась иконка, то надо очистить кэш браузера).</p>
+    <p>Как быть если после дефрагментации появилвсь <span class="node">Группа парсинга</span> и она уже занята и содержит <span class="node">Атрибуты</span>, а для парсинга или загрузки
+        прайс-листа надо ее очистить? Ничего сложного. Надо создать новую одноименную группу, и с помощью Drag-and-drop технологии перетащить туда все атрибуты, а саму <span class="node">Группу парсинга</span>
+        переименовать. Для лучшего понимания - следующие видео:</p>
+    <div id="example_2">
+        <div class="media">
+            <div class="media-left">
+                <a class="lg-item" href="https://youtu.be/8OcO_4L7iBU">
+                    <img class="media-object" src="/img/video-play.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Подготовка группы парсинга</h4>
+                <p>Дефрагментация <span class="node">Групп</span> и <span class="node">Атрибутов</span>. Подготовка <span class="node">Группы парсинга</span>.</p>
+            </div>
+        </div>
+    </div>
+    <h3 id="tools-detach">Удалить не связанные с товаром.</h3>
+    <p>В результате парсинга, автоматической загрузки прайс-листов и других операций, часто появляются дубли <span class="node">Атрибутов</span> или <span class="node">Атрибуты</span>,
+        которые не принадлежат ни одному товару.</p>
+    <p>Сами по себе не связанные с товаром атрибуты никакого отрицательного влияния на работу магазина не оказывают. Возможно, незначительно замедляют поиск. Но если вы боретесь за порядок
+        и чистоту в рядах <span class="node">Атрибутов</span>, можете применять этот инструмент.</p>
+    <p>Прежде всего надо выбрать <span class="node">Группы</span>, отметив соответствующий чекбокс в дереве. Можно выбрать сразу все, отметив самый верхний.</p>
+    <a class="lightgallery" href="/img/help/attributico/detach.jpg" title="Detach & deduplicate"><img src="/img/help/attributico/detach.jpg" alt="Detach & deduplicate" class="img-thumbnail img-responsive mrb15"></a>
+    <p>После того, как отметили <span class="node">Группы</span> для запуска задачи необходимо нажать
+        <button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+    <h3 id="tools-duplicate">Объединить дубли (beta).</h3>
+    <p>Причины появления дублей <span class="node">Атрибутов</span> как было в описании для предыдущего инструмента, появляются в результате парсинга, автоматической загрузки прайс-листов или ошибок контент-менеджеров.
+        Этот инструмент позволяет объединять дубли без потери связей с товаром и категорией. Действие производятся для отмеченных <span class="node">Групп</span>, как и в предыдущем случае.</p>
+    <div class="callout callout-warning">
+        <h4>Используйте с осторожностью.</h4>
+        <p>Инструмент "Объединить дубли" пока работает в режиме beta-версии.</p>
+    </div>
+    <p>Как и в предыдущих случаях, для запуска достаточно нажать на кнопку
+        <button type="button" data-toggle="tooltip" title="Запустить задачу" class="btn btn-warning"><i class="fa fa-play"></i></button>.</p>
+    <p>Должно появиться сообщение с рекомендацией не покидать данную страницу.</p>
+    <div class="alert alert-warning" role="alert"> Внимание! Оставайтесь на этой странице до завершения операции. </div>
+    <p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Удалено атрибутов: 0 </div>
+    <p>или</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Обработано дублей: 0 </div>
+    <h3 id="tools-category">Атрибуты категорий.</h3>
+    <p>Этот инструмент будет полезен тем, кто устанавливает модуль на рабочий магазин, особенно с большим количеством категорий и товаров, а так же для тех, кто занимается парсингом. Формирование <span class="node">Атрибутов
+            категорий</span>
+        вручную, является трудоемким процессом, а при парсинге иногда неизвестно с какими <span class="node">Атрибутами</span> придет товар.</p>
+    <a class="lightgallery" href="/img/help/attributico/createcategory.jpg" title="Create category attributes"><img src="/img/help/attributico/createcategory.jpg" alt="Create category attributes"
+            class="img-thumbnail img-responsive mrb15"></a>
+    <p>Инструмент выберет все <span class="node">Атрибуты</span> указанной вами категориии из всех товаров, принадлежащих этой категории и сгруппирует их в виде <span class="node">Атрибутов категории</span>.</p>
+    <div class="callout callout-warning">
+        <h4>Имейте в виду!</h4>
+        <p>Если товар принадлежит сразу нескольким категориям, то <span class="node">Атрибуты</span> всех этих категорий просуммируются для каждой из них. Приведите в порядок структуру категорий или не забудьте удалить
+            ненужные атрибуты
+            из категорий после выполнения задачи.</p>
+    </div>
+    <p>Если отмечен пункт <mark><small>Расставить атрибуты категории в товары</small></mark>, то будет выполнена так же задача добавления <span class="node">Атрибутов</span> и их <span class="node">Значений</span> во все
+        товары выбранной
+        категории.</p>
+    <p>Расстановка или добавление <span class="node">Атрибутов</span> и их <span class="node">Значений</span> в товары будет производится в соответствии с <a href="#settings-product"><mark><small>алгоритмом</small></mark></a>,
+        указанными
+        в настройках.</p>
+    <a class="lightgallery" href="/img/help/attributico/update_settings.jpg" title="Values update settings"><img src="/img/help/attributico/update_settings.jpg" alt="Values update settings"
+            class="img-thumbnail img-responsive mrb15"></a>
+    <p>Уместно заметить, что добавление <a href="#theory-duty"><span class="node">Дежурных шаблонов</span></a> происходит только если сами <span class="node">Дежурные шаблоны</span> заполнены информацией. Поэтому, если вам
+        необходимо добавить <span class="node">Атрибуты</span>
+        даже с пустыми <span class="node">Значениями</span>, выберите пункт <code>Оставлять</code>.</p>
+    <div class="callout callout-info">
+        <h4>Для больших магазинов.</h4>
+        <p>Не отмечайте сразу много категорий. Есть вероятность, что на хостинге есть ограничения на время выполнения скрипта. Высока вероятность прерывания сервером операции по тайм-ауту</p>
+    </div>
+    <p>При успеном выполнении задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Сформировано атрибутов категории: 12 Добавлено атрибутов в товары: 758</div>
+    <h3 id="tools-cache">Очистить кэш деревьев.</h3>
+    <p>В процессе эксплуатации модуля выяснилось, что на магазинах с большим количеством <span class="node">Атрибутов</span> деревья загружаются медленно. Поскольку синхронизация данных
+        заставляет перезагружать деревья при любом изменении данных, то работать становится трудно. Для ускорения загрузки деревьев начиная с версии 2.1.7 предусмотрен кэш. Деревья
+        кэшируются целиком. Если настройки дерева совпадают с тем, что уже есть в кэше, то данные будут загружаться из кэш файла.</p>
+    <p>Очистка подразумевает удаление из кэша всех файлов соответсвующих деревьям, т.е. файлов с именем <code>cache.attributico...</code>. Другие файлы кэша не затрагиваются.</p>
+    <div class="callout callout-warning">
+        <h4>Есть нюанс!</h4>
+        <p>Если во время использования этого инструмента кэш не отключен в настройках на вкладке <mark><small>Общие</small></mark>, то произойдет не очистка, а перезагрузка кэша. Таким образом, если вы хотите
+            действительно удалить кэш, то отключите этот чекбокс в настройках, не забывая эти настройки сохранить.</p>
+    </div>
+    <h3 id="tools-standart">Стандартизация атрибутов.</h3>
+    <h3 id="clone">Клонирование атрибутов, групп или значений.</h3>
+    <p>Пока первая функция в стандартизации. Может быть полезна при подключении нового языка. Клонирование производится с учетом <span class="node">Дежурных шаблонов</span>.</p>
+    <p>Можно отдельно клонировать <span class="node">Группы</span>, <span class="node">Атрибуты</span> или <span class="node">Значения</span></p>
+    <p>В зависимости от выбранного режима будет производится вставка недостающих элементов либо вставка недостающих и перезапись отличающихся.</p>
+    <a class="lightgallery" href="/img/help/attributico/clone.jpg" title="Clone attribute between languages"><img src="/img/help/attributico/clone.jpg" alt="Clone attribute between languages"
+            class="img-thumbnail img-responsive mrb15"></a>
+    <p>После выполнения задачи должно появиться соответсвующее сообщение.</p>
+    <div class="alert alert-success alert-dismissible" role="alert"> Успешно! Операция завершена. Клонировано групп: 0 Клонировано атрибутов: 20 Клонировано значений: 624</div>
+</div>
+</main>
+<nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
+    <ul class="side-nav">
+        <li class="nav-item"><a class="nav-link" href="#tools-empty">Удалить пустые значения</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-scavengery">Удалить ошибочные ссылки</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-defrag">Дефрагментация атрибутов</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-detach">Удалить не связанные с товаром</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-duplicate">Объединить дубли (beta)</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-category">Атрибуты категорий</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools-cache">Очистить кэш деревьев</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tools-standart">Стандартизация атрибутов</a>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#clone">Клонировать язык</a></li>
+            </ul>
+        </li>
+    </ul>
+    </nav>
+</div>
+<!-- </section> -->
+</div>
+<!-- Footer -->
+<? require "../../common/footer.php"; ?>
