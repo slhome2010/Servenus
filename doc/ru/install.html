@@ -98,19 +98,18 @@
                 <div class="page-header">
                     <h1 id="install">Установка, обновление, удаление модуля.</h1>
                 </div>
-                <p class="lead">Установка.</p>
+                <h2 id="install-install">Установка.</h2>
                 <p>1. Распакуйте архив. Содержимое папки <code>upload.../</code>, соответствующей вашей версии OpenCart скопируйте поверх структуры папок сайта.</p>
                 <p>2. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> должен появиться модуль "Attribut&amp;co". Его необходимо установить. Кнопка
                     <button type="button" class="btn btn-success" data-toggle="tooltip" title="Установить"><i class="fa fa-plus-circle"></i></button></p>
-                <p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установиить разрешения на просмотр и редактирование для
+                <p>3. В административной панели в разделе <mark><small>Система ⇒ Пользователи ⇒ Группы пользователей</small></mark> установите разрешения на просмотр и редактирование для
                     <code>module/attributico</code> или <code>extension/module/attributico</code> для магазинов версии >2.2 .</p>
                 <p>4. Распакуйте архив <code>License.zip</code>. Содержимое папки, соответствующей вашей версии PHP скопируйте поверх структуры папок сайта.</p>
                 <p>5. В административной панели в разделе <mark><small>Дополнения ⇒ Установка дополнений</small></mark> загрузите файлы <code>attribut&co.2.x.ocmod.xml</code> и <code>autocomplete.ocmod.xml</code>
                     для магазинов второй версии (2.x) или <code>attributico.3.x.ocmod.zip</code> для магазинов третьей версии (3.x) из папки <code>ocmod</code>. Для магазинов версии 1.5.x скопируйте
                     папку <code>vqumod/</code> поверх структуры сайта. </p>
                 <p>6. В административной панели в разделе <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark> необходимо обновить модификаторы. Кнопка <button type="button" class="btn btn-info" data-toggle="tooltip"
-                        title="Обновиить">
-                        <i class="fa fa-refresh"></i></button>&nbsp;&nbsp;</p>
+                        title="Обновиить"><i class="fa fa-refresh"></i></button>&nbsp;&nbsp;</p>
                 <p>После этого должен появиться пункт меню <mark><small>Каталог ⇒ Атрибуты ⇒ Attribut&amp;co.</small></mark></p>
                 <div class="callout callout-danger">
                     <h4>Внимание</h4>
@@ -134,14 +133,14 @@
                         нарушена работоспособность некоторых сторонних модулей.
                     </p>
                 </div>
-                <p class="lead">Обновление.</p>
+                <h2 id="install-update">Обновление.</h2>
                 <p>1. Обновление модуля не требует его удаления. После скачивания новой версии надо распаковать архив и содержимое папки <code>upload.../</code>, соответствующей вашей версии магазина из архива скопировать поверх
                     структуры папок сайта.</p>
                 <p>2. Для магазинов версии 2.x и 3.x надо обязательно переустановить модификаторы <code>...ocmod.xml</code> или <code>...ocmod.zip</code> описанным выше способов, затем в административной панели в разделе
                     <mark><small>Дополнения ⇒ Менеджер дополнений</small></mark>
                     необходимо их обновить. <button type="button" class="btn btn-info" data-toggle="tooltip" title="Обновиить"><i class="fa fa-refresh"></i></button></p>
                 <p>3. Очистите <a href="https://shopiweb.ru/opencart-3/kesh-opencart-3-ochistka-kesha/" target="blanc">кэш магазина</a> и браузера.</p>
-                <p class="lead">Удаление.</p>
+                <h2 id="install-delete">Удаление.</h2>
                 <p>1. В административной панели в разделе <mark><small>Дополнения ⇒ Модули</small></mark> напротив модуля "Attribut&amp;co" - кнопка "Удалить". <button type="button" class="btn btn-danger" data-toggle="tooltip"
                         title="Установить">
                         <i class="fa fa-minus-circle"></i></button></p>
@@ -157,7 +156,9 @@
         </main>
         <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
             <ul class="side-nav">
-
+                <li class="nav-item"><a class="nav-link" href="#install-install">Установка</a></li>
+                <li class="nav-item"><a class="nav-link" href="#install-update">Обновление</a></li>
+                <li class="nav-item"><a class="nav-link" href="#install-delete">Удаление</a></li>
             </ul>
         </nav>
     </div>

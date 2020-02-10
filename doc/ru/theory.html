@@ -98,7 +98,7 @@
                 <div class="page-header">
                     <h1 id="theory">Теория и терминология.</h1>
                 </div>
-                <h3 id="theory-theory">Немного теории.</h3>
+                <h2 id="theory-theory">Немного теории.</h2>
                 <p>Что такое атрибуты и чем они отличаются, например, от опций, Вы можете прочитать в интернете. Информации достаточно, например, <a
                         href="http://docs.myopencart.com/index.php?title=%D0%90%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B" target="blanc">здесь</a>
                     или <a href="http://bono-idea.com/blog/instrukciya-po-rabote-s-opciyami-i-atributami-v-OpenCart-2/" target="blanc">здесь</a>. Если коротко, то это характеристики, которые позволяют
@@ -140,7 +140,7 @@
 └── Значение(список значений) атрибута
           </code></pre>
                 </div>
-                <h3 id="theory-terms">Термины и определения.</h3>
+                <h2 id="theory-terms">Термины и определения.</h2>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -193,7 +193,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="lead">Обозначение деревьев.</p>
+                <h4>Обозначение деревьев.</h4>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -290,7 +290,7 @@
                         <a class="lg-item" href="/img/help/attributico/tree4.png" title="Products"><img src="/img/help/attributico/tree4.png" alt="Tree3" class="img-thumbnail img-responsive mrb15"></a>
                     </li>
                 </ul>
-                <h3 id="theory-template">Шаблоны и значения.</h3>
+                <h2 id="theory-template">Шаблоны и значения.</h2>
                 <p>Чтобы лучше понимать, что такое <span class="node">Значение</span>, стоит напомнить, что это обычный текст, описывающий характеристику (<span class="node">Атрибут</span>)
                     товара. <span class="node">Значение</span> записывается в поле типа <code>TEXT</code> в Базе Данных. Записать туда можно все, что угодно, например :
                     <code>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."</code>.</p>
@@ -330,7 +330,7 @@
                 </ul>
                 <p>Необходимо отметить, что <span class="node">Значение</span> уникально для каждого товара. Если в каком-то товаре изменить одну букву в тексте, то остальных товаров это не коснется,
                     даже если до этого <span class="node">Значения</span> совпадали, а у вас появится еще одно <span class="node">Значение</span>. То же самое верно и для <span class="node">Шаблонов</span>. </p>
-                <h3 id="theory-duty">Дежурный шаблон - значение по умолчанию.</h3>
+                <h2 id="theory-duty">Дежурный шаблон - значение по умолчанию.</h2>
                 <p>Естественным желанием является то, чтобы при добавлении <span class="node">Атрибута</span> в товар, синхронно добавлялось <span class="node">Значение</span> или
                     набор <span class="node">Значений</span>. Особенно если <span class="node">Значения</span> одни и те же, а операций надо выполнить много.</p>
                 <p>Эти <span class="node">Значения</span> должны где-то храниться. Для этого и служит <span class="node">Дежурный Шаблон</span>. Именно там храняться <span class="node">Значения</span>,
@@ -339,8 +339,8 @@
                 <p><span class="node">Дежурный Шаблон</span> можно изменять многократно для подстановки других <span class="node">Значений</span> в другие товары не затрагивая уже имеющиеся.
                     Для этого надо использовать настройку <code>Подставлять дежурный только в пустые</code>.</p>
                 <p><span class="node">Дежурный Шаблон</span> можно <a href="#using-duty-del">удалять</a>.</p>
-                <h3 id="theory-product">Принцип фильтрации товаров.</h3>
-                <p class="lead">Режим совпадений.</p>
+                <h2 id="theory-product">Принцип фильтрации товаров.</h2>
+                <h4 class="mt-3">Режим совпадений.</h4>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -372,7 +372,7 @@
                     </table>
                 </div>
                 <a class="lightgallery" href="/img/help/attributico/matches.jpg" title="Settings"><img src="/img/help/attributico/matches.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
-                <p class="lead">Режим расхождений.</p>
+                <h4 class="mt-3">Режим расхождений.</h4>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -403,7 +403,7 @@
                 </div>
                 <a class="lightgallery" href="/img/help/attributico/diver.jpg" title="Settings"><img src="/img/help/attributico/diver.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
                 <p>В режиме расхождений иконки папок в дереве товаров меняют цвет.</p>
-                <h3 id="theory-loading">Загрузка узлов.</h3>
+                <h2 id="theory-loading">Загрузка узлов.</h2>
                 <p>Медленная загрузка деревьев может свести на нет все усилия по облегчению работы с атрибутами. Поэтому, для дочерних узлов, таких как <span class="node">Шаблоны</span> и <span class="node">Значения</span>
                     используется, так называемая, ленивая (lazy) загрузка. Эти узлы не загружаются в момент загрузки дерева, а подгружаются по мере обращения к ним, т.е. по запросу. Вот почему при двойном клике на узел
                     <span class="node">Шаблоны</span> или <span class="node">Значения</span> прежде, чем откроется этот узел, приходится наблюдать индикатор загрузки <img src="/img/loading_ajax.gif" alt="loading">.</p>
@@ -418,7 +418,7 @@
                         invisible.</small>
                     Это означает, что данные ajax запроса не успели загрузиться до начала их использования. Особенно это проявляется на медленных серверах. Ничего страшного, на результаты работы модуля это не влияет,
                     но стимулирует на совершенствование алгоритма.</p>
-                <h3 id="theory-synchro">Мультиязычность и синхронизация.</h3>
+                <h2 id="theory-synchro">Мультиязычность и синхронизация.</h2>
                 <p>Поскольку модуль является мультиязычным, то для каждого языка будут создаваться свои деревья. Для удобства к обозначениям деревьев будем прибавлять языковую приставку <span class="tree">.ru</span>
                     или <span class="tree">.en</span> там, где это необходимо для объяснения. Для сохраниния целостности БД применяется синхронизация между деревьями. Например, при добавлении нового <span class="node">Атрибута</span> в
                     <span class="tree">Группы атрибутов.ru</span>, в дерево <span class="tree">Группы атрибутов.en</span> синхронно добавится новый <span class="node">Атрибут</span> с названием "New attribute".

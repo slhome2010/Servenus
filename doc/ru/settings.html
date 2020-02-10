@@ -98,9 +98,13 @@
                 <div class="page-header">
                     <h1 id="settings">Настройка модуля.</h1>
                 </div>
-                <p>На вкладке <mark><small>Настройки</small></mark> (до версии 2.0.3 вкладка "Общие") есть возможность установить и сохранить некоторые опции, которые влияют на работу модуля.</p>
-                <h3 class="lead" id="settings-main">Общие настройки.</h3>
-                <a class="lightgallery" href="/img/help/attributico/settings.jpg" title="Settings"><img src="/img/help/attributico/settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+                <p>Все настройки, включая настройки фильтра сохраняются при нажатии 
+                    <button type="button" class="btn btn-success" data-toggle="tooltip" title="Применить" data-placement="top"><i class="fa fa-check"></i></button>
+                    <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Сохранить" data-placement="top"><i class="fa fa-save"></i></button>                    
+                </p>
+                <p>Оперативные настройки сохраняются только на время работы модуля без перезагрузки страницы.</p>
+                <h2 id="settings-main">Общие настройки.</h2>
+                <a class="lightgallery" href="/img/help/attributico/settings.jpg" title="Settings"><img src="/img/help/attributico/settings.jpg" alt="Settings" class="img-thumbnail img-responsive mb-3"></a>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -116,7 +120,7 @@
                         <tbody>
                             <tr>
                                 <th class="im">Разделитель атрибутов</th>
-                                <td>Применяется если товар может иметь несколько разных значений одного и того же атрибута. Более подробно прочтите в <a href="#theory-terms">Термины и определения</a>.</td>
+                                <td>Применяется если товар может иметь несколько разных значений одного и того же атрибута. Более подробно прочтите в <a href="theory.html#theory-terms">Термины и определения</a>.</td>
                             </tr>
                             <tr>
                                 <th class="im">Учитывать порядок сортировки</th>
@@ -128,7 +132,7 @@
                             </tr>
                             <tr>
                                 <th class="im">Показывать пустые значения</th>
-                                <td>Показывать или скрывать пустые значения атрибута или пустые шаблоны. О пустых значениях более подробно <a href="#tools-empty">Удалить пустые значения</a>.</td>
+                                <td>Показывать или скрывать пустые значения атрибута или пустые шаблоны. О пустых значениях более подробно <a href="tools.html#tools-empty">Удалить пустые значения</a>.</td>
                             </tr>
                             <tr>
                                 <th class="im">Товар в новом окне</th>
@@ -137,13 +141,13 @@
                             <tr>
                                 <th class="im">Ленивая загрузка</th>
                                 <td>Управление режимом загрузки деревьев. Если режим включен, то, как и раньше, дочерние узлы подгружаются по запросу. Если отключен, дерево грузится полностью. Более подробно в разделе <a
-                                        href="#theory-loading">Загрузка узлов</a>.</td>
+                                        href="theory.html#theory-loading">Загрузка узлов</a>.</td>
                             </tr>
                             <tr>
                                 <th class="im">Кэш деревьев атрибутов</th>
                                 <td>Управление режимом загрузки деревьев. Если режим включен, то при построении дерева атрибутов на различных вкладках, данные будут получены не из базы данных, а из кэш файла, соответствующего данному
                                     дереву.
-                                    Дополнительно: <a href="#tools-cache">Очистить кэш деревьев</a>.</td>
+                                    Дополнительно: <a href="tools.html#tools-cache">Очистить кэш деревьев</a>.</td>
                             </tr>
                             <tr>
                                 <th class="im">Все магазины</th>
@@ -165,13 +169,13 @@
                             class="node">Атрибута</span>
                         и <span class="node">Группы</span> с которыми осуществлена переадресация на карточку товара.</p>
                 </div>
-                <h3 class="lead" id="settings-tree">Настройки деревьев.</h3>
-                <a class="lightgallery" href="/img/help/attributico/tree_settings.jpg" title="Settings"><img src="/img/help/attributico/tree_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+                <h2 id="settings-tree">Настройки деревьев.</h2>
+                <a class="lightgallery" href="/img/help/attributico/tree_settings.jpg" title="Settings"><img src="/img/help/attributico/tree_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mb-3"></a>
                 <p>Теперь есть возможность для каждого дерева сделать настройку дочерних узлов <span class="node">Атрибута</span>. Отметка чекбокса узла в делает его видимым в соответствующем дереве.
-                    Обозначение деревьев можно посмотреть в разделе <a href="#theory-terms">Термины и определения</a>.</p>
-                <h3 class="lead" id="settings-category">Добавление/удаление атрибутов категории.</h3>
+                    Обозначение деревьев можно посмотреть в разделе <a href="theory.html#theory-terms">Термины и определения</a>.</p>
+                <h2 id="settings-category">Добавление/удаление атрибутов категории.</h2>
                 <a class="lightgallery" href="/img/help/attributico/category_attribute_settings.jpg" title="Settings"><img src="/img/help/attributico/category_attribute_settings.jpg" alt="Settings"
-                        class="img-thumbnail img-responsive mrb15"></a>
+                        class="img-thumbnail img-responsive mb-3"></a>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -197,8 +201,8 @@
                         </tbody>
                     </table>
                 </div>
-                <h3 class="lead" id="settings-inherit">Наследование.</h3>
-                <a class="lightgallery" href="/img/help/attributico/inherit_settings.jpg" title="Settings"><img src="/img/help/attributico/inherit_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+                <h2 id="settings-inherit">Наследование.</h2>
+                <a class="lightgallery" href="/img/help/attributico/inherit_settings.jpg" title="Settings"><img src="/img/help/attributico/inherit_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mb-3"></a>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -243,10 +247,10 @@
                     надо отключить. Для оперативного управления этим режимом в дереве <span class="tree">Категории</span> в контекстном меню, <span class="im">Настройки</span> есть пункт <span class="im">Учитывать иерархию</span>.</p>
                 <ul id="gallery_0" class="list-unstyled row">
                     <li class="col-xs-6 col-md-4">
-                        <a class="lg-item" href="/img/help/attributico/hier_category.jpg" title="Hierarchical multi-selection"><img src="/img/help/attributico/hier_category.jpg" alt="Tree1" class="img-thumbnail img-responsive mrb15"></a>
+                        <a class="lg-item" href="/img/help/attributico/hier_category.jpg" title="Hierarchical multi-selection"><img src="/img/help/attributico/hier_category.jpg" alt="Tree1" class="img-thumbnail img-responsive mb-3"></a>
                     </li>
                     <li class="col-xs-6 col-md-4">
-                        <a class="lg-item" href="/img/help/attributico/hier_operative.jpg" title="Hierarchical operate"><img src="/img/help/attributico/hier_operative.jpg" alt="Tree2" class="img-thumbnail img-responsive mrb15"></a>
+                        <a class="lg-item" href="/img/help/attributico/hier_operative.jpg" title="Hierarchical operate"><img src="/img/help/attributico/hier_operative.jpg" alt="Tree2" class="img-thumbnail img-responsive mb-3"></a>
                     </li>
                 </ul>
                 <div class="callout callout-warning">
@@ -254,8 +258,8 @@
                     <p>Действия всегда выполняются по отношению к целевой категории независимо от того, отмечена она или нет. Целевая - это та категория, куда вы
                         перетаскиваете атрибут с помощью Drag-and-Drop или Copy-Paste, которая в результате откроется в дереве справа со всеми своими <span class="node">Атрибутами категории</span>.</p>
                 </div>
-                <h3 class="lead" id="settings-product">Добавление значений атрибута в товар.</h3>
-                <a class="lightgallery" href="/img/help/attributico/product_settings.jpg" title="Settings"><img src="/img/help/attributico/product_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mrb15"></a>
+                <h2 id="settings-product">Добавление значений атрибута в товар.</h2>
+                <a class="lightgallery" href="/img/help/attributico/product_settings.jpg" title="Settings"><img src="/img/help/attributico/product_settings.jpg" alt="Settings" class="img-thumbnail img-responsive mb-3"></a>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
@@ -283,13 +287,13 @@
                             </tr>
                             <tr>
                                 <th><code>Подставлять дежурный шаблон</code></th>
-                                <td> При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-duty"><span class="node">Дежурным
+                                <td> При добавлении <span class="node">Атрибута</span> в категорию, <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="theory.html#theory-duty"><span class="node">Дежурным
                                             шаблоном</span></a>, если
                                     сам этот шаблон не пустой.</td>
                             </tr>
                             <tr>
                                 <th><code>Подставлять дежурный только в пустые</code></th>
-                                <td>При добавлении <span class="node">Атрибута</span> в категорию, пустые <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="#theory-duty"><span
+                                <td>При добавлении <span class="node">Атрибута</span> в категорию, пустые <span class="node">Значения</span> атрибута в товарах этой категории, будут заменены <a href="theory.html#theory-duty"><span
                                             class="node">Дежурным шаблоном</span></a>,
                                     если сам этот шаблон не пустой, непустые <span class="node">Значения</span> атрибута останутся без изменений.</td>
                             </tr>
@@ -301,15 +305,15 @@
                     <p>По точно такому же <mark><small>алгоритму</small></mark>, значения атрибутов будут изменяться при "ручном" редактировании карточки товара. Например, отметка
                         пункта "Показывать в категории" на вкладке <mark><small>Связи</small></mark> приведет к добавлению в этот товар всех атрибутов данной категории, а в поле <span class="node">Значение</span> в колонке "Текст"
                         подставится
-                        <a href="#theory-duty"><span class="node">Дежурный шаблон</span></a>.</p>
+                        <a href="theory.html#theory-duty"><span class="node">Дежурный шаблон</span></a>.</p>
                 </div>
                 <div class="callout callout-warning">
                     <h4>Внимание!</h4>
                     <p>При отключенном пункте <span class="im">Добавлять атрибут категории в товары</span>, настройки <span class="im">Добавление значений атрибута в товар</span> не активируются.</p>
                 </div>
-                <h3 class="lead" id="settings-dialog">Оперативное изменение настроек.</h3>
+                <h2 id="settings-dialog">Оперативное изменение настроек.</h2>
                 <p>Некоторые настройки можно изменять оперативно, в процессе работы. По окончании работы они не сохраняются.</p>
-                <p>Если в <a href="#using-context-menu">контекстном меню</a> выбрать пункт "Настройки", то появится <a href="#using-dialog">диалоговое окно</a> управления деревом.</p>
+                <p>Если в <a href="using.html#using-context-menu">контекстном меню</a> выбрать пункт "Настройки", то появится <a href="using.html#using-dialog">диалоговое окно</a> управления деревом.</p>
             </div>
         </main>
         <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
