@@ -348,8 +348,9 @@ li.nav-item>a.nav-link.active:focus {
 .im{   /* item menu */
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 	font-size: 90%;
-	font-weight: bold;
-    color: #999;
+	font-weight: 500;
+    /* color: #999; */
+    color:#6787a0;
 }
 .tree{   /* item menu */
 	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -363,9 +364,9 @@ li.nav-item>a.nav-link.active:focus {
 	font-weight: bold;
     color: #2f6f9f;
 }
-.well-lg {
+/* .well-lg {
 	font-size: 90%;
-}
+} */
 
 .underpicture {
   font-size: 14px;
@@ -389,7 +390,7 @@ span.required:after {
 .feature_wrap.option3 .icon_feature { border: 2px solid; display: block; float: none; font-size: 3em; height: 75px; line-height:75px; margin: 0 auto 20px; width:75px }
 .feature_wrap.option3 .wrap { float: none; width: 100%; }
 
-mark { background-color: #f7f7f9;}
+/* mark { background-color: #f7f7f9;} */
 .badge-version {
   color: #fff;
   background-color: #F6575E;
