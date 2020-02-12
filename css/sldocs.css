@@ -416,3 +416,14 @@ color: #F6575E;
   background-color: #f8f9fa;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
+.btn-warning {
+  color: #fff;
+  background-color: #f38733;
+  border-color: #ef710e;
+}
+.btn-warning:hover {
+  color: #fff;
+  background-color: #e66c0e;
+  border-color: #b5550b;
+}
