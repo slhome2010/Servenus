@@ -248,24 +248,27 @@ h3[id] {
   padding-left: 1rem
 }
 
-.nav-item {
+.side-nav .nav-item {
   display: block
 }
 
-.nav-item a {
+.side-nav .nav-item a {
   display: block;
   padding: .125rem 1.5rem;
   color: #77757a
 }
 
-.nav-item a:hover {
-  color: #156EAC;
-  text-decoration: none
+
+.side-nav .nav-item a:hover {
+  color: rgba(0, 0, 0, .88);
+  text-decoration: none;
+  background-color: transparent;
+ /*  border-right: 1px solid rgba(0, 0, 0, .30); */
 }
 
-li.nav-item>a.nav-link.active,
-li.nav-item>a.nav-link.active:hover,
-li.nav-item>a.nav-link.active:focus {
+.side-nav li.nav-item>a.nav-link.active,
+.side-nav li.nav-item>a.nav-link.active:hover,
+.side-nav li.nav-item>a.nav-link.active:focus {
   font-weight: 600;
   color: #156EAC;
   background-color: transparent;
@@ -426,4 +429,8 @@ color: #F6575E;
   color: #fff;
   background-color: #e66c0e;
   border-color: #b5550b;
+}
+.btn-link {
+  font-weight: 500;
+  color: #156EAC;  
 }
