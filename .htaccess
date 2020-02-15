@@ -34,4 +34,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !.*\.(css|jpg|gif|png|zip|rar|doc|xls|js|tif|tiff|docx|xlsx|ico)$
 RewriteRule ^([^?]*) index.php [L,QSA]
 
-#
+#Redirect permanent /ru/doc_attributico_ru.html http://servenus.com/doc/attributico.html

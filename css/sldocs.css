@@ -419,6 +419,14 @@ color: #F6575E;
   background-color: #f8f9fa;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+.console {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #967F51;
+  background-color: #FFFBE5;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 
 .btn-warning {
   color: #fff;

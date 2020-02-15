@@ -3,39 +3,11 @@
     $title = 'Attribut&amp;co doc page';
     $description = 'Attribut&nbsp;co lets you to create, rename, delete, products attributes for your OpenCart administration.';
 	$keywords = 'opencart, attribute';
+	$active_page = 'tools';
 	require "../../common/header.php";
+	require "../../common/navbar.html";
 ?>
-<header>
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #156EAC;">
-		<a class="navbar-brand" href="/">
-			<img src="/img/logo-attributico.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-			Attribut&amp;co
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<span class="badge badge-version"><?php echo $version_short;?></span>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<div class="col-8">
-				<ul class="navbar-nav">
-					<!-- <li class="nav-item active"><a class="nav-link" href="#home"><span class="glyphicon glyphicon-home sr-only"></span></a></li> -->
-					<li class="nav-item"><a class="nav-link" href="/doc/ru/attributico.html"><?php echo $entry_documentation;?></a></li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $entry_language;?></a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="/index.php?lang=ru&page=/doc/ru/attributico"><img src="/img/ru.png"> Русский</a>
-							<a class="dropdown-item" href="/index.php?lang=en&page=/doc/en/attributico"><img src="/img/en.png"> English</a>
-						</div>
-					</li>
-			</div>
-			<div class="col-4 d-flex justify-content-end align-items-center">
-				<a class="nav-item btn btn-sm btn-outline-light" href="/common/download.html"><?php echo $entry_download;?></a>
-				<a class="nav-item btn btn-sm btn-outline-light ml-2" href="/common/payment.html"><?php echo $entry_buy;?></a>
-			</div>
-			</ul>
-		</div>
-	</nav>
-</header>
+
 <!-- Docs page layout -->
 <div class="container-fluid">
 	<!-- <section class="section"> -->
@@ -45,10 +17,10 @@
 			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
 				<ul class="nav flex-column nav-list">
 					<li>
-						<a class="nav-link" href="attributico.html">Описание</a>						
+						<a class="nav-link" href="attributico.html">Введение</a>						
 					</li>					
 					<li>
-						<a class="nav-link" href="included.html">Структура архива</a>
+						<a class="nav-link" href="included.html">Содержание архива</a>
 					</li>
 					<li>
 						<a class="nav-link" href="system.html">Системные требования.</a>
@@ -316,11 +288,9 @@
             из категорий после выполнения задачи.</p>
     </div>
     <p>Если отмечен пункт <mark><small>Расставить атрибуты категории в товары</small></mark>, то будет выполнена так же задача добавления <span class="node">Атрибутов</span> и их <span class="node">Значений</span> во все
-        товары выбранной
-        категории.</p>
-    <p>Расстановка или добавление <span class="node">Атрибутов</span> и их <span class="node">Значений</span> в товары будет производится в соответствии с <a href="settings.html#settings-product"><mark><small>алгоритмом</small></mark></a>,
-        указанными
-        в настройках.</p>
+        товары выбранной категории.</p>
+    <p>Расстановка или добавление <span class="node">Атрибутов</span> и их <span class="node">Значений</span> в товары будет производится в соответствии со <a href="settings.html#settings-product"><mark><small>способом</small></mark></a>,
+        указанными в настройках.</p>
     <a class="lightgallery" href="/img/help/attributico/update_settings.jpg" title="Values update settings"><img src="/img/help/attributico/update_settings.jpg" alt="Values update settings"
             class="img-thumbnail img-responsive mb-3"></a>
     <p>Уместно заметить, что добавление <a href="theory.html#theory-duty"><span class="node">Дежурных шаблонов</span></a> происходит только если сами <span class="node">Дежурные шаблоны</span> заполнены информацией. Поэтому, если вам
