@@ -9,151 +9,99 @@
 ?>
 <!-- Docs page layout -->
 <div class="container-fluid">
-	<!-- <section class="section"> -->
-	<div class="row flex-xl-nowrap section">
-		<div class="col-md-3 col-xl-2  bd-sidebar">
-			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
-			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
-				<ul class="nav flex-column nav-list">
-					<li>
-						<a class="nav-link" href="attributico.html">Введение</a>						
-					</li>					
-					<li>
-						<a class="nav-link" href="included.html">Содержание архива</a>
-					</li>
-					<li>
-						<a class="nav-link" href="system.html">Системные требования.</a>
-					</li>					
-					<li>
-						<a class="nav-link" href="license.html">Лицензия <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="free.html">Бесплатная версия</a>
-					</li>
-					<li>
-						<a class="nav-link" href="install.html">Установка/обновление <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="theory.html">Теория и терминология</a>						
-					</li>
-					<li>						
-						<a class="nav-link" href="settings.html">Настройка <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
-					</li>
-					<li>
-						<a class="nav-link" href="using.html">Работа с модулем <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
-					</li>
-					<li>
-						<a class="nav-link active-page" href="integro.html">Интеграция с OpenCart <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
-					</li>
-					<li>
-						<a class="nav-link" href="tools.html">Инструменты <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>						
-					</li>
-					<li>
-						<a class="nav-link" href="example.html">Примеры</a>
-					</li>
-					<li>
-						<a class="nav-link" href="problems.html">Проблемы и ошибки</a>
-					</li>
-					<li>
-						<a class="nav-link" href="faq.html">FAQ</a>
-					</li>
-					<li>
-						<a class="nav-link" href="history.html">История изменений</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-<!-- integro -->
-<div class="docs-section">
-    <div class="page-header">
-        <h1 id="integro">Интеграция с OpenCart.</h1>
+    <div class="row flex-xl-nowrap section">
+        <?php require "sidebar.html";?>
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <!-- integro -->
+            <div class="docs-section">
+                <div class="page-header">
+                    <h1 id="integro">Интеграция с OpenCart.</h1>
+                </div>
+                <h3 id="integro-product">Интеграция со страницей товара.</h3>
+                <p>Интеграция модуля с движком OpenCart осуществляется с помощью файлов модификаторов <code>ocmod</code> или <code>vqmod</code>. Более подробно об этом
+                    в разделе <a href="included.html#whats-included">Структура архива</a>. Если модификация прошла корректно, в карточке товара должны появиться дополнительные кнопки управления
+                    <span class="btn-group"><button type="button" class="btn btn-outline-dark"><i class="fa fa-th-list"></i> Шаблоны</button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-th"></i> Значения</button></span>&nbsp;&nbsp;и поле выбора.</p>
+                <p>В зависимости от того, какая кнопка нажата, в поле выбора будут выводиться либо <span class="node">Шаблоны</span> либо <span class="node">Значения</span>.</p>
+                <div class="callout callout-info">
+                    <h4>Новый шаблон.</h4>
+                    <p>Новый шаблон всегда можно "накидать" из <span class="node">Значений</span>. Разделитель будет подставляться автоматически. Недостающие <span class="node">Значения</span>
+                        надо будет вписать вручную.</p>
+                </div>
+                <p class="lead">Откуда берутся шаблоны.</p>
+                <p>Представим, что мы только начали работать с магазином. Создали несколько товаров, несколько <span class="node">Атрибутов</span>. Зайдя в карточку товара, на вкладку <mark><small>Атрибуты</small></mark>
+                    мы увидим пустую страницу. Добавим <span class="node">Атрибут</span> и справа видим пустое текстовое поле. Чтобы появился хотя бы один <span class="node">Шаблон</span> надо что-то вписать в это поле. Точнее туда надо
+                    вписать набор <span class="node">Значений</span>. Например <code>Дальность1/Дальность2/Дальность3</code>. После того, как Вы сохраните изменения и снова зайдете в карточку товара, то увидите, что справа появилось
+                    поле выбора и выбрать возможно только одну запись. По мере накопления товаров и соответствующих им, заполненных, текстовых полей, список <span class="node">Шаблонов</span> пополняется.</p>
+                <p>Напомню, что <span class="node">Значения</span> это "разобранные" по разделителю <span class="node">Шаблоны</span>.</p>
+                <p>Более подробно можно почитать в разделе <a href="theory.html#theory-template">Шаблоны и значения</a>.</p>
+                <h2 id="integro-filter">Фильтр значений.</h2>
+                <p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным.
+                    Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <a
+                        href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a></p>
+                <div>
+                    <label class="radio-inline">
+                        <input type="radio" name="filter-values" id="filter-nofilter" value="all" checked> Все
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="filter-values" id="filter-category" value="categories"> Категории
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="filter-values" id="filter-duty" value="duty"> Дежурные
+                    </label>
+                    <label class="radio-inline"></label>
+                </div>
+                <p></p>
+                <p>Фильтр работает в оперативном режиме, перезагрузка списка <span class="node">Значений</span> происходит сразу после переключения режима. На больших магазинах иногда заметны
+                    задержки. Т.е. после переключения надо немного подождать.</p>
+                <h3 id="integro-category">Интеграция со страницей категории.</h3>
+                <p>На сегодняшний день сохраняется интеграция на уровне карточки категории. Там должна появиться вкладка <mark><small>Атрибуты</small></mark>.</p>
+                <div class="callout callout-warning">
+                    <h4>Особенности.</h4>
+                    <p>Интеграция сделана только в информационных целях. Можно только просматривать привязанные к категории атрибуты. Все манипуляции с атрибутами категорий делаются через модуль.
+                        Это сделано, чтобы не дублировать функционал самого модуля и минимизировать модификации движка OpenCart, что может привести к возрастанию вероятности ошибок, конфликтов с другими модификаторами.</p>
+                </div>
+                <h3 id="integro-attribute">Поддержка атрибутов категории.</h3>
+                <p>Интеграция со страницей товара позволяет немного автоматизировать "ручной" способ добавления <span class="node">Атрибутов категории</span> в товар.</p>
+                <p>Добавление <span class="node">Атрибутов категории</span> происходит в момент "привязки" товара к определенной категории или установки видимости товара в категории.
+                    Физически это происходит в момент, когда отмечается чекбокс напротив категории или изменяется Главная категория на вкладке <mark><small>Связи</small></mark> (Ocstore).
+                    Или в момент выбра категории из списка (OpenCart).</p>
+                <p>
+                    Добавление <span class="node">Атрибутов категории</span> в товар происходит в соответствии со <a href="settings.html#settings-product"><mark><small>способом</small></mark></a>,
+                    который обсуждался в разделе <a href="settings.html#settings-product">Настройки</a>.
+                </p>
+                <p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a href="example.html#using-example">Примеры</a>.</p>
+                <ul id="gallery_2" class="list-unstyled row">
+                    <li class="col-xs-6 col-md-4">
+                        <a class="lg-item" href="/img/help/attributico/integro1.jpg" title="Integration OpenCart 2.x"><img src="/img/help/attributico/integro1.jpg" alt="Integro1" class="img-thumbnail img-responsive mrb15"></a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a class="lg-item" href="/img/help/attributico/integro15.png" title="Integration OpenCart 1.5.x"><img src="/img/help/attributico/integro15.png" alt="Integro15" class="img-thumbnail img-responsive mrb15"></a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a class="lg-item" href="/img/help/attributico/integro2.png" title="Integration OpenCart - links"><img src="/img/help/attributico/integro2.png" alt="Integro2" class="img-thumbnail img-responsive mrb15"></a>
+                    </li>
+                    <div class="clearfix"></div>
+                    <li class="col-xs-6 col-md-4">
+                        <a class="lg-item" href="/img/help/attributico/integro22.png" title="Integration OpenCart 2.2.x"><img src="/img/help/attributico/integro22.png" alt="Integro22" class="img-thumbnail img-responsive mrb15"></a>
+                    </li>
+                    <li class="col-xs-6 col-md-4">
+                        <a class="lg-item" href="/img/help/attributico/integro_category.png" title="Integration OpenCart - category"><img src="/img/help/attributico/integro_category.png" alt="Integro_category"
+                                class="img-thumbnail img-responsive mrb15"></a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
+            <ul class="side-nav">
+                <li class="nav-item"><a class="nav-link" href="#integro-product">Страница товара</a></li>
+                <li class="nav-item"><a class="nav-link" href="#integro-filter">Фильтр значений</a></li>
+                <li class="nav-item"><a class="nav-link" href="#integro-category">Страница категории</a></li>
+                <li class="nav-item"><a class="nav-link" href="#integro-attribute">Атрибуты категории</a></li>
+            </ul>
+        </nav>
     </div>
-    <h3 id="integro-product">Интеграция со страницей товара.</h3>
-    <p>Интеграция модуля с движком OpenCart осуществляется с помощью файлов модификаторов <code>ocmod</code> или <code>vqmod</code>. Более подробно об этом
-        в разделе <a href="included.html#whats-included">Структура архива</a>. Если модификация прошла корректно, в карточке товара должны появиться дополнительные кнопки управления
-        <span class="btn-group"><button type="button" class="btn btn-outline-dark"><i class="fa fa-th-list"></i> Шаблоны</button>
-            <button type="button" class="btn btn-outline-dark"><i class="fa fa-th"></i> Значения</button></span>&nbsp;&nbsp;и поле выбора.</p>
-    <p>В зависимости от того, какая кнопка нажата, в поле выбора будут выводиться либо <span class="node">Шаблоны</span> либо <span class="node">Значения</span>.</p>
-    <div class="callout callout-info">
-        <h4>Новый шаблон.</h4>
-        <p>Новый шаблон всегда можно "накидать" из <span class="node">Значений</span>. Разделитель будет подставляться автоматически. Недостающие <span class="node">Значения</span>
-            надо будет вписать вручную.</p>
-    </div>
-    <p class="lead">Откуда берутся шаблоны.</p>
-    <p>Представим, что мы только начали работать с магазином. Создали несколько товаров, несколько <span class="node">Атрибутов</span>. Зайдя в карточку товара, на вкладку <mark><small>Атрибуты</small></mark>
-        мы увидим пустую страницу. Добавим <span class="node">Атрибут</span> и справа видим пустое текстовое поле. Чтобы появился хотя бы один <span class="node">Шаблон</span> надо что-то вписать в это поле. Точнее туда надо
-        вписать набор <span class="node">Значений</span>. Например <code>Дальность1/Дальность2/Дальность3</code>. После того, как Вы сохраните изменения и снова зайдете в карточку товара, то увидите, что справа появилось
-        поле выбора и выбрать возможно только одну запись. По мере накопления товаров и соответствующих им, заполненных, текстовых полей, список <span class="node">Шаблонов</span> пополняется.</p>
-    <p>Напомню, что <span class="node">Значения</span> это "разобранные" по разделителю <span class="node">Шаблоны</span>.</p>
-    <p>Более подробно можно почитать в разделе <a href="theory.html#theory-template">Шаблоны и значения</a>.</p>
-    <h2 id="integro-filter">Фильтр значений.</h2>
-    <p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным.
-        Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <a
-            href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a></p>
-    <div>
-        <label class="radio-inline">
-            <input type="radio" name="filter-values" id="filter-nofilter" value="all" checked> Все
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="filter-values" id="filter-category" value="categories"> Категории
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="filter-values" id="filter-duty" value="duty"> Дежурные
-        </label>
-        <label class="radio-inline"></label>
-    </div>
-    <p></p>
-    <p>Фильтр работает в оперативном режиме, перезагрузка списка <span class="node">Значений</span> происходит сразу после переключения режима. На больших магазинах иногда заметны
-        задержки. Т.е. после переключения надо немного подождать.</p>
-    <h3 id="integro-category">Интеграция со страницей категории.</h3>
-    <p>На сегодняшний день сохраняется интеграция на уровне карточки категории. Там должна появиться вкладка <mark><small>Атрибуты</small></mark>.</p>
-    <div class="callout callout-warning">
-        <h4>Особенности.</h4>
-        <p>Интеграция сделана только в информационных целях. Можно только просматривать привязанные к категории атрибуты. Все манипуляции с атрибутами категорий делаются через модуль.
-            Это сделано, чтобы не дублировать функционал самого модуля и минимизировать модификации движка OpenCart, что может привести к возрастанию вероятности ошибок, конфликтов с другими модификаторами.</p>
-    </div>
-    <h3 id="integro-attribute">Поддержка атрибутов категории.</h3>
-    <p>Интеграция со страницей товара позволяет немного автоматизировать "ручной" способ добавления <span class="node">Атрибутов категории</span> в товар.</p> 
-    <p>Добавление <span class="node">Атрибутов категории</span> происходит в момент "привязки" товара к определенной категории или установки видимости товара в категории. 
-        Физически это происходит в момент, когда отмечается чекбокс напротив категории или изменяется Главная категория на вкладке <mark><small>Связи</small></mark> (Ocstore). 
-        Или в момент выбра категории из списка (OpenCart).</p>
-    <p>     
-        Добавление <span class="node">Атрибутов категории</span> в товар происходит в соответствии со <a href="settings.html#settings-product"><mark><small>способом</small></mark></a>, 
-        который обсуждался в разделе <a href="settings.html#settings-product">Настройки</a>.
-    </p>
-    <p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a href="example.html#using-example">Примеры</a>.</p>
-    <ul id="gallery_2" class="list-unstyled row">
-        <li class="col-xs-6 col-md-4">
-            <a class="lg-item" href="/img/help/attributico/integro1.jpg" title="Integration OpenCart 2.x"><img src="/img/help/attributico/integro1.jpg" alt="Integro1" class="img-thumbnail img-responsive mrb15"></a>
-        </li>
-        <li class="col-xs-6 col-md-4">
-            <a class="lg-item" href="/img/help/attributico/integro15.png" title="Integration OpenCart 1.5.x"><img src="/img/help/attributico/integro15.png" alt="Integro15" class="img-thumbnail img-responsive mrb15"></a>
-        </li>
-        <li class="col-xs-6 col-md-4">
-            <a class="lg-item" href="/img/help/attributico/integro2.png" title="Integration OpenCart - links"><img src="/img/help/attributico/integro2.png" alt="Integro2" class="img-thumbnail img-responsive mrb15"></a>
-        </li>
-        <div class="clearfix"></div>
-        <li class="col-xs-6 col-md-4">
-            <a class="lg-item" href="/img/help/attributico/integro22.png" title="Integration OpenCart 2.2.x"><img src="/img/help/attributico/integro22.png" alt="Integro22" class="img-thumbnail img-responsive mrb15"></a>
-        </li>
-        <li class="col-xs-6 col-md-4">
-            <a class="lg-item" href="/img/help/attributico/integro_category.png" title="Integration OpenCart - category"><img src="/img/help/attributico/integro_category.png" alt="Integro_category"
-                    class="img-thumbnail img-responsive mrb15"></a>
-        </li>
-    </ul>
-</div>
-</main>
-<nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
-    <ul class="side-nav">
-        <li class="nav-item"><a class="nav-link" href="#integro-product">Страница товара</a></li>
-        <li class="nav-item"><a class="nav-link" href="#integro-filter">Фильтр значений</a></li>
-        <li class="nav-item"><a class="nav-link" href="#integro-category">Страница категории</a></li>
-        <li class="nav-item"><a class="nav-link" href="#integro-attribute">Атрибуты категории</a></li>
-    </ul>    
-    </nav>
-</div>
-<!-- </section> -->
+    <!-- </section> -->
 </div>
 <!-- Footer -->
 <?php require "../../common/footer.php"; ?>

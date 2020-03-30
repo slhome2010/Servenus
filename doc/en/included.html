@@ -8,61 +8,9 @@
 	require "../../common/navbar.html";
 ?>
 <!-- Docs page layout -->
-<div class="container-fluid">
-	<!-- <section class="section"> -->
+<div class="container-fluid">	
 	<div class="row flex-xl-nowrap section">
-		<div class="col-md-3 col-xl-2  bd-sidebar">
-			<!-- <nav id="sidebar" class="sidebar hidden-xs"> -->
-			<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
-				<ul class="nav flex-column nav-list">
-					<li>
-						<a class="nav-link" href="attributico.html">Introduction</a>
-					</li>
-					<li>
-						<a class="nav-link active-page" href="included.html">Archive contents</a>
-					</li>
-					<li>
-						<a class="nav-link" href="system.html">Requirements</a>
-					</li>
-					<li>
-						<a class="nav-link" href="license.html">Licence <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="free.html">Free version</a>
-					</li>
-					<li>
-						<a class="nav-link" href="install.html">Install / Upgrade <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="theory.html">Theory and Terms</a>
-					</li>
-					<li>
-						<a class="nav-link" href="settings.html">Settings <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="using.html">Module usage <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="integro.html">OpenCart integration <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="tools.html">Tools <sup><span class="badge badge-version"><strong>!!!</strong></span></sup></a>
-					</li>
-					<li>
-						<a class="nav-link" href="example.html">Examples</a>
-					</li>
-					<li>
-						<a class="nav-link" href="problems.html">Problems and Errors</a>
-					</li>
-					<li>
-						<a class="nav-link" href="faq.html">FAQ</a>
-					</li>
-					<li>
-						<a class="nav-link" href="history.html">Changelogs</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+		<?php require "sidebar.html";?>
 		<main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 			
 					<div class="alert alert-warning" role="alert"><?php echo $alert_nofound;?></div>
