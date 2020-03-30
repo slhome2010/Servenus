@@ -1,8 +1,8 @@
 <?php
 $language = 'en';
 $language_name = 'English';
-$version = 'Currently v3.0.8';
-$version_short = 'v3.0.8';
+$version = 'Currently v3.0.9';
+$version_short = 'v3.0.9';
 $copyright = 'Copyright &copy; 2016-' . date('Y') . '&nbsp; Comtronics.';
 
 // Menu items
