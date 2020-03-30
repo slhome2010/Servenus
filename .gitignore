@@ -1,4 +1,5 @@
 # Opencart ignore list
+*.log
 _stock/
 
 !index.html

@@ -1,7 +1,5 @@
 <?php
 // Global define
-/* define('VERSION', 'v3.0.1');
-define('DIR_DOWNLOAD', '/downloads'); */
 
 // Configuration
 if (is_file('config.php')) {
