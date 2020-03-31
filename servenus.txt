@@ -1,4 +1,2 @@
 
-INDEX_PARSE_URI =/
-DIRECT_REQUEST_URI =/common/download.html
 INDEX_PARSE_URI =/ru/index.html
