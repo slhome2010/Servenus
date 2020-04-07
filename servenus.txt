@@ -1,2 +1,0 @@
-
-INDEX_PARSE_URI =/ru/index.html
