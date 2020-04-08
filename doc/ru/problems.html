@@ -18,7 +18,7 @@
 				<div class="page-header">
 					<h1 id="problems">Проблемы и ошибки.</h1>
 				</div>
-				<h2 id="error-install">Ошибки установки лицензии.</h2>
+				<h2 id="error-licence">Ошибки установки лицензии.</h2>
 				<div class="card">
 					<div class="card-header">
 						<small>Notice: Undefined variable: vendor in .....\www\admin\controller\module\attributico.php on line...</small>
@@ -43,6 +43,18 @@
 						<p class="card-text">Прочтите раздел документации <a href="license.html#license">Лицензия</a>. Уточните название домена. Переустановите лицензию в соответствии с документацией.</p>
 					</div>
 				</div>
+				<h2 id="error-install">Ошибки установки модуля.</h2>
+				<div class="card">
+					<div class="card-header">
+						<small>Fatal error: Uncaught exception 'Exception' with message 'Error: Table '...oc_category_attribute' doesn't exist...</small>						
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Причина</h5>
+						<p class="card-text">Ошибка возникает из-за отсутствия в БД таблицы <code>category_attribute</code>. Возможно, Вы установили модификатор, но не активировали сам модуль.</p>
+						<h5 class="card-title">Решение</h5>
+						<p class="card-text">Прочтите раздел документации <a href="install.html#install-install">Установка</a>. Обратите внимание на пункт 2.</p>
+					</div>
+				</div>				
 				<h2 id="error-conflict">Конфликты с другими модулями.</h2>
 				<p>Если Вы используете несколько модулей, работающих с атрибутами, имейте в виду, что большинство из них, как и Attribut&amp;co, модифицируют форму редактирования
 					товара или "подставляют" свою страницу с формой. В этом случае все, что связано с интеграцией Attribut&amp;co в движок работать не будет и Вам остается пользоваться
@@ -124,7 +136,8 @@
 		</main>
 		<nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
 			<ul class="side-nav">				
-				<li class="nav-item"><a class="nav-link" href="#error-install">Ошибки лицензии</a></li>
+				<li class="nav-item"><a class="nav-link" href="#error-licence">Ошибки лицензии</a></li>
+				<li class="nav-item"><a class="nav-link" href="#error-install">Ошибки установки</a></li>
 				<li class="nav-item"><a class="nav-link" href="#error-conflict">Конфликты</a></li>
 				<li class="nav-item"><a class="nav-link" href="#error-run-time">Ошибки выполнения</a></li>
 				<li class="nav-item"><a class="nav-link" href="#error-server">Ошибки сервера</a></li>
