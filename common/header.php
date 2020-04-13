@@ -6,9 +6,9 @@ header('Set-Cookie: cross-site-cookie=bar; SameSite=None; Secure');
 require_once('direct.php');
 
 //Проверяем был ли вызван файл системой или напрямую. Перенаправляем на главную
-if (!isset($_SESSION['access']) || !$_SESSION['access']) {    
-    die(header("location:../index.php?page=".$_SERVER['REQUEST_URI']));
- } 
+if (!isset($_SESSION['access']) || !$_SESSION['access']) {       
+   /*  die(header("location:../index.php?page=".$_SERVER['REQUEST_URI'])); */
+} 
 
 require_once(__DIR__ . "/../language/" . addslashes($_SESSION['lang']) . ".php");
 
