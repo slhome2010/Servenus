@@ -4,6 +4,7 @@ header('Set-Cookie: same-site-cookie=foo; SameSite=Lax');
 header('Set-Cookie: cross-site-cookie=bar; SameSite=None; Secure');
  
 require_once('direct.php');
+require_once(__DIR__ . '/../config.php');
 
 //Проверяем был ли вызван файл системой или напрямую. Перенаправляем на главную
 if (!isset($_SESSION['access']) || !$_SESSION['access']) {       
