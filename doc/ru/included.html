@@ -21,7 +21,7 @@
                     <pre><code>
 Attributico_v3.0.1/
 │── PHP5.4-5.6/
-│       ├── upload_v1.5.x-2.2/
+│       ├── upload_v2.1.x-2.2/
 │       │     ├── admin/
 │       │     │    ├── controller/
 │       │     │    ├── language/
@@ -36,23 +36,23 @@ Attributico_v3.0.1/
 │
 │ 
 │── PHP7.0/
-│       ├── upload_v1.5.x-2.2/
+│       ├── upload_v2.1.x-2.2/
 │       └── upload_v2.3.x-3.x/ 
 │
 │── PHP7.1
-│       ├── upload_v1.5.x-2.2/
+│       ├── upload_v2.1.x-2.2/
 │       └── upload_v2.3.x-3.x/
 │ 
 │── PHP7.2/
-│       ├── upload_v1.5.x-2.2/
+│       ├── upload_v2.1.x-2.2/
 │       └── upload_v2.3.x-3.x/ 
 │
 │── ocmod/
 │       ├── attribut&co.2.x.ocmod.xml
 │       ├── autocomplete.ocmod.xml
 │       └── attributico.3.x.ocmod.zip
-│
-│── vqmod/
+|
+│── vqmod/  <code>(до версии 3.0.9)</code>
 │       └── xml/ 
 │            ├── attribut&co1_5_x.xml
 │            └── autocomplete.xml
@@ -60,14 +60,13 @@ Attributico_v3.0.1/
 ├── help/
 │    ├── img/
 │    └── readme.txt
-├── News2.2.0/
-├── News3.0.1/
+├── News3.1.1/
 └── readme.txt	
 					</code></pre>
                 </div>
                 <h2 id="included-folders">Назначение папок и файлов.</h2>
                 <ul>
-                    <li><code>upload_v1.5.x-2.2/</code> и <code>upload_v2.3.x-3.x/</code> папки с файлами собственно модуля для разных версий OpenCart;</li>
+                    <li><code>upload_v2.1.x-2.2/</code> и <code>upload_v2.3.x-3.x/</code> папки с файлами собственно модуля для разных версий OpenCart;</li>
                     <li><code>ocmod/</code> папка с модификаторами для магазинов второй и третьей версии
                         <ul>
                             <li><code>attribut&co.2.x.ocmod.xml</code> файл модификатор для магазинов второй версии 2.0.x - 2.3.x;</li>
@@ -75,7 +74,7 @@ Attributico_v3.0.1/
                             <li><code>attributico.3.x.ocmod.zip</code> файл модификатор для магазинов третьей версии 3.x;</li>
                         </ul>
                     </li>
-                    <li><code>vqmod/</code> папка с модификаторами для магазинов версий 1.5.x
+                    <li><code>(устаревшее) vqmod/</code> папка с модификаторами для магазинов версий 1.5.x
                         <ul>
                             <li><code>vqmod/xml/attribut&amp;co1_5_x.xml</code> файл модификатор для версий 1.5.x;</li>
                             <li><code>vqmod/xml/autocomplete.xml</code> файл модификатор для улучшения работы функции <code>autocomplete</code> для магазинов версий 1.5.x;</li>
@@ -93,11 +92,9 @@ Attributico_v3.0.1/
                         для разных версий магазинов.
                     </p>
                     <p>
-                        Если версия движка вашего магазина, например, 2.1.0.2, а версия PHP5.5, то вам нужна папка <code>upload_v1.5.x-2.2/</code> из папки PHP5.4-5.6,
+                        Если версия движка вашего магазина, например, 2.1.0.2, а версия PHP5.5, то вам нужна папка <code>upload_v2.1.x-2.2/</code> из папки PHP5.4-5.6,
                         если версия магазина 2.3.0.2, то папка <code>upload_v2.3.x-3.x/</code>.
-                    </p>
-                    <p>Для магазинов версий >2.x. папка <code>vqumod/</code> не нужна.</p>
-                    <p>Для магазинов версий 1.5.x. копирование папки <code>vqmod/</code> является обязательным. Зато файлы с расширением <code>.ocmod</code> совсем не нужны.</p>
+                    </p>                   
                 </div>
             </div>
         </main>
