@@ -406,6 +406,22 @@
                         <button type="button" data-toggle="tooltip" title="Сохранить" class="btn btn-primary"><i class="fa fa-save"></i></button>
                         состояние фильтра сохраняется для каждого дерева.</p>
                 </div>
+                <h2 id="using-summary">Сводная таблица.</h2>
+                <p>Сокращение Drag&Drop означает перемещение узлов с нажатой левой кнопкой мыши  <sup><span class="badge badge-danger">***</span></sup></p>
+                <table class="table table-bordered list">
+                    <thead><tr><th>Операция</th><th>Мышь/Drag&Drop</th><th>Меню</th><th>Клавиатура</th><th>Примечание</th></tr></thead>
+                    <tbody>
+                        <tr><td>Раскрыть/Свернуть узел</td><td>Двойной клик</td><td></td><td></td><td></td></tr>
+                        <tr><td>Выделить узел</td><td>Ctrl + клик</td><td></td><td></td><td>Можно выделить несколько узлов</td></tr>
+                        <tr><td>Контекстное меню</td><td>Правая кнопка</td><td></td><td></td><td>Есть подсказки горячих клавиш</td></tr>
+                        <tr><td>Перетаскивание узлов</td><td>Drag&Drop</td><td></td><td></td><td></td></tr>
+                        <tr><td>Добавить группу</td><td></td><td>Новая группа</td><td><kbd>[ctrl+M]</kbd></td><td></td></tr>
+                        <tr><td>Добавить атрибут</td><td></td><td>Новый атрибут</td><td><kbd>[ctrl+Q]</kbd></td><td></td></tr>
+                        <tr><td>Редактировать</td><td></td><td>Редактировать</td><td><kbd>[shift+Enter]</kbd></td><td>Подтверждение - <kbd>[Enter]</kbd> Отмена - <kbd>[Esc]</kbd></td></tr>
+                        <tr><td>Сортировать</td><td>Drag&Drop</td><td>Вырезать > Вставить</td><td><kbd>[ctrl+X]</kbd> > <kbd>[ctrl+V]</kbd></td><td>Если узлы одного уровня</td></tr>
+                        <tr><td>Слияние атрибутов или групп</td><td>Ctrl + Drag&Drop</td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
             </div>
         </main>
         <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
@@ -422,6 +438,7 @@
                 <li class="nav-item"><a class="nav-link" href="#using-merge">Слияние</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-attribute-category">Атрибуты категории</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-search">Фильтр атрибутов</a></li>
+                <li class="nav-item"><a class="nav-link" href="#using-summary">Сводная таблица</a></li>
             </ul>
         </nav>
     </div>
