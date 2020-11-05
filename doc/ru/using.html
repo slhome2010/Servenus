@@ -9,7 +9,7 @@
 ?>
 
 <!-- Docs page layout -->
-<div class="container-fluid">   
+<div class="container-fluid">
     <div class="row flex-xl-nowrap section">
         <?php require "sidebar.html";?>
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -228,7 +228,7 @@
                     <li>Изменение категории у <span class="node">Атрибута</span></li>
                     <li>Слияние <span class="node">Атрибутов</span> (объединение) без потери <span class="node">Значений</span> и связей;</li>
                 </ul>
-                <p>Как это работает можно увидеть в разделе <a href="example.html#using-example">Примеры</a>.</p>                
+                <p>Как это работает можно увидеть в разделе <a href="example.html#using-example">Примеры</a>.</p>
                 <h2 id="using-select">Мультиселект.</h2>
                 <p>Все операции Drag-and-Drop, а так же Copy-Paste можно выполнять не только над одним <span class="tree">Узлом</span>, но и над несколькими
                     <span class="tree">Узлами</span> одновременно. Для того, чтобы выделить несколько <span class="tree">Узлов</span>, кликайте по этим <span class="tree">Узлам</span>
@@ -258,15 +258,15 @@
                 </div>
                 <h2 id="using-attribute-category">Атрибуты категории.</h2>
                 <p>Идея использования набора атрибутов для массового присваивания однотипным товарам лежит в основе работы данного модуля. Подготовить набор <span class="node">Атрибутов категории</span>
-                можно несколькими способами.</p>
-                <p>Самый простой способ - использование технологий Drag-and-Drop. Просто перетащите мышкой выбранный <span class="node">Атрибут</span> или несколько 
-                отмеченных с помощью <a href="#using-select">мультивыбора</a> в дерево <span class="tree">Категории</span> или, непосредственно, в дерево <span class="tree">Атрибуты категорий</span>.</p>
-                <p>Можно отметить чекбоксы сразу нескольких категорий и перетащить отмеченные <span class="node">Атрибуты</span> сразу во все отмеченные категории 
-                одним движением.</p>
+                    можно несколькими способами.</p>
+                <p>Самый простой способ - использование технологий Drag-and-Drop. Просто перетащите мышкой выбранный <span class="node">Атрибут</span> или несколько
+                    отмеченных с помощью <a href="#using-select">мультивыбора</a> в дерево <span class="tree">Категории</span> или, непосредственно, в дерево <span class="tree">Атрибуты категорий</span>.</p>
+                <p>Можно отметить чекбоксы сразу нескольких категорий и перетащить отмеченные <span class="node">Атрибуты</span> сразу во все отмеченные категории
+                    одним движением.</p>
                 <p>Рекомендуется посмотреть видео в разделе <a href="example.html#using-example">Примеры</a>.</p>
                 <p>Еще один способ - использование инструмента <a href="tools.html#tools-category">Атрибуты категорий</a>.</p>
                 <p>Добавление <span class="node">Атрибутов категории</span> в товар производится в соответствии с настройками <a href="settings.html#settings-category">Атрибуты категорий</a> и
-                     <a href="settings.html#settings-inherit">Наследование</a>. Для инструмента эта настройка вынесена отдельно и ей управляет чекбокс <mark><small>Расставить атрибуты категории в товары</small></mark>.</p>
+                    <a href="settings.html#settings-inherit">Наследование</a>. Для инструмента эта настройка вынесена отдельно и ей управляет чекбокс <mark><small>Расставить атрибуты категории в товары</small></mark>.</p>
                 <p>Добавить <span class="node">Атрибуты категории</span> в товар можно и в карточке товара. Как это сделать, описано в разделе <a href="integro.html#integro-attribute">Интеграция с Opencart</a>.</p>
                 <p>Одновременно с добавлением <span class="node">Атрибутов категории</span>, в товар добавляются и их <span class="node">Значения</span> или, точнее,
                     <span class="node">Дежурный шаблон</span>. Происходит это в зависимости от настроек <a href="settings.html#settings-product">Добавление значений атрибута в товар</a>.</p>
@@ -354,17 +354,17 @@
                         </button>
                         <button id="tab-attribute_btnSearch1" type="button" class="btn btn-outline-dark" value="R" style="margin-left:1px;"><i class="fa fa-search" aria-hidden="true"></i>
                         </button>
-                        <div class="btn-group" role="group" style="margin-left:1px;" >
+                        <div class="btn-group" role="group" style="margin-left:1px;">
                             <button id="btnGroupDrop1" type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Выполнить
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">                              
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                 <a class="dropdown-item" href="#">Найти пустые</a>
                                 <a class="dropdown-item" href="#">Найти числовые</a>
                                 <a class="dropdown-item" href="#">Найти HTML теги</a>
                                 <a class="dropdown-item" href="#">Восстановить</a>
                             </div>
                         </div>
-                        
+
                         <input type="checkbox" name="fs_tab-attribute_autoComplete1" id="fs_tab-attribute_autoComplete1" style="margin-left:1rem;"><label for="fs_tab-attribute_autoComplete1"
                             style="padding-top:0px; margin-left:1px; font-weight:normal;">Автозаполнение</label>
                         <input type="checkbox" name="fs_tab-attribute_attributesOnly1" id="fs_tab-attribute_attributesOnly1" style="margin-left:1rem;"><label for="fs_tab-attribute_attributesOnly1"
@@ -407,21 +407,131 @@
                         состояние фильтра сохраняется для каждого дерева.</p>
                 </div>
                 <h2 id="using-summary">Сводная таблица.</h2>
-                <p>Сокращение Drag&Drop означает перемещение узлов с нажатой левой кнопкой мыши  <sup><span class="badge badge-danger">***</span></sup></p>
+                <div class="alert alert-light" role="alert">
+                    <p>Сокращение Drag&Drop означает перетаскивание узлов с нажатой левой кнопкой мыши <sup><span class="badge badge-danger">***</span></sup></p>
+                    <p>Источник - узел или узлы, которые надо переместить. Цель - узел, куда надо перместить <sup><span class="badge badge-danger">**</span></sup></p>
+                    <p>Уровень - глубина расположения узла в иерархии дерева <sup><span class="badge badge-danger">*</span></sup></p>
+                </div>
+
                 <table class="table table-bordered list">
-                    <thead><tr><th>Операция</th><th>Мышь/Drag&Drop</th><th>Меню</th><th>Клавиатура</th><th>Примечание</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Операция</th>
+                            <th>Мышь/Drag&Drop</th>
+                            <th>Меню</th>
+                            <th>Клавиатура</th>
+                            <th>Примечание</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>Раскрыть/Свернуть узел</td><td>Двойной клик</td><td></td><td></td><td></td></tr>
-                        <tr><td>Выделить узел</td><td>Ctrl + клик</td><td></td><td></td><td>Можно выделить несколько узлов</td></tr>
-                        <tr><td>Контекстное меню</td><td>Правая кнопка</td><td></td><td></td><td>Есть подсказки горячих клавиш</td></tr>
-                        <tr><td>Перетаскивание узлов</td><td>Drag&Drop</td><td></td><td></td><td></td></tr>
-                        <tr><td>Добавить группу</td><td></td><td>Новая группа</td><td><kbd>[ctrl+M]</kbd></td><td></td></tr>
-                        <tr><td>Добавить атрибут</td><td></td><td>Новый атрибут</td><td><kbd>[ctrl+Q]</kbd></td><td></td></tr>
-                        <tr><td>Редактировать</td><td></td><td>Редактировать</td><td><kbd>[shift+Enter]</kbd></td><td>Подтверждение - <kbd>[Enter]</kbd> Отмена - <kbd>[Esc]</kbd></td></tr>
-                        <tr><td>Сортировать</td><td>Drag&Drop</td><td>Вырезать > Вставить</td><td><kbd>[ctrl+X]</kbd> > <kbd>[ctrl+V]</kbd></td><td>Если узлы одного уровня</td></tr>
-                        <tr><td>Слияние атрибутов или групп</td><td>Ctrl + Drag&Drop</td><td></td><td></td><td></td></tr>
+                        <tr>
+                            <td>Раскрыть/Свернуть узел</td>
+                            <td>Двойной клик</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Выделить узел</td>
+                            <td>Ctrl + клик</td>
+                            <td></td>
+                            <td></td>
+                            <td>Можно выделить несколько узлов</td>
+                        </tr>
+                        <tr>
+                            <td>Контекстное меню</td>
+                            <td>Правая кнопка</td>
+                            <td></td>
+                            <td></td>
+                            <td>Есть подсказки горячих клавиш</td>
+                        </tr>
+                        <tr>
+                            <td>Добавить группу</td>
+                            <td></td>
+                            <td>Новая группа</td>
+                            <td><kbd>[Ctrl+M]</kbd></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Добавить атрибут</td>
+                            <td></td>
+                            <td>Новый атрибут</td>
+                            <td><kbd>[Ctrl+Q]</kbd></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Редактировать</td>
+                            <td></td>
+                            <td>Редактировать</td>
+                            <td><kbd>[Shift+Enter]</kbd></td>
+                            <td>Подтверждение - <kbd>[Enter]</kbd> Отмена - <kbd>[Esc]</kbd></td>
+                        </tr>
+                        <tr>
+                            <td>Удалить</td>
+                            <td></td>
+                            <td>Удалить</td>
+                            <td><kbd>[Del]</kbd></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Сортировать</td>
+                            <td>Drag&Drop</td>
+                            <td>Вырезать > Вставить</td>
+                            <td><kbd>[Ctrl+X]</kbd> > <kbd>[Ctrl+V]</kbd></td>
+                            <td>Уровни источника и цели должны совпадать. Сортировать можно группы или атрибуты внутри группы</td>
+                        </tr>
+                        <tr>
+                            <td>Копировать</td>
+                            <td></td>
+                            <td>Копировать > Вставить</td>
+                            <td><kbd>[Ctrl+C]</kbd> > <kbd>[Ctrl+V]</kbd></td>
+                            <td>Копировать можно только атрибуты. Вставить только в группу</td>
+                        </tr>
+                        <tr>
+                            <td>Сменить группу</td>
+                            <td>Drag&Drop</td>
+                            <td>Вырезать > Вставить</td>
+                            <td><kbd>[Ctrl+X]</kbd> > <kbd>[Ctrl+V]</kbd></td>
+                            <td>Источник - атрибут. Цель -группа</td>
+                        </tr>
+                        <tr>
+                            <td>Слияние атрибутов или групп</td>
+                            <td>Ctrl + Drag&Drop</td>
+                            <td>Вырезать > Объединить</td>
+                            <td><kbd>[Ctrl+X]</kbd> > <kbd>[Alt+V]</kbd></td>
+                            <td>Уровни источника и цели должны совпадать. Если источник атрибут, то цель должна быть атрибутом.</td>
+                        </tr>
+                        <tr>
+                            <td>Добавить атрибут в категорию</td>
+                            <td>Drag&Drop</td>
+                            <td>Копировать > Вставить</td>
+                            <td><kbd>[Ctrl+C]</kbd> > <kbd>[Ctrl+V]</kbd></td>
+                            <td>Источник - атрибут. Цель - категория.</td>
+                        </tr>
+                        <tr>
+                            <td>Сменить категорию</td>
+                            <td>Drag&Drop</td>
+                            <td>Вырезать > Вставить</td>
+                            <td><kbd>[Ctrl+X]</kbd> > <kbd>[Ctrl+V]</kbd></td>
+                            <td>Источник - атрибут в дереве "Атрибуты категорий". Цель - категория в дереве "Категории".</td>
+                        </tr>
+                        <tr>
+                            <td>Удалить из категории</td>
+                            <td></td>
+                            <td>Удалить</td>
+                            <td><kbd>[Del]</kbd></td>
+                            <td>Атрибут из дерева "Атрибуты категорий".</td>
+                        </tr>
+                        <tr>
+                            <td>Выбрать из списка дежурный шаблон</td>
+                            <td></td>
+                            <td>Редактировать</td>
+                            <td><kbd>[Shift+Enter]</kbd> + <kbd>[Alt+Shift+Click]</kbd></td>
+                            <td>Войти в режим редактирования затем нажать <kbd>[Alt+Shift+Click]</kbd>.</td>
+                        </tr>
                     </tbody>
                 </table>
+
             </div>
         </main>
         <nav class="d-none d-xl-block col-xl-2 bd-right" aria-label="Secondary navigation">
