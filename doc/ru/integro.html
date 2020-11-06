@@ -36,11 +36,18 @@
                           <tbody></tbody>
                         </table>
                       </div>
-                        <p>И поле выбора в правой стороне таблице  <div class="input-group">
-                            <select name="attribute_select_3" class="form-control attribute_select" attribute_id="3" language_id="1" style="display:block;"><option value=""> --- Выберите --- </option></select>
-                          </div>
-                        </p>
-                        <p>В сайдбаре административной панели в меню <mark><small>Каталог ⇒ Характеристики</small></mark>должен появиться пункт <span> Attribut<b style="color: #2199C7;">&amp;</b>co</span></p>
+                <p>И поле выбора в правой стороне таблице  <div class="input-group">
+                    <select name="attribute_select_3" class="form-control attribute_select" attribute_id="3" language_id="1" style="display:block;"><option value=""> --- Выберите --- </option></select>
+                  </div>
+                </p>
+                <p>В сайдбаре административной панели в меню <mark><small>Каталог ⇒ Характеристики</small></mark>должен появиться пункт    <span>Attribut<b style="color: #2199C7;">&amp;</b>co</span>
+                </p>
+                <p>Станут доступны следующие <span class="text-danger font-italic">манипуляции</span> :</p>
+                <ul>
+                    <li>Вставка <span class="node">Шаблонов</span> или <span class="node">Значений</span> из выпадающего списка;</li>
+                    <li>Вставка <span class="node">Шаблонов</span> или <span class="node">Значений</span> в момент выбора <span class="node">Атрибута</span>;</li>
+                    <li>Вставка <span class="node">Атрибутов</span> с их <span class="node">Значениями</span> в момент привязки или перепривязки товара к категории на вкладке <mark><small>Связи</small></mark>;</li>                    
+                </ul>
                 <h2 id="integro-list">Управление видом списка.</h2>
                 <div class="btn-group" style="margin-left:10px;"><button type="button" id="template-view" class="btn btn-info"><i class="fa fa-th-list"></i>Шаблоны</button><button type="button" id="values-view" class="btn btn-outline-dark"><i class="fa fa-th"></i>Значения</button></div>        
                         <p>В зависимости от того, какая кнопка нажата, в поле выбора будут выводиться либо <span class="node">Шаблоны</span> либо <span class="node">Значения</span>.</p>
@@ -77,14 +84,14 @@
                     задержки. Т.е. после переключения надо немного подождать.</p>
                 <h3 id="integro-override">Переопределение способа вставки значений.</h3>
                 <p>
-                    До сих пор <span class="node">Значения</span> или <span class="node">Шаблоны</span> в товар вставлялись в соответствии со <a href="settings.html#settings-product"><mark><small>способом</small></mark></a>, который установлен в <a href="settings.html#settings-product">Настройках модуля</a>.
+                    До сих пор <span class="node">Значения</span> или <span class="node">Шаблоны</span> в товар вставлялись в соответствии со <a href="settings.html#settings-product"><mark><em>способом</em></mark></a>, который установлен в <a href="settings.html#settings-product">Настройках модуля</a>.
 
                 </p>
-                <p>Чтобы каждый раз не менять базовые настройки, добавлена возможность оперативно переопределить <mark><small>способ</small></mark> вставки значений.</p>                
+                <p>Чтобы каждый раз не менять базовые настройки, добавлена возможность оперативно переопределить <mark><em>способ</em></mark> вставки значений.</p>                
                 <select class="form-control" id="method-view" style="margin-left:3px; font-weight:normal; width:27%"><option value="1" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Очищать</option><option value="2" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Не менять</option><option value="3" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Заменять дежурным</option><option selected="" value="4" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Только в пустые</option></select>
                 <p></p>
-                <p><mark><small>Переопределенный способ</small></mark> действует на время работы в карточке товара. При перезагрузке страницы или загрузке другого товара он будет сброшен к сохраненной настройке модуля. Действие <mark><small>переопределенного способа</small></mark> распространяется на привязку к категории, редактирование или добавление нового 
-                    <span class="node">Атрибута</span>, а так же на вставку <span class="node">Значения</span>, выбранного из списка.</p>
+                <p><mark><em>Переопределенный способ</em></mark> действует на время работы в карточке товара. При перезагрузке страницы или загрузке другого товара он будет сброшен к сохраненной настройке модуля. Действие <mark><em>переопределенного способа</em></mark> распространяется на все <a href="#integro-product"><span class="text-danger font-italic">манипуляции</span></a> в карточке товара.</p>
+                <p>Вставка <span class="node">Значения</span> производится синхронно для всех языков. Если вы хотите защитить ранее введенные <span class="node">Значения</span>, выбирайте способ "Только в пустые".</p>
 
                 <h3 id="integro-category">Интеграция со страницей категории.</h3>
                 <p>На сегодняшний день сохраняется интеграция на уровне карточки категории. Там должна появиться вкладка <mark><small>Атрибуты</small></mark>.</p>
@@ -99,7 +106,7 @@
                     Физически это происходит в момент, когда отмечается чекбокс напротив категории или изменяется Главная категория на вкладке <mark><small>Связи</small></mark> (Ocstore).
                     Или в момент выбра категории из списка (OpenCart).</p>
                 <p>
-                    Добавление <span class="node">Атрибутов категории</span> в товар происходит в соответствии со <a href="settings.html#settings-product"><mark><small>способом</small></mark></a>, который установлен в <a href="settings.html#settings-product">Настройах модуля</a>.
+                    Добавление <span class="node">Атрибутов категории</span> в товар происходит в соответствии со <a href="settings.html#settings-product"><mark><em>способом</em></mark></a>, который установлен в <a href="settings.html#settings-product">Настройках модуля</a> или <a href="#integro-override"><mark><em>переопределенным способом</em></mark></a>.
                 </p>
                 <p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a href="example.html#using-example">Примеры</a>.</p>
                 <ul id="gallery_2" class="list-unstyled row">
