@@ -78,18 +78,24 @@
                                 <td><i class="fa fa-link"></i></td>
                                 <td>Объединить</td>
                                 <th><kbd class="small">Alt + V</kbd></th>
-                                <td>Выполняется слияние <span class="tree">Узла</span> находящегося в буфере с выбранным целевым <span class="tree">Узлом</span.</td>
+                                <td>Выполняется слияние <span class="tree">Узла</span> находящегося в буфере с выбранным целевым <span class="tree">Узлом</span>.</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-forward"></i></td>
+                                <td>Клонировать</td>
+                                <th><kbd class="small">Alt + C</kbd></th>
+                                <td>Выполняется заполнение <span class="node">Дежурных шаблонов</span> для всех языков идентичным содержимым.</td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-folder-open"></i></td>
                                 <td>Раскрыть/Свернуть</td>
-                                <th><kbd class="small">Ctrl + b</kbd></th>
+                                <th><kbd class="small">Ctrl + B</kbd></th>
                                 <td>Переключатель. С каждым нажатием выполняется раскрытие всех свернутых узлов дерева или сворачивание раскрытых.</td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-refresh"></i></td>
                                 <td>Обновить</td>
-                                <th><kbd class="small">Shift + r</kbd></th>
+                                <th><kbd class="small">Shift + R</kbd></th>
                                 <td>Позволяет перезагрузить выбранное дерево.</td>
                             </tr>
                             <tr>
@@ -101,13 +107,13 @@
                             <tr>
                                 <td><i class="fa fa-plus"></i></td>
                                 <td>Новая группа</td>
-                                <th><kbd class="small">Ctrl + m</kbd></th>
+                                <th><kbd class="small">Ctrl + M</kbd></th>
                                 <td>Добавится новая <span class="node">Группа</span> и включится однострочный редактор. Синхронно добавится во все деревья.</td>
                             </tr>
                             <tr>
                                 <td><span class="fa fa-plus"></span></td>
                                 <td>Новый атрибут</td>
-                                <th><kbd class="small">Ctrl + q</kbd></th>
+                                <th><kbd class="small">Ctrl + Q</kbd></th>
                                 <td>В выбранную <span class="node">Группу</span> добавится новый <span class="node">Атрибут</span> и включится однострочный редактор. Синхронно добавится во все деревья.</td>
                             </tr>
                         </tbody>
@@ -223,7 +229,11 @@
                 </ul>
                 <h2 id="using-duty-del">Удаление дежурного шаблона.</h2>
                 <p>Удаление (очистка) <a href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a> производится через <a href="#using-context-menu">контекстное меню</a> или клавишей <kbd class="small">Del</kbd>.</p>
-                <p>Операцию можно производить только на вкладке <mark><small>Дежурные шаблоны</small></mark>. Данная операция не затрагивает товары. Удаляется только <span class="node">Дежурный шаблон</span>.</p>
+                <p>Операцию можно производить только на вкладках <mark><small>Дежурные шаблоны</small></mark> или  <mark><small>Группы атрибутов</small></mark>. Данная операция не затрагивает товары. Удаляется только <span class="node">Дежурный шаблон</span>.</p>
+                <h2 id="using-duty-clone">Клонирование дежурного шаблона.</h2>
+                <p>Очень часто <span class="node">Дежурный шаблон</span> представляет собой набор числовых значений, не нуждающихся в переводе на другие языки. Например, <code>20°C - 40°C</code>, или <code>2G/3G (WCDMA/UMTS)/4G (LTE)</code> </p> 
+                <p>Заполнив <span class="node">Дежурный шаблон</span> для одного языка, можно сразу клонировать его в другие языки.</p> 
+                <p>Клонирование <a href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a> производится через <a href="#using-context-menu">контекстное меню</a> или по сочетанию клавиш <kbd class="small">Alt + C</kbd>.</p>                                
                 <h2 id="using-dnd">Drag-and-Drop технологии.</h2>
                 <p>Даже ради этого стоит использовать Attribut&amp;co. Насколько удобней например, перетащить мышкой <span class="node">Атрибут</span> из <span class="node">Группы</span> в <span class="node">Группу</span>
                     , чем открывать формы, в одной форме добалять в другой форме удалять название новой <span class="node">Группы</span>. В общем возможности d&d технологии можно описать так:</p>
@@ -542,6 +552,13 @@
                             <td><kbd>[Shift+Enter]</kbd> + <kbd>[Alt+Shift+Click]</kbd></td>
                             <td>Войти в режим редактирования затем нажать <kbd>[Alt+Shift+Click]</kbd>.</td>
                         </tr>
+                        <tr>
+                            <td>Клонировать Дежурный шаблон в другие языки</td>
+                            <td></td>
+                            <td>Клонировать</td>
+                            <td><kbd>[Alt+C]</kbd></td>
+                            <td>Пустые шаблоны не клонируются.</td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -556,6 +573,7 @@
                 <li class="nav-item"><a class="nav-link" href="#using-value">Удаление значений</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-duty">Создание дежурного</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-duty-del">Удаление дежурного</a></li>
+                <li class="nav-item"><a class="nav-link" href="#using-duty-clone">Клонирование дежурного</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-dnd">Drag-and-Drop</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-select">Мультиселект</a></li>
                 <li class="nav-item"><a class="nav-link" href="#using-merge">Слияние</a></li>
