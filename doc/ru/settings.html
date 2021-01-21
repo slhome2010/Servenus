@@ -232,6 +232,20 @@
                     <h4>Внимание!</h4>
                     <p>При отключенном пункте <span class="im">Добавлять атрибут категории в товары</span>, настройки <span class="im">Добавление значений атрибута в товар</span> не активируются.</p>
                 </div>
+                <h2 id="settings-replace">Редактирование значений.</h2>
+                <p>Эта настройка определяет алгоритм обновления <span class="node">Значений</span> после их редактирования.</p>
+                <a class="lightgallery" href="/img/help/attributico/replacemode.jpg" title="Settings"><img src="/img/help/attributico/replacemode.jpg" alt="Settings" class="img-thumbnail img-responsive mb-3"></a>
+                <p>Сохранение или обновление <span class="node">Значений</span> происходит в момент закрытия однострочного редактора если не было отмены клавишей <kbd>[Esc]</kbd>. В этот момент происходит поиск редактируемого образца среди всех <span class="node">Значений</span> данного <span class="node">Атрибута</span> и замена его на новое, отредактированное, состояние.</p>
+                <p>Стандартом является поиск и замена всех вхождений редактируемого образца (подстроки) в <span class="node">Значение</span> (строку)</p>
+                <p>Например, есть такие записи (<code>MP4/AVI, MP4-MPEG4/MP4-MPG/VOB, MP4/AVI/MKV, MP4/AVI/MKV/VOB</code>). После замены, например,   <code>MP4</code> на <code>MP3</code> произойдет следующее (<code>MP3/AVI, MP3-MPEG4/MP3-MPG/VOB, MP3/AVI/MKV, MP3/AVI/MKV/VOB</code>), т.е. все вхождения образца <code>MP4</code> обновились на <code>MP3</code>.</p>
+                <p>Теперь рассмотрим пример, где такое обновление нас не устроит. Допустим, некоторый <span class="node">Атрибут</span> имеет набор <span class="node">Значений</span> (<span class="node">Шаблонов</span>) (<code>50, 50-100, 50/500/500-5000, 500</code>). 
+                После замены <code>50</code> на <code>50гр</code> получим неожиданный результат (<code>50гр, 50гр-100, 50гр/50гр0/50гр0-50гр00, 50гр0</code>).</p>
+                <p>Несмотря на то, что это частный случай, можно его учесть. Для этого надо включить настройку "<span class="im">По точному совпадению</span>". В этом режиме результат редактирования будет правильным (<code>50гр, 50-100, 50гр/500/500-5000, 500</code>).</p> 
+                <div class="callout callout-info">
+                    <h4>Разница редактирования <span class="node">Шаблонов</span> и <span class="node">Значений</span></h4>
+                    <p>Описанная выше настройка касается редактирования <span class="node">Значений</span>.</p>
+                    <p>Обновление <span class="node">Шаблона</span> всегда делается по точному совпадению редактируемого образца и всего <span class="node">Шаблона</span> целиком.</p>
+                </div>
                 <h2 id="settings-dialog">Оперативное изменение настроек.</h2>
                 <p>Некоторые настройки можно изменять оперативно, в процессе работы. По окончании работы они не сохраняются.</p>
                 <p>Если в <a href="using.html#using-context-menu">контекстном меню</a> выбрать пункт "Настройки", то появится <a href="using.html#using-dialog">диалоговое окно</a> управления деревом.</p>
@@ -244,6 +258,7 @@
                 <li class="nav-item"><a class="nav-link" href="#settings-category">Атрибуты категории</a></li>
                 <li class="nav-item"><a class="nav-link" href="#settings-inherit">Наследование</a></li>
                 <li class="nav-item"><a class="nav-link" href="#settings-product">Добавление в товар</a></li>
+                <li class="nav-item"><a class="nav-link" href="#settings-replace">Редактирование значений</a></li>
                 <li class="nav-item"><a class="nav-link" href="#settings-dialog">Оперативная настройка</a></li>
             </ul>
         </nav>
