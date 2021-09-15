@@ -1,12 +1,13 @@
 <?php
 
 $responce = array(
-	'lastversion' => 'v3.1.7',
+	'lastversion' => 'v3.1.8',
 	'news' => '<h4>Есть обновления!</h4> 
-				<p class="lead">Версия 3.1.7.</p>
+				<p class="lead">Версия 3.1.8.</p>
 				<ul>
-					<li>Исправлена ошибка из-за которой сбрасывались настройки дочерних узлов деревьев;</li>
-					<li>Добавлена настройка обновления значений атрибутов после редактирования. По вхождению подстроки и по точному совпадению;</li>                   
+				<li>Усовершенствован алгоритм дефрагментации;</li>
+				<li>Усовершенствована работа фильтра значений в карточке товара;</li>
+				<li>Добавлена кнопка для размещения атрибутов категорий в товар одним нажатием;</li>                   
 				</ul>',
 	'well' => '<p class="lead">Вы используете последнюю версию модуля <span> Attribut<b style="color: #2199C7;">&</b>co</span> !</p>',
 	'links' => '<div class="form-group">
@@ -18,7 +19,7 @@ $responce = array(
 					</ul>								
 				</div>',
 	'copyright' => '<strong>Документация:</strong> <a href="http://servenus.com/doc/ru/attributico.html">http://servenus.com/doc/ru/attributico.html</a><br/>
-					<p>Copyright &copy; 2016-2020&nbsp; Servenus</p>',
+					<p>Copyright &copy; 2016-2021&nbsp; Servenus</p>',
 );
 
 echo json_encode($responce);

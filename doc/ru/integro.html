@@ -64,9 +64,8 @@
                 <p>Напомню, что <span class="node">Значения</span> это "разобранные" по разделителю <span class="node">Шаблоны</span>.</p>
                 <p>Более подробно можно почитать в разделе <a href="theory.html#theory-template">Шаблоны и значения</a>.</p>
                 <h2 id="integro-filter">Фильтр значений.</h2>
-                <p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным.
-                    Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значенями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий или <a
-                        href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a></p>
+                <p>В магазинах с большим количеством товаров, <span class="node">Атрибутов</span> и их <span class="node">Значений</span> список, подключаемый к полю выбора может быть очень длинным. Это вызывает определенные неудобства при заполнении таблицы. Фильтр позволяет ограничить выдачу <span class="node">Значениями</span> только отмеченных на вкладке <mark><small>Связи</small></mark> категорий (не путать со <span class="node">Значениями атрибутов категорий</span>) или <a class="anchor" href="theory.html#theory-duty"><span class="node">Дежурного шаблона</span></a></p>
+                <p>Если отмечен пункт "Все", то в список попадут все <span class="node">Значения</span> данного <span class="node">Атрибута</span> для всех товаров, плюс <span class="node">Дежурный шаблон</span>.</p>
                 <div>
                     <label class="radio-inline">
                         <input type="radio" name="filter-values" id="filter-nofilter" value="all" checked> Все
@@ -82,15 +81,12 @@
                 <p></p>
                 <p>Фильтр работает в оперативном режиме, перезагрузка списка <span class="node">Значений</span> происходит сразу после переключения режима. На больших магазинах иногда заметны
                     задержки. Т.е. после переключения надо немного подождать.</p>
-                <h3 id="integro-override">Переопределение способа вставки значений.</h3>
-                <p>
-                    До сих пор <span class="node">Значения</span> или <span class="node">Шаблоны</span> в товар вставлялись в соответствии со <a href="settings.html#settings-product"><mark><em>способом</em></mark></a>, который установлен в <a href="settings.html#settings-product">Настройках модуля</a>.
-
-                </p>
-                <p>Чтобы каждый раз не менять базовые настройки, добавлена возможность оперативно переопределить <mark><em>способ</em></mark> вставки значений.</p>                
+                <h3 id="integro-override">Переопределение способа вставки значений.</h3>                
+                <p>До сих пор <span class="node">Значения</span> или <span class="node">Шаблоны</span> в товар вставлялись в соответствии со способом, который установлен в настройках <a class="anchor" href="settings.html#settings-product"><mark><small>Добавление значений атрибута в товар</small></mark></a>.</p>
+                <p>Чтобы каждый раз не менять базовые настройки, добавлена возможность оперативно <mark><em>переопределить способ</em></mark> вставки значений.</p>                
                 <select class="form-control" id="method-view" style="margin-left:3px; font-weight:normal; width:27%"><option value="1" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Очищать</option><option value="2" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Не менять</option><option value="3" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Заменять дежурным</option><option selected="" value="4" style="overflow:hidden;" white-space:nowrap;="" text-overflow:ellipsis;="">Только в пустые</option></select>
                 <p></p>
-                <p><mark><em>Переопределенный способ</em></mark> действует на время работы в карточке товара. При перезагрузке страницы или загрузке другого товара он будет сброшен к сохраненной настройке модуля. Действие <mark><em>переопределенного способа</em></mark> распространяется на все <a href="#integro-product"><span class="text-danger font-italic">манипуляции</span></a> в карточке товара.</p>
+                <p><mark><em>Переопределенный способ</em></mark> имеет приоритет, но действует только на время работы в карточке товара. При перезагрузке страницы или загрузке другого товара он будет сброшен к <a class="anchor" href="settings.html#settings-product"><mark><small>действующей настройке</small></mark></a> модуля. Действие <mark><em>переопределенного способа</em></mark> распространяется на все <a href="#integro-product"><span class="text-danger font-italic">манипуляции</span></a> в карточке товара.</p>
                 <p>Вставка <span class="node">Значения</span> производится синхронно для всех языков в момент привязки к категории или выбора нового <span class="node">Атрибута</span>. Синхронная для всех языков вставка <span class="node">Значения</span>, выбранного из списка, происходит если фильтр переключен в положение "Дежурные". Если вы хотите защитить ранее введенные <span class="node">Значения</span>, выбирайте способ "Только в пустые".</p>
 
                 <h3 id="integro-category">Интеграция со страницей категории.</h3>
@@ -107,9 +103,15 @@
                     Или в момент выбора категории из списка (OpenCart).</p>
                 <p>Удаление <span class="node">Атрибутов категории</span> происходит в момент "отвязки" товара от категории. Удаление необходимо подтвердить во всплывающем окне.</p>
                 <p>
-                    Добавление <span class="node">Значений атрибутов категории</span> в товар происходит в соответствии со <a href="settings.html#settings-product"><mark><em>способом</em></mark></a>, который установлен в <a href="settings.html#settings-product">Настройках модуля</a> или <a href="#integro-override"><mark><em>переопределенным способом</em></mark></a>.
+                    Добавление <span class="node">Значений атрибутов категории</span> в товар происходит в соответствии со способом, который установлен в настройках <a href="settings.html#settings-product"><mark><small><em>Добавление значений атрибута в товар</em></small></mark></a> или <a href="#integro-override"><mark><small><em>переопределенным способом</em></small></mark></a>.
                 </p>
-                <p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a href="example.html#using-example">Примеры</a>.</p>
+                <p>В версии 3.1.8 появилась возможность добавить Атрибуты всех категорий, к которым "привязан" товар, одной кнопкой <button type="button" id="attach-attribute" class="btn btn-success"><i class="fa fa-plus"></i> Характеристики</button> непосредственно на вкладке "Атрибуты" ("Характеристики").</p>
+                <div class="callout callout-info">
+                    <h4>Информация.</h4>
+                    <p>Все, что описано выше по поводу добавления <span class="node">Атрибутов категорий</span> и их <span class="node">Значений</span>, касается одного, конкретного, редактируемого товара.</p>
+                    <p>Если необходимо добавить <span class="node">Атрибуты категории</span> во все товары какой либо категории, то можно воспользоваться инструментом <a class="anchor" href="tools.html#tools-category"><mark><small>Атрибуты категорий</small></mark></a>.</p>
+                </div>
+                <p>Скриншоты ниже иллюстрируют интеграцию. Можно обратиться так же к разделу <a class="anchor" href="example.html#using-example">Примеры</a>.</p>
                 <ul id="gallery_2" class="list-unstyled row">
                     <li class="col-xs-6 col-md-4">
                         <a class="lg-item" href="/img/help/attributico/integro1.jpg" title="Integration OpenCart 2.x"><img src="/img/help/attributico/integro1.jpg" alt="Integro1" class="img-thumbnail img-responsive mrb15"></a>

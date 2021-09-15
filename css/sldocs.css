@@ -13,9 +13,11 @@ a {
   text-decoration: none;
 }
 a span.node {
-text-decoration: underline;
+  text-decoration: underline;
 }
-
+a.anchor {
+  font-style: italic;
+}
 
 /*
  * Scrollspy and affix Sidebar css
